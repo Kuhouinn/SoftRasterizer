@@ -141,9 +141,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Matrix3.cpp" />
     <ClCompile Include="source\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Matrix3.h" />
     <ClInclude Include="include\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
