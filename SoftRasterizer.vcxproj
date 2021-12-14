@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\FrameBuffer.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Matrix3.cpp" />
     <ClCompile Include="source\Vector3.cpp" />
@@ -151,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Camera.h" />
+    <ClInclude Include="Include\FrameBuffer.h" />
     <ClInclude Include="include\Matrix3.h" />
     <ClInclude Include="include\Vector3.h" />
     <ClInclude Include="include\Vector4.h" />
