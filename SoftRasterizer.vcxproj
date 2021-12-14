@@ -116,11 +116,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\admin\Documents\SoftRasterizer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\ThirdParty\Include;.\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\ThirdParty\Library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,13 +142,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Matrix3.cpp" />
     <ClCompile Include="source\Vector3.cpp" />
+    <ClCompile Include="source\Vector4.cpp" />
+    <ClCompile Include="ThirdParty\Source\glad.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\Camera.h" />
     <ClInclude Include="include\Matrix3.h" />
     <ClInclude Include="include\Vector3.h" />
+    <ClInclude Include="include\Vector4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
