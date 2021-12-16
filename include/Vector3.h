@@ -12,6 +12,8 @@ public:
 	bool operator==(const Vector3& value) const;
 	bool operator!=(const Vector3& value) const;
 
+	Vector3 Normalize() const;
+
 	Vector3 CrossProduct(const Vector3& value);
 public:
 	float x = 0.0f;

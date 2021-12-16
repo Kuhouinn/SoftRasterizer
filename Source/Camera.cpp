@@ -1,10 +1,5 @@
 #include "Camera.h"
 
-Camera::Camera() :pitch(0.0), yaw(-90.0), fov(45.0), cameraPos(Vector3(0.0f, 0.0f, 3.0f)), cameraFront(Vector3(0.0f, 0.0f, -1.0f)), cameraUp(Vector3(0.0f, 1.0f, 0.0f))
-{
-
-}
-
 void Camera::SetMouseCallback(double xOffset, double yOffset)
 {
 // 	float sensitivity = 0.1f;
@@ -42,4 +37,20 @@ void Camera::SetScrollCallback(double yOffset)
 		fov = 1.0f;
 	if (fov >= 45.0f)
 		fov = 45.0f;
+}
+
+Matrix4 Camera::GetViewMatrix()
+{
+	auto zAxis = -cameraDirection;
+	auto xAxis = cameraUp.CrossProduct(zAxis).Normalize();
+	auto yAxis = zAxis.CrossProduct(xAxis).Normalize();
+
+	Matrix4 rotationMatrix(xAxis, yAxis, zAxis);
+
+	Matrix4 transformMatrix;
+	transformMatrix.m[0][3] = cameraPos.x;
+	transformMatrix.m[1][3] = cameraPos.y;
+	transformMatrix.m[2][3] = cameraPos.z;
+
+	return transformMatrix * rotationMatrix;
 }

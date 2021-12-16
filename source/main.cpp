@@ -2,6 +2,8 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+#include "FrameBuffer.h"
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
@@ -9,7 +11,7 @@ void processInput(GLFWwindow* window);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-void main()
+int main()
 {
 	// glfw: initialize and configure
 	// ------------------------------
@@ -25,7 +27,7 @@ void main()
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
-		return;
+		return 0;
 	}
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
@@ -35,8 +37,10 @@ void main()
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize GLAD" << std::endl;
-		return;
+		return 0;
 	}
+
+	FrameBuffer frontFrameBuffer;
 
 	//这里将会使用第三方库加载模型，可能会定义一个数据结构去
 	//存储顶点数据。
@@ -57,7 +61,7 @@ void main()
 
 
 
-		//这里使用glDrawPixels()去绘制像素到窗口上。
+		//frameBuffer有了，想个办法绘制到屏幕上
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 		// -------------------------------------------------------------------------------
@@ -68,6 +72,8 @@ void main()
 	// glfw: terminate, clearing all previously allocated GLFW resources.
 	// ------------------------------------------------------------------
 	glfwTerminate();
+
+	return 0;
 }
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly

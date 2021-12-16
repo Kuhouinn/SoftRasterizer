@@ -1,4 +1,5 @@
 #include "Vector3.h"
+#include <cmath>
 
 Vector3 Vector3::operator+(const Vector3& value) const
 {
@@ -23,6 +24,12 @@ bool Vector3::operator==(const Vector3& value) const
 bool Vector3::operator!=(const Vector3& value) const
 {
 	return !operator==(value);
+}
+
+Vector3 Vector3::Normalize() const
+{
+	auto denominator = std::sqrt(x * x + y * y + z * z);
+	return { x / denominator,y / denominator,z / denominator };
 }
 
 Vector3 Vector3::CrossProduct(const Vector3& value)

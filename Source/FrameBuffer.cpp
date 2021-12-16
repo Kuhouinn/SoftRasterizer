@@ -9,13 +9,51 @@ FrameBuffer::FrameBuffer(unsigned int widthVal /*= 1920*/, unsigned int heightVa
 
 void FrameBuffer::WritePixelColor(unsigned int x, unsigned int y, const Vector4& color)
 {
-// 	colorBuffer[0] = color.x;
-// 	colorBuffer[1] = color.y;
-// 	colorBuffer[2] = color.z;
-// 	colorBuffer[3] = color.w;
+	if (x >= width || y >= height || x < 0 || y < 0)
+	{
+		return;
+	}
+
+	//сп╢Щ╦д╫Ь
+	auto r = unsigned char(color.x * 255);
+	auto g = unsigned char(color.x * 255);
+	auto b = unsigned char(color.x * 255);
+	auto a = unsigned char(color.x * 255);
+
+	auto index = (y * width + x) * 4;
+	colorBuffer[index] = r;
+	colorBuffer[index + 1] = g;
+	colorBuffer[index + 2] = b;
+	colorBuffer[index + 3] = a;
 }
 
 void FrameBuffer::WriteDepth(unsigned int x, unsigned int y, float depth)
 {
+	if (x >= width || y >= height || x < 0 || y < 0)
+	{
+		return;
+	}
 
+	auto index = y * width + x;
+	depthBuffer[index] = depth;
+}
+
+void FrameBuffer::Clear(const Vector4& clearColor)
+{
+	auto r = unsigned char(clearColor.x * 255);
+	auto g = unsigned char(clearColor.x * 255);
+	auto b = unsigned char(clearColor.x * 255);
+	auto a = unsigned char(clearColor.x * 255);
+
+	for (auto y = 0; y < height; y++)
+	{
+		for (auto x = 0; x < width; x++)
+		{
+			auto index = (y * width + x) * 4;
+			colorBuffer[index] = r;
+			colorBuffer[index + 1] = g;
+			colorBuffer[index + 2] = b;
+			colorBuffer[index + 3] = a;
+		}
+	}
 }
