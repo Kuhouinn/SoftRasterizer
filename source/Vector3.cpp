@@ -11,6 +11,11 @@ Vector3 Vector3::operator-(const Vector3& value) const
 	return { x - value.x,y - value.y,z - value.z };
 }
 
+Vector3 Vector3::operator-() const
+{
+	return { -x,-y,-z };
+}
+
 float Vector3::operator*(const Vector3& value) const
 {
 	return x * value.x + y * value.y + z * value.z;
@@ -34,7 +39,7 @@ Vector3 Vector3::Normalize() const
 
 Vector3 Vector3::CrossProduct(const Vector3& value)
 {
-	return { x * value.y - y * value.x,y * value.z - z * value.y,z * value.x - x * value.z };
+	return { y * value.z - z * value.y,z * value.x - x * value.z,x * value.y - y * value.x };
 }
 
 Vector3& Vector3::operator+=(const Vector3& value)

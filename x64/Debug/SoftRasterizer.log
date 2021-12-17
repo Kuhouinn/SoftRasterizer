@@ -1,2 +1,2 @@
-﻿  main.cpp
-C:\Users\admin\Documents\SoftRasterizer\source\main.cpp(65,3): error C3861: “glDrawPixels”: 找不到标识符
+﻿  Vector3.cpp
+  SoftRasterizer.vcxproj -> C:\Users\admin\Documents\SoftRasterizer\x64\Debug\SoftRasterizer.exe

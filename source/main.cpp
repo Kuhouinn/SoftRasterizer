@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "FrameBuffer.h"
+#include "Camera.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -39,6 +40,9 @@ int main()
 		std::cout << "Failed to initialize GLAD" << std::endl;
 		return 0;
 	}
+
+	Camera camera;
+	auto viewMatrix = camera.GetViewMatrix();
 
 	FrameBuffer frontFrameBuffer;
 
