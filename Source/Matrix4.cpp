@@ -60,3 +60,8 @@ Matrix4 Matrix4::operator*(const Matrix4& val) const
 
 	return result;
 }
+
+float* Matrix4::operator[](int index)
+{
+	return m[index];
+}

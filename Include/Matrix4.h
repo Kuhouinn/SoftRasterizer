@@ -9,6 +9,7 @@ public:
 	Matrix4 GetTransposed() const;
 
 	Matrix4 operator*(const Matrix4& val) const;
+	float* operator[](int index);
 public:
 	float m[4][4] = { 1,0,0,0,
 		0,1,0,0,
