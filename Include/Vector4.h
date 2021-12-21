@@ -6,13 +6,10 @@ public:
 
 	Vector4 operator+(const Vector4& value) const;
 	Vector4 operator-(const Vector4& value) const;
-	float operator*(const Vector4& value) const;
 	Vector4& operator+=(const Vector4& value);
 	Vector4& operator-=(const Vector4& value);
 	bool operator==(const Vector4& value) const;
 	bool operator!=(const Vector4& value) const;
-
-	Vector4 CrossProduct(const Vector4& value);
 public:
 	float x = 0.0f;
 	float y = 0.0f;

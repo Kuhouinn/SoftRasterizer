@@ -148,8 +148,11 @@
     <ClCompile Include="source\Matrix3.cpp" />
     <ClCompile Include="Source\Matrix4.cpp" />
     <ClCompile Include="Source\Renderer.cpp" />
+    <ClCompile Include="Source\ShaderPipeline.cpp" />
+    <ClCompile Include="Source\Vector2.cpp" />
     <ClCompile Include="source\Vector3.cpp" />
     <ClCompile Include="source\Vector4.cpp" />
+    <ClCompile Include="Source\VertexData.cpp" />
     <ClCompile Include="ThirdParty\Source\glad.c" />
   </ItemGroup>
   <ItemGroup>
@@ -158,8 +161,11 @@
     <ClInclude Include="include\Matrix3.h" />
     <ClInclude Include="Include\Matrix4.h" />
     <ClInclude Include="Include\Renderer.h" />
+    <ClInclude Include="Include\ShaderPipeline.h" />
+    <ClInclude Include="Include\Vector2.h" />
     <ClInclude Include="include\Vector3.h" />
     <ClInclude Include="include\Vector4.h" />
+    <ClInclude Include="Include\VertexData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

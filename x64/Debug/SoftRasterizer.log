@@ -1,2 +1,17 @@
-﻿  main.cpp
-  SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Debug\SoftRasterizer.exe
+﻿  Camera.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Camera.cpp(35,17): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
+  FrameBuffer.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\FrameBuffer.cpp(48,21): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\FrameBuffer.cpp(50,22): warning C4018: “<”: 有符号/无符号不匹配
+  main.cpp
+  Matrix3.cpp
+  Matrix4.cpp
+  Renderer.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(14,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(25,35): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Vector3.cpp
+  Vector4.cpp
+  正在生成代码...
+  glad.c
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  SoftRasterizer.vcxproj -> C:\Users\admin\Documents\SoftRasterizer\x64\Debug\SoftRasterizer.exe
