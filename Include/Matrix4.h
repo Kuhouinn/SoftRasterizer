@@ -1,6 +1,8 @@
 #pragma once
 #include "Vector3.h"
 
+class Vector4;
+
 class Matrix4
 {
 public:
@@ -8,7 +10,10 @@ public:
 
 	Matrix4 GetTransposed() const;
 
-	Matrix4 operator*(const Matrix4& val) const;
+	Matrix4 operator*(const Matrix4& value) const;
+
+	Vector4 operator*(const Vector4& value) const;
+
 	float* operator[](int index);
 public:
 	float m[4][4] = { 1,0,0,0,

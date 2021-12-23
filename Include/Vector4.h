@@ -10,6 +10,8 @@ public:
 	Vector4& operator-=(const Vector4& value);
 	bool operator==(const Vector4& value) const;
 	bool operator!=(const Vector4& value) const;
+	float& operator[](int index);
+	const float& operator[](int index) const;
 public:
 	float x = 0.0f;
 	float y = 0.0f;

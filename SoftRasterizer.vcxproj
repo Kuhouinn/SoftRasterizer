@@ -147,6 +147,8 @@
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Matrix3.cpp" />
     <ClCompile Include="Source\Matrix4.cpp" />
+    <ClCompile Include="Source\Mesh.cpp" />
+    <ClCompile Include="Source\Model.cpp" />
     <ClCompile Include="Source\Renderer.cpp" />
     <ClCompile Include="Source\ShaderPipeline.cpp" />
     <ClCompile Include="Source\Vector2.cpp" />
@@ -160,6 +162,8 @@
     <ClInclude Include="Include\FrameBuffer.h" />
     <ClInclude Include="include\Matrix3.h" />
     <ClInclude Include="Include\Matrix4.h" />
+    <ClInclude Include="Include\Mesh.h" />
+    <ClInclude Include="Include\Model.h" />
     <ClInclude Include="Include\Renderer.h" />
     <ClInclude Include="Include\ShaderPipeline.h" />
     <ClInclude Include="Include\Vector2.h" />

@@ -60,7 +60,7 @@ Matrix4 Camera::GetViewMatrix()
 	//上面如果猜想正确的话，算出来的是左手坐标系的view矩阵，下面这个我要改一下改成右手坐标系的view
 	auto zAxis = -cameraDirection;
 	auto xAxis = zAxis.CrossProduct(cameraUp).Normalize();
-	auto yAxis = zAxis.CrossProduct(xAxis).Normalize();
+	auto yAxis = xAxis.CrossProduct(zAxis).Normalize();
 
 	Matrix4 rotationMatrix(xAxis, yAxis, zAxis);
 	auto inversetRotationMatirx = rotationMatrix.GetTransposed();

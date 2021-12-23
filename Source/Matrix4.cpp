@@ -1,4 +1,5 @@
 #include "Matrix4.h"
+#include "Vector4.h"
 
 Matrix4::Matrix4(const Vector3& baseX, const Vector3& baseY, const Vector3& baseZ, const Vector3& baseW)
 {
@@ -46,7 +47,7 @@ Matrix4 Matrix4::GetTransposed() const
 	return result;
 }
 
-Matrix4 Matrix4::operator*(const Matrix4& val) const
+Matrix4 Matrix4::operator*(const Matrix4& value) const
 {
 	Matrix4 result;
 
@@ -54,11 +55,20 @@ Matrix4 Matrix4::operator*(const Matrix4& val) const
 	{
 		for (auto j = 0; j < 4; j++)
 		{
-			result.m[i][j] = m[i][0] * val.m[0][j] + m[i][1] * val.m[1][j] + m[i][2] * val.m[2][j] + m[i][3] * val.m[3][j];
+			result.m[i][j] = m[i][0] * value.m[0][j] + m[i][1] * value.m[1][j] + m[i][2] * value.m[2][j] + m[i][3] * value.m[3][j];
 		}
 	}
 
 	return result;
+}
+
+Vector4 Matrix4::operator*(const Vector4& value) const
+{
+	Vector4 result;
+	for (auto i = 0; i < 4; i++)
+	{
+		result[i] = m[i][0] * value[0] + m[i][1] * value[1] + m[i][2] * value[2] + m[i][3] * value[3];
+	}
 }
 
 float* Matrix4::operator[](int index)
