@@ -6,7 +6,7 @@
 class Renderer
 {
 public:
-	static Matrix4 GetProjectionMatrix(float fovy, float aspect, float near, float far);
+	static Matrix4 CalculateProjectionMatrix(float fovy, float aspect, float near, float far);
 
 	void SetModelMatrix(const Matrix4& model);
 

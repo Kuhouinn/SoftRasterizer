@@ -1,7 +1,7 @@
 #include "Renderer.h"
 #include <cmath>
 
-Matrix4 Renderer::GetProjectionMatrix(float fovy, float aspect, float near, float far)
+Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
 {
 	//这个透视投影矩阵是按view矩阵是右手坐标系计算的，计算出来的projection矩阵是左手坐标系的
 

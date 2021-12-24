@@ -10,8 +10,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
 // settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 1920;
+const unsigned int SCR_HEIGHT = 1080;
 
 int main()
 {
@@ -45,7 +45,10 @@ int main()
 	Renderer renderer;
 
 	Camera camera;
+
 	auto viewMatrix = camera.GetViewMatrix();
+	renderer.SetViewMatrix(viewMatrix);
+	renderer.SetProjectionMatrix(Renderer::CalculateProjectionMatrix(camera.GetCameraFov(), static_cast<float>(SCR_WIDTH) / static_cast<float>(SCR_HEIGHT), 0.1f, 1000.0f));
 
 	FrameBuffer frontFrameBuffer;
 
@@ -65,7 +68,7 @@ int main()
 
 		//在这里将会实现软渲染器的渲染管线，替代OpenGL的渲染管线。预计是做一套可编程管线。
 		//具体步骤包括顶点着色器处理，图元装配，裁剪，背面剔除，光栅化，片元着色器处理，深度测试。
-
+		renderer.Render();
 
 
 		//frameBuffer有了，想个办法绘制到屏幕上
