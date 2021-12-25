@@ -1,114 +1,71 @@
 ﻿  Camera.cpp
-C:\Users\admin\Documents\SoftRasterizer\Source\Camera.cpp(35,17): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
+  FrameBuffer.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\Camera.cpp(35,17): warning C4244:  “-=”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(48,21): warning C4018:  “<”: 有符号/无符号不匹配
   main.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(50,22): warning C4018:  “<”: 有符号/无符号不匹配
+  Matrix3.cpp
   Matrix4.cpp
-C:\Users\admin\Documents\SoftRasterizer\Source\Matrix4.cpp(65,1): error C2027: 使用了未定义类型“Vector4”
-C:\Users\admin\Documents\SoftRasterizer\Include\Matrix4.h(4): message : 参见“Vector4”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\Matrix4.cpp(65,1): error C2079: “Matrix4::operator *”使用未定义的 class“Vector4”
-C:\Users\admin\Documents\SoftRasterizer\Source\Matrix4.cpp(64,18): error C2027: 使用了未定义类型“Vector4”
-C:\Users\admin\Documents\SoftRasterizer\Include\Matrix4.h(4): message : 参见“Vector4”的声明
+  Mesh.cpp
+D:\UE4SourceCode\SoftRasterizer\Include\Vector2.h(5,86): error C2614:  “Vector2”: 非法的成员初始化:“z”不是基或成员
+  Model.cpp
+D:\UE4SourceCode\SoftRasterizer\Include\Vector2.h(5,86): error C2614:  “Vector2”: 非法的成员初始化:“z”不是基或成员
+D:\UE4SourceCode\SoftRasterizer\Include\Model.h(12,19): error C2061:  语法错误: 标识符“Shader”
+D:\UE4SourceCode\SoftRasterizer\Include\Model.h(16,14): error C2065:  “Texture”: 未声明的标识符
+D:\UE4SourceCode\SoftRasterizer\Include\Model.h(16,7): error C2923:  “std::vector”: 对于参数“_Ty”，“Texture”不是有效的 模板 类型变量
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\vector(334,37): error C3203:  “allocator”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Alloc”，应为 real 类型
+D:\UE4SourceCode\SoftRasterizer\Include\Model.h(20,14): error C2065:  “Texture”: 未声明的标识符
+D:\UE4SourceCode\SoftRasterizer\Include\Model.h(20,7): error C2923:  “std::vector”: 对于参数“_Ty”，“Texture”不是有效的 模板 类型变量
   Renderer.cpp
-C:\Users\admin\Documents\SoftRasterizer\Include\Vector2.h(5,86): error C2614: “Vector2”: 非法的成员初始化:“z”不是基或成员
-C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(14,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(25,35): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\Model.cpp(2,10): error C1083:  无法打开包括文件: “Shader.h”: No such file or directory
+D:\UE4SourceCode\SoftRasterizer\Include\Vector2.h(5,86): error C2614:  “Vector2”: 非法的成员初始化:“z”不是基或成员
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(14,15): warning C4244:  “初始化”: 从“double”转换到“float”，可能丢失数据
   ShaderPipeline.cpp
-C:\Users\admin\Documents\SoftRasterizer\Include\Vector2.h(5,86): error C2614: “Vector2”: 非法的成员初始化:“z”不是基或成员
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(20,11): warning C4244: “初始化”: 从“const float”转换到“int”，可能丢失数据
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(21,11): warning C4244: “初始化”: 从“const float”转换到“int”，可能丢失数据
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(22,11): warning C4244: “初始化”: 从“const float”转换到“int”，可能丢失数据
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(23,11): warning C4244: “初始化”: 从“const float”转换到“int”，可能丢失数据
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,14): error C2672: “std::min”: 未找到匹配的重载函数
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,74): error C2780: “_Ty std::min(std::initializer_list<_Elem>)”: 应输入 1 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(76): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,74): error C2784: “_Ty std::min(std::initializer_list<_Elem>,_Pr)”: 未能从“int”为“std::initializer_list<_Elem>”推导 模板 参数
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(73): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,74): error C2782: “const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: 模板 参数“_Ty”不明确
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(65): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,74): message : 可能是“_Ty”
-          with
-          [
-              _Ty=float
-          ]
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,74): message : 或    “int”
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,74): error C2784: “const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: 未能从“const _Ty”为“const _Ty &”推导 模板 参数
-          with
-          [
-              _Ty=float
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(65): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(25,74): error C2780: “const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: 应输入 3 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(56): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,14): error C2672: “std::max”: 未找到匹配的重载函数
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,74): error C2780: “_Ty std::max(std::initializer_list<_Elem>)”: 应输入 1 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(52): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,74): error C2784: “_Ty std::max(std::initializer_list<_Elem>,_Pr)”: 未能从“int”为“std::initializer_list<_Elem>”推导 模板 参数
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(49): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,74): error C2782: “const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: 模板 参数“_Ty”不明确
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(41): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,74): message : 可能是“_Ty”
-          with
-          [
-              _Ty=float
-          ]
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,74): message : 或    “int”
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,74): error C2784: “const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: 未能从“const _Ty”为“const _Ty &”推导 模板 参数
-          with
-          [
-              _Ty=float
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(41): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(26,74): error C2780: “const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: 应输入 3 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(32): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,14): error C2672: “std::min”: 未找到匹配的重载函数
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,74): error C2780: “_Ty std::min(std::initializer_list<_Elem>)”: 应输入 1 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(76): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,74): error C2784: “_Ty std::min(std::initializer_list<_Elem>,_Pr)”: 未能从“int”为“std::initializer_list<_Elem>”推导 模板 参数
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(73): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,74): error C2782: “const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: 模板 参数“_Ty”不明确
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(65): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,74): message : 可能是“_Ty”
-          with
-          [
-              _Ty=float
-          ]
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,74): message : 或    “int”
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,74): error C2784: “const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: 未能从“const _Ty”为“const _Ty &”推导 模板 参数
-          with
-          [
-              _Ty=float
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(65): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(27,74): error C2780: “const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: 应输入 3 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(56): message : 参见“std::min”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,14): error C2672: “std::max”: 未找到匹配的重载函数
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,74): error C2780: “_Ty std::max(std::initializer_list<_Elem>)”: 应输入 1 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(52): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,74): error C2784: “_Ty std::max(std::initializer_list<_Elem>,_Pr)”: 未能从“int”为“std::initializer_list<_Elem>”推导 模板 参数
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(49): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,74): error C2782: “const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: 模板 参数“_Ty”不明确
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(41): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,74): message : 可能是“_Ty”
-          with
-          [
-              _Ty=float
-          ]
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,74): message : 或    “int”
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,74): error C2784: “const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: 未能从“const _Ty”为“const _Ty &”推导 模板 参数
-          with
-          [
-              _Ty=float
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(41): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(28,74): error C2780: “const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: 应输入 3 个参数，却提供了 2 个
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(32): message : 参见“std::max”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(33,18): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(33,14): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(50,30): error C2039: "barycentricLerp": 不是 "VertexData" 的成员
-C:\Users\admin\Documents\SoftRasterizer\Include\VertexData.h(6): message : 参见“VertexData”的声明
-C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(50,45): error C3861: “barycentricLerp”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(25,35): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Include\Vector2.h(5,86): error C2614:  “Vector2”: 非法的成员初始化:“z”不是基或成员
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(21,11): warning C4244:  “初始化”: 从“const float”转换到“int”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(22,11): warning C4244:  “初始化”: 从“const float”转换到“int”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(23,11): warning C4244:  “初始化”: 从“const float”转换到“int”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(24,11): warning C4244:  “初始化”: 从“const float”转换到“int”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(26,14): error C2039:  “min”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(26,29): error C2039:  “min”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(26,32): error C3861:  “min”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(26,17): error C3861:  “min”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(27,14): error C2039:  “max”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(27,29): error C2039:  “max”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(27,32): error C3861:  “max”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(27,17): error C3861:  “max”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(28,14): error C2039:  “min”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(28,29): error C2039:  “min”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(28,32): error C3861:  “min”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(28,17): error C3861:  “min”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(29,14): error C2039:  “max”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(29,29): error C2039:  “max”: 不是“std”的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\cmath(492): message :  参见“std”的声明
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(29,32): error C3861:  “max”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(29,17): error C3861:  “max”: 找不到标识符
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(34,18): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(34,14): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(51,30): error C2039:  “barycentricLerp”: 不是“VertexData”的成员
+D:\UE4SourceCode\SoftRasterizer\Include\VertexData.h(6): message :  参见“VertexData”的声明
+  stb.cpp
   Vector2.cpp
-C:\Users\admin\Documents\SoftRasterizer\Source\Vector2.cpp : fatal error C1041: 无法打开程序数据库“C:\Users\admin\Documents\SoftRasterizer\x64\Debug\vc142.idb”；如果要将多个 CL.EXE 写入同一个 .PDB 文件，请使用 /FS
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(51,45): error C3861:  “barycentricLerp”: 找不到标识符
+  Vector3.cpp
   Vector4.cpp
+D:\UE4SourceCode\SoftRasterizer\Include\Vector2.h(5,86): error C2614:  “Vector2”: 非法的成员初始化:“z”不是基或成员
+D:\UE4SourceCode\SoftRasterizer\source\Vector4.cpp(17,19): error C2440:  “return”: 无法从“float *”转换为“float &”
+D:\UE4SourceCode\SoftRasterizer\source\Vector4.cpp(18,19): error C2440:  “return”: 无法从“float *”转换为“float &”
+D:\UE4SourceCode\SoftRasterizer\source\Vector4.cpp(19,19): error C2440:  “return”: 无法从“float *”转换为“float &”
   VertexData.cpp
-C:\Users\admin\Documents\SoftRasterizer\Include\Vector2.h(5,86): error C2614: “Vector2”: 非法的成员初始化:“z”不是基或成员
+D:\UE4SourceCode\SoftRasterizer\source\Vector4.cpp(20,19): error C2440:  “return”: 无法从“float *”转换为“float &”
   正在生成代码...
+D:\UE4SourceCode\SoftRasterizer\Include\Vector2.h(5,86): error C2614:  “Vector2”: 非法的成员初始化:“z”不是基或成员
+D:\UE4SourceCode\SoftRasterizer\Source\Matrix4.cpp(72): error C4716:  “Matrix4::operator*”: 必须返回一个值

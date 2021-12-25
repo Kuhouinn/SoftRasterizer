@@ -1,20 +1,29 @@
 #pragma once
 #include "Matrix4.h"
 #include "VertexData.h"
-#include "ShaderPipeline.h"
+
 #include <vector>
+#include <memory>
+
+class Model;
+class ShaderPipeline;
+
 class Renderer
 {
 public:
+	Renderer();
+
 	static Matrix4 CalculateProjectionMatrix(float fovy, float aspect, float near, float far);
 
-	void SetModelMatrix(const Matrix4& model);
+	void SetModelMatrix(const Matrix4& value);
 
-	void SetViewMatrix(const Matrix4& view);
+	void SetViewMatrix(const Matrix4& value);
 
-	void SetProjectionMatrix(const Matrix4& projection);
+	void SetProjectionMatrix(const Matrix4& value);
 
-	void Render();
+	void Render(Model& modelSource);
+
+	void SetShaderPipline(std::shared_ptr<ShaderPipeline>& value);
 
 private:
 	//先在齐次裁剪空间使用简单裁剪，后续如果有时间可以换成Sutherland算法。
@@ -23,6 +32,6 @@ private:
 private:
 	float near = 0.01f;
 	float far = 1000.0f;
-	ShaderPipeline shaderPipeline;
+	std::shared_ptr<ShaderPipeline> shaderPipeline = nullptr;
 };
 

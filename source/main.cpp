@@ -5,6 +5,7 @@
 #include "FrameBuffer.h"
 #include "Camera.h"
 #include "Renderer.h"
+#include "Model.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -43,8 +44,8 @@ int main()
 	}
 
 	Renderer renderer;
-
 	Camera camera;
+	Model myModel("./Model/AssimpResource/nanosuit.obj");
 
 	auto viewMatrix = camera.GetViewMatrix();
 	renderer.SetViewMatrix(viewMatrix);
@@ -68,7 +69,7 @@ int main()
 
 		//在这里将会实现软渲染器的渲染管线，替代OpenGL的渲染管线。预计是做一套可编程管线。
 		//具体步骤包括顶点着色器处理，图元装配，裁剪，背面剔除，光栅化，片元着色器处理，深度测试。
-		renderer.Render();
+		renderer.Render(myModel);
 
 
 		//frameBuffer有了，想个办法绘制到屏幕上

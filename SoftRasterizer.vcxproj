@@ -122,7 +122,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>.\ThirdParty\Library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\DefaultShaderPipline.cpp" />
     <ClCompile Include="Source\FrameBuffer.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Matrix3.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="Source\Model.cpp" />
     <ClCompile Include="Source\Renderer.cpp" />
     <ClCompile Include="Source\ShaderPipeline.cpp" />
+    <ClCompile Include="Source\stb.cpp" />
     <ClCompile Include="Source\Vector2.cpp" />
     <ClCompile Include="source\Vector3.cpp" />
     <ClCompile Include="source\Vector4.cpp" />
@@ -159,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Camera.h" />
+    <ClInclude Include="Include\DefaultShaderPipline.h" />
     <ClInclude Include="Include\FrameBuffer.h" />
     <ClInclude Include="include\Matrix3.h" />
     <ClInclude Include="Include\Matrix4.h" />
@@ -166,6 +169,7 @@
     <ClInclude Include="Include\Model.h" />
     <ClInclude Include="Include\Renderer.h" />
     <ClInclude Include="Include\ShaderPipeline.h" />
+    <ClInclude Include="Include\stb_image.h" />
     <ClInclude Include="Include\Vector2.h" />
     <ClInclude Include="include\Vector3.h" />
     <ClInclude Include="include\Vector4.h" />

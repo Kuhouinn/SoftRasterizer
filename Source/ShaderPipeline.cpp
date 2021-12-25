@@ -2,12 +2,6 @@
 #include "VertexData.h"
 #include <cmath>
 
-void ShaderPipeline::VertexShader(VertexData& vertex)
-{
-	vertex.position = modelMatrix * vertex.position;
-	vertex.clipPosition = projectionMatrix * viewMatrix * vertex.position;
-}
-
 void ShaderPipeline::RasterizeFillEdgeFunction(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
 {
 	//Edge-function rasterization algorithm

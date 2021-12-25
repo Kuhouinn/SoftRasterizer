@@ -1,5 +1,13 @@
 #include "Renderer.h"
+
+#include "Model.h"
+#include "DefaultShaderPipline.h"
 #include <cmath>
+
+Renderer::Renderer()
+{
+	shaderPipeline = std::make_shared<DefaultShaderPipline>();
+}
 
 Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
 {
@@ -27,24 +35,33 @@ Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near
 	return result;
 }
 
-void Renderer::SetModelMatrix(const Matrix4& model)
+void Renderer::SetModelMatrix(const Matrix4& value)
 {
-	shaderPipeline.SetModelMatrix(model);
+	shaderPipeline->SetModelMatrix(value);
 }
 
-void Renderer::SetProjectionMatrix(const Matrix4& projectionMatrix)
+void Renderer::SetProjectionMatrix(const Matrix4& value)
 {
-	shaderPipeline.SetProjectionMatrix(projectionMatrix);
+	shaderPipeline->SetProjectionMatrix(value);
 }
 
-void Renderer::SetViewMatrix(const Matrix4& view)
+void Renderer::SetViewMatrix(const Matrix4& value)
 {
-	shaderPipeline.SetViewMatrix(view);
+	shaderPipeline->SetViewMatrix(value);
 }
 
-void Renderer::Render()
+void Renderer::Render(Model& modelSource)
 {
+	shaderPipeline->VertexShader()
+}
 
+void Renderer::SetShaderPipline(std::shared_ptr<ShaderPipeline>& value)
+{
+	value->SetModelMatrix(shaderPipeline->GetModelMatrix());
+	value->SetViewMatrix(shaderPipeline->GetViewMatrix());
+	value->SetProjectionMatrix(shaderPipeline->GetProjectionMatrix());
+
+	shaderPipeline = value;
 }
 
 std::vector<VertexData> Renderer::Clipping(const VertexData& v0, const VertexData& v1, const VertexData& v2) const
