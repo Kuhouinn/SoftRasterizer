@@ -2,11 +2,14 @@
 
 #include "Model.h"
 #include "DefaultShaderPipline.h"
+#include "FrameBuffer.h"
 #include <cmath>
 
 Renderer::Renderer()
 {
 	shaderPipeline = std::make_shared<DefaultShaderPipline>();
+	frontBuffer = std::make_shared<FrameBuffer>();
+	backBuffer = std::make_shared<FrameBuffer>();
 }
 
 Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
@@ -20,7 +23,7 @@ Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near
 
 	//n/t
 	float yScale = 1.0 / tanHalf;
-	
+
 	//aspect是r/t，一除变成n/r
 	float xScale = yScale / aspect;
 	float farMinusNear = far - near;
@@ -52,7 +55,40 @@ void Renderer::SetViewMatrix(const Matrix4& value)
 
 void Renderer::Render(Model& modelSource)
 {
-	shaderPipeline->VertexShader()
+	std::vector<VertexData> rasterizedPoints;
+	rasterizedPoints.reserve(backBuffer->GetWidth() * backBuffer->GetHeight());
+
+	auto& meshes = modelSource.meshs;
+
+	for (auto i = 0; i < meshes.size(); i++)
+	{
+		auto& vertices = meshes[i].vertices;
+		auto& indices = meshes[i].indices;
+
+		for (auto j = 0; j < indices.size(); j += 3)
+		{
+			VertexData vertex[3];
+
+			//从模型中按mesh取出每一个三角面片去处理
+			vertex[0].position = vertices[indices[j]].position;
+			vertex[0].normal = vertices[indices[j]].normal;
+			vertex[0].texCoordinate = vertices[indices[j]].texCoords;
+
+			vertex[0].position = vertices[indices[j + 1]].position;
+			vertex[0].normal = vertices[indices[j + 1]].normal;
+			vertex[0].texCoordinate = vertices[indices[j + 1]].texCoords;
+
+			vertex[0].position = vertices[indices[j + 2]].position;
+			vertex[0].normal = vertices[indices[j + 2]].normal;
+			vertex[0].texCoordinate = vertices[indices[j + 2]].texCoords;
+
+			//vertex shader处理阶段
+			shaderPipeline->VertexShader(vertex[0]);
+			shaderPipeline->VertexShader(vertex[1]);
+			shaderPipeline->VertexShader(vertex[2]);
+		}
+
+	}
 }
 
 void Renderer::SetShaderPipline(std::shared_ptr<ShaderPipeline>& value)

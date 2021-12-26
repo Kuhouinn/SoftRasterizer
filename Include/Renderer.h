@@ -7,6 +7,7 @@
 
 class Model;
 class ShaderPipeline;
+class FrameBuffer;
 
 class Renderer
 {
@@ -33,5 +34,7 @@ private:
 	float near = 0.01f;
 	float far = 1000.0f;
 	std::shared_ptr<ShaderPipeline> shaderPipeline = nullptr;
+	std::shared_ptr<FrameBuffer> frontBuffer = nullptr;
+	std::shared_ptr<FrameBuffer> backBuffer = nullptr;
 };
 

@@ -1,4 +1,7 @@
 #pragma once
+
+class Vector3;
+
 class Vector4
 {
 public:
@@ -8,6 +11,9 @@ public:
 	Vector4 operator-(const Vector4& value) const;
 	Vector4& operator+=(const Vector4& value);
 	Vector4& operator-=(const Vector4& value);
+	Vector4& operator=(const Vector4& value);
+	Vector4& operator=(const Vector3& value);
+
 	bool operator==(const Vector4& value) const;
 	bool operator!=(const Vector4& value) const;
 	float& operator[](int index);

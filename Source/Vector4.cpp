@@ -1,5 +1,7 @@
 #include "Vector4.h"
 
+#include "Vector3.h"
+
 Vector4 Vector4::operator+(const Vector4& value) const
 {
 	return { x + value.x,y + value.y,z + value.z,w + value.w };
@@ -8,6 +10,21 @@ Vector4 Vector4::operator+(const Vector4& value) const
 Vector4 Vector4::operator-(const Vector4& value) const
 {
 	return { x - value.x,y - value.y,z - value.z ,w - value.w };
+}
+
+Vector4& Vector4::operator=(const Vector4& value)
+{
+	x = value.x;
+	y = value.y;
+	z = value.z;
+	w = value.w;
+}
+
+Vector4& Vector4::operator=(const Vector3& value)
+{
+	x = value.x;
+	y = value.y;
+	z = value.z;
 }
 
 float& Vector4::operator[](int index)

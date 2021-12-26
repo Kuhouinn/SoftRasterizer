@@ -51,8 +51,6 @@ int main()
 	renderer.SetViewMatrix(viewMatrix);
 	renderer.SetProjectionMatrix(Renderer::CalculateProjectionMatrix(camera.GetCameraFov(), static_cast<float>(SCR_WIDTH) / static_cast<float>(SCR_HEIGHT), 0.1f, 1000.0f));
 
-	FrameBuffer frontFrameBuffer;
-
 	//这里将会使用第三方库加载模型，可能会定义一个数据结构去
 	//存储顶点数据。
 
