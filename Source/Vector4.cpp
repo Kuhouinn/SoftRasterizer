@@ -12,6 +12,18 @@ Vector4 Vector4::operator-(const Vector4& value) const
 	return { x - value.x,y - value.y,z - value.z ,w - value.w };
 }
 
+Vector4 Vector4::operator*(float value) const
+{
+	return { x * value,y * value,z * value,w * value };
+}
+
+Vector4& Vector4::operator/=(float value)
+{
+	x /= value;
+	y /= value;
+	z /= value;
+}
+
 Vector4& Vector4::operator=(const Vector4& value)
 {
 	x = value.x;

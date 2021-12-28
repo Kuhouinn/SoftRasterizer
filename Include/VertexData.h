@@ -11,5 +11,8 @@ struct VertexData
 	Vector2 texCoordinate;
 	Vector4	clipPosition;
 	Vector2 screenPosition;
+
+	static void PrePerspCorrection(VertexData& v);
+	static void AftPrespCorrection(VertexData& v);
 };
 

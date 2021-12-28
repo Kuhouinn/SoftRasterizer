@@ -9,8 +9,10 @@ public:
 
 	Vector4 operator+(const Vector4& value) const;
 	Vector4 operator-(const Vector4& value) const;
+	Vector4 operator*(float value) const;
 	Vector4& operator+=(const Vector4& value);
 	Vector4& operator-=(const Vector4& value);
+	Vector4& operator/=(float value);
 	Vector4& operator=(const Vector4& value);
 	Vector4& operator=(const Vector3& value);
 

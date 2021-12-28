@@ -6,6 +6,7 @@ public:
 
 	Vector2 operator+(const Vector2& value) const;
 	Vector2 operator-(const Vector2& value) const;
+	Vector2 operator*(float value) const;
 	Vector2& operator+=(const Vector2& value);
 	Vector2& operator-=(const Vector2& value);
 	bool operator==(const Vector2& value) const;

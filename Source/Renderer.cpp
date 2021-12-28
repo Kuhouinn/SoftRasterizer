@@ -89,8 +89,20 @@ void Renderer::Render(Model& modelSource)
 
 			//齐次空间裁剪
 			auto clippedVertices = Clipping(vertex[0], vertex[1], vertex[2]);
+			if (clippedVertices.empty())
+			{
+				continue;
+			}
 
 			//透视除法
+			for (auto& vertex : clippedVertices)
+			{
+				//光栅化前的透视矫正
+				VertexData::PrePerspCorrection(vertex);
+
+				//从clip space 转换到 ndc space
+				vertex.clipPosition /= vertex.clipPosition.w;
+			}
 
 			//光栅化
 

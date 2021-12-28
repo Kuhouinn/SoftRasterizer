@@ -16,6 +16,11 @@ Vector2 Vector2::operator-() const
 }
 
 
+Vector2 Vector2::operator*(float value) const
+{
+	return { x * value,y * value };
+}
+
 bool Vector2::operator==(const Vector2& value) const
 {
 	return x == value.x && y == value.y;
