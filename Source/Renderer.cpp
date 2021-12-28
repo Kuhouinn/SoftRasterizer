@@ -74,18 +74,27 @@ void Renderer::Render(Model& modelSource)
 			vertex[0].normal = vertices[indices[j]].normal;
 			vertex[0].texCoordinate = vertices[indices[j]].texCoords;
 
-			vertex[0].position = vertices[indices[j + 1]].position;
-			vertex[0].normal = vertices[indices[j + 1]].normal;
-			vertex[0].texCoordinate = vertices[indices[j + 1]].texCoords;
+			vertex[1].position = vertices[indices[j + 1]].position;
+			vertex[1].normal = vertices[indices[j + 1]].normal;
+			vertex[1].texCoordinate = vertices[indices[j + 1]].texCoords;
 
-			vertex[0].position = vertices[indices[j + 2]].position;
-			vertex[0].normal = vertices[indices[j + 2]].normal;
-			vertex[0].texCoordinate = vertices[indices[j + 2]].texCoords;
+			vertex[2].position = vertices[indices[j + 2]].position;
+			vertex[2].normal = vertices[indices[j + 2]].normal;
+			vertex[2].texCoordinate = vertices[indices[j + 2]].texCoords;
 
 			//vertex shader处理阶段
 			shaderPipeline->VertexShader(vertex[0]);
 			shaderPipeline->VertexShader(vertex[1]);
 			shaderPipeline->VertexShader(vertex[2]);
+
+			//齐次空间裁剪
+			auto clippedVertices = Clipping(vertex[0], vertex[1], vertex[2]);
+
+			//透视除法
+
+			//光栅化
+
+			//fragment shader处理阶段
 		}
 
 	}
