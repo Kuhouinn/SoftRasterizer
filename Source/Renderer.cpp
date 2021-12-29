@@ -11,7 +11,7 @@ Renderer::Renderer(int width, int height)
 	frontBuffer = std::make_shared<FrameBuffer>(width, height);
 	backBuffer = std::make_shared<FrameBuffer>(width, height);
 
-	viewPortMatrix= 
+	viewPortMatrix = CalculateViewPortMatrix(width, height);
 }
 
 Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
@@ -46,10 +46,10 @@ Matrix4 Renderer::CalculateViewPortMatrix(int width, int height)
 	Matrix4 vpMat;
 	float hwidth = width * 0.5f;
 	float hheight = height * 0.5f;
-	vpMat[0][0] = hwidth; vpMat[0][1] = 0.0f;    vpMat[0][2] = 0.0f; vpMat[0][3] = 0.0f;
-	vpMat[1][0] = 0.0f;	  vpMat[1][1] = -hheight; vpMat[1][2] = 0.0f; vpMat[1][3] = 0.0f;
+	vpMat[0][0] = hwidth; vpMat[0][1] = 0.0f;    vpMat[0][2] = 0.0f; vpMat[0][3] = hwidth;
+	vpMat[1][0] = 0.0f;	  vpMat[1][1] = -hheight; vpMat[1][2] = 0.0f; vpMat[1][3] = hheight;
 	vpMat[2][0] = 0.0f;   vpMat[2][1] = 0.0f;    vpMat[2][2] = 1.0f; vpMat[2][3] = 0.0f;
-	vpMat[3][0] = hwidth; vpMat[3][1] = hheight; vpMat[3][2] = 0.0f; vpMat[3][3] = 0.0f;
+	vpMat[3][0] = 0.0f; vpMat[3][1] = 0.0f; vpMat[3][2] = 0.0f; vpMat[3][3] = 0.0f;
 	return vpMat;
 }
 
@@ -134,13 +134,15 @@ void Renderer::Render(Model& modelSource)
 				}
 
 				//光栅化
-				vertex[0].spos = glm::ivec2(m_viewportMatrix * vert[0].cpos + glm::vec4(0.5f));
-				vertex[1].spos = glm::ivec2(m_viewportMatrix * vert[1].cpos + glm::vec4(0.5f));
-				vertex[2].spos = glm::ivec2(m_viewportMatrix * vert[2].cpos + glm::vec4(0.5f));
+				auto tempVector = viewPortMatrix * vert[0].clipPosition + Vector4(0.5f);
+				vertex[0].screenPosition = Vector2(int(tempVector.x),int(tempVector.y));
+				tempVector = viewPortMatrix * vert[1].clipPosition + Vector4(0.5f);
+				vertex[1].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
+				tempVector = viewPortMatrix * vert[2].clipPosition + Vector4(0.5f);
+				vertex[2].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
 
-				m_shader_handler->rasterize_fill_edge_function(vert[0], vert[1], vert[2],
-					m_backBuffer->getWidth(), m_backBuffer->getHeight(), rasterized_points);
-
+				shaderPipeline->RasterizeFillEdgeFunction(vert[0], vert[1], vert[2],
+					backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
 			}
 
 			//fragment shader处理阶段

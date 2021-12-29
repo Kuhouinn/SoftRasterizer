@@ -12,6 +12,8 @@ public:
 	bool operator==(const Vector2& value) const;
 	bool operator!=(const Vector2& value) const;
 
+	friend Vector2 operator*(float value, const Vector2& vector);
+
 	Vector2 operator-()const;
 public:
 	float x = 0.0f;

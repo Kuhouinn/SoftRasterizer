@@ -57,3 +57,8 @@ Vector3& Vector3::operator-=(const Vector3& value)
 	z -= value.z;
 	return *this;
 }
+
+Vector3 operator*(float value, const Vector3& vector)
+{
+	return vector * value;
+}

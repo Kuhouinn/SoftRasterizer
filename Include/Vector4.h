@@ -20,6 +20,8 @@ public:
 	bool operator!=(const Vector4& value) const;
 	float& operator[](int index);
 	const float& operator[](int index) const;
+
+	friend Vector4 operator*(float value, const Vector4& vector);
 public:
 	float x = 0.0f;
 	float y = 0.0f;

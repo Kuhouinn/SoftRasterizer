@@ -13,6 +13,9 @@ struct VertexData
 	Vector2 screenPosition;
 
 	static void PrePerspCorrection(VertexData& v);
+	
 	static void AftPrespCorrection(VertexData& v);
+
+	static VertexData BarycentricLerp(const VertexData& v0, const VertexData& v1, const VertexData& v2, Vector3 w);
 };
 

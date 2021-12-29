@@ -12,6 +12,9 @@ public:
 	bool operator==(const Vector3& value) const;
 	bool operator!=(const Vector3& value) const;
 
+	friend Vector3 operator*(float value, const Vector3& vector);
+
+
 	Vector3 operator-()const;
 
 	Vector3 Normalize() const;

@@ -82,3 +82,8 @@ Vector4& Vector4::operator-=(const Vector4& value)
 	w -= value.w;
 	return *this;
 }
+
+Vector4 operator*(float value, const Vector4& vector)
+{
+	return vector * value;
+}
