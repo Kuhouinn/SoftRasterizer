@@ -5,11 +5,13 @@
 #include "FrameBuffer.h"
 #include <cmath>
 
-Renderer::Renderer()
+Renderer::Renderer(int width, int height)
 {
 	shaderPipeline = std::make_shared<DefaultShaderPipline>();
-	frontBuffer = std::make_shared<FrameBuffer>();
-	backBuffer = std::make_shared<FrameBuffer>();
+	frontBuffer = std::make_shared<FrameBuffer>(width, height);
+	backBuffer = std::make_shared<FrameBuffer>(width, height);
+
+	viewPortMatrix= 
 }
 
 Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
@@ -36,6 +38,19 @@ Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near
 	result[3][2] = -2.0 * far * near / farAddNear;
 
 	return result;
+}
+
+Matrix4 Renderer::CalculateViewPortMatrix(int width, int height)
+{
+	//Setup viewport matrix (ndc space -> screen space)
+	Matrix4 vpMat;
+	float hwidth = width * 0.5f;
+	float hheight = height * 0.5f;
+	vpMat[0][0] = hwidth; vpMat[0][1] = 0.0f;    vpMat[0][2] = 0.0f; vpMat[0][3] = 0.0f;
+	vpMat[1][0] = 0.0f;	  vpMat[1][1] = -hheight; vpMat[1][2] = 0.0f; vpMat[1][3] = 0.0f;
+	vpMat[2][0] = 0.0f;   vpMat[2][1] = 0.0f;    vpMat[2][2] = 1.0f; vpMat[2][3] = 0.0f;
+	vpMat[3][0] = hwidth; vpMat[3][1] = hheight; vpMat[3][2] = 0.0f; vpMat[3][3] = 0.0f;
+	return vpMat;
 }
 
 void Renderer::SetModelMatrix(const Matrix4& value)
@@ -95,16 +110,38 @@ void Renderer::Render(Model& modelSource)
 			}
 
 			//透视除法
-			for (auto& vertex : clippedVertices)
+			for (auto& vert : clippedVertices)
 			{
 				//光栅化前的透视矫正
-				VertexData::PrePerspCorrection(vertex);
+				VertexData::PrePerspCorrection(vert);
 
 				//从clip space 转换到 ndc space
-				vertex.clipPosition /= vertex.clipPosition.w;
+				vert.clipPosition /= vert.clipPosition.w;
 			}
 
-			//光栅化
+			for (auto i = 0; i < clippedVertices.size() - 2; ++i)
+			{
+				//Triangle assembly
+				VertexData vert[3] = {
+						clippedVertices[0],
+						clippedVertices[i + 1],
+						clippedVertices[i + 2] };
+
+				//背面剔除
+				if (IsTowardBackFace(vert[0].clipPosition, vert[1].clipPosition, vert[2].clipPosition))
+				{
+					continue;
+				}
+
+				//光栅化
+				vertex[0].spos = glm::ivec2(m_viewportMatrix * vert[0].cpos + glm::vec4(0.5f));
+				vertex[1].spos = glm::ivec2(m_viewportMatrix * vert[1].cpos + glm::vec4(0.5f));
+				vertex[2].spos = glm::ivec2(m_viewportMatrix * vert[2].cpos + glm::vec4(0.5f));
+
+				m_shader_handler->rasterize_fill_edge_function(vert[0], vert[1], vert[2],
+					m_backBuffer->getWidth(), m_backBuffer->getHeight(), rasterized_points);
+
+			}
 
 			//fragment shader处理阶段
 		}
@@ -167,4 +204,27 @@ std::vector<VertexData> Renderer::Clipping(const VertexData& v0, const VertexDat
 	}
 
 	return { v0, v1, v2 };
+}
+
+bool Renderer::IsTowardBackFace(const Vector4& v0, const Vector4& v1, const Vector4& v2) const
+{
+	//Back face culling in the ndc space
+	Vector3 tmp1 = Vector3(v1.x - v0.x, v1.y - v0.y, v1.z - v0.z);
+	Vector3 tmp2 = Vector3(v2.x - v0.x, v2.y - v0.y, v2.z - v0.z);
+
+	//叉乘得到法向量
+	Vector3 normal = tmp1.CrossProduct(tmp2).Normalize();
+	//glm::vec3 view = glm::normalize(glm::vec3(v1.x - camera->Position.x, v1.y - camera->Position.y, v1.z - camera->Position.z));
+	//NDC中观察方向指向+z
+	Vector3 view = Vector3(0, 0, 1);
+	double result = normal * view;
+
+	if (result > 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
 }
