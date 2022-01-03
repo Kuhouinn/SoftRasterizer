@@ -1,5 +1,4 @@
 #include "Model.h"
-#include "Shader.h"
 #include "stb_image.h"
 
 #include <assimp/Importer.hpp>
@@ -134,49 +133,49 @@ unsigned int Model::TextureFromFile(const char* path, const std::string& directo
 	std::string filename = std::string(path);
 	filename = directory + '/' + filename;
 
-	unsigned int textureID;
+	unsigned int textureID=0;
 	int width, height, nrComponents;
 	unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
-	if (data)
-	{
-		GLenum format, formatAlpha;
-		glCreateTextures(GL_TEXTURE_2D, 1, &textureID);
-		switch (nrComponents)
-		{
-		case 1:
-			format = GL_RED;
-			break;
-		case 3:
-			format = GL_RGB;
-			formatAlpha = GL_RGB8;
-			break;
-		case 4:
-			format = GL_RGBA;
-			formatAlpha = GL_RGBA8;
-			break;
-		default:
-			format = GL_RGB;
-			formatAlpha = GL_RGB8;
-		}
-
-		glBindTexture(GL_TEXTURE_2D, textureID);
-		glTextureStorage2D(textureID, 5, formatAlpha, width, height);
-		//glBindTextureUnit(0, textureID);
-		glTextureSubImage2D(textureID, 0, 0, 0, width, height, format, GL_UNSIGNED_BYTE, data);
-		glGenerateTextureMipmap(textureID);
-
-		glTextureParameteri(textureID, GL_TEXTURE_WRAP_S, GL_REPEAT);
-		glTextureParameteri(textureID, GL_TEXTURE_WRAP_T, GL_REPEAT);
-		glTextureParameteri(textureID, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-		glTextureParameteri(textureID, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-		stbi_image_free(data);
-	}
-	else
-	{
-		std::cout << "Texture failed to load at path: " << path << std::endl;
-		stbi_image_free(data);
-	}
+// 	if (data)
+// 	{
+// 		GLenum format, formatAlpha;
+// 		glCreateTextures(GL_TEXTURE_2D, 1, &textureID);
+// 		switch (nrComponents)
+// 		{
+// 		case 1:
+// 			format = GL_RED;
+// 			break;
+// 		case 3:
+// 			format = GL_RGB;
+// 			formatAlpha = GL_RGB8;
+// 			break;
+// 		case 4:
+// 			format = GL_RGBA;
+// 			formatAlpha = GL_RGBA8;
+// 			break;
+// 		default:
+// 			format = GL_RGB;
+// 			formatAlpha = GL_RGB8;
+// 		}
+// 
+// 		glBindTexture(GL_TEXTURE_2D, textureID);
+// 		glTextureStorage2D(textureID, 5, formatAlpha, width, height);
+// 		//glBindTextureUnit(0, textureID);
+// 		glTextureSubImage2D(textureID, 0, 0, 0, width, height, format, GL_UNSIGNED_BYTE, data);
+// 		glGenerateTextureMipmap(textureID);
+// 
+// 		glTextureParameteri(textureID, GL_TEXTURE_WRAP_S, GL_REPEAT);
+// 		glTextureParameteri(textureID, GL_TEXTURE_WRAP_T, GL_REPEAT);
+// 		glTextureParameteri(textureID, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+// 		glTextureParameteri(textureID, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+// 
+// 		stbi_image_free(data);
+// 	}
+// 	else
+// 	{
+// 		std::cout << "Texture failed to load at path: " << path << std::endl;
+// 		stbi_image_free(data);
+// 	}
 
 	return textureID;
 }

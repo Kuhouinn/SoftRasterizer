@@ -22,6 +22,8 @@ public:
 
 	const auto& GetColorBuffer() const{ return colorBuffer; }
 
+	float ReadDepth(int x,int y) const;
+
 
 private:
 	unsigned int width = 1920;

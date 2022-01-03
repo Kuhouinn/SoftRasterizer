@@ -57,3 +57,13 @@ void FrameBuffer::Clear(const Vector4& clearColor)
 		}
 	}
 }
+
+float FrameBuffer::ReadDepth(int x, int y) const
+{
+	if (x < 0 || x >= width || y < 0 || y >= height)
+	{
+		return 0.0f;
+	}
+
+	return depthBuffer[height * y + x];
+}

@@ -69,6 +69,8 @@ Vector4 Matrix4::operator*(const Vector4& value) const
 	{
 		result[i] = m[i][0] * value[0] + m[i][1] * value[1] + m[i][2] * value[2] + m[i][3] * value[3];
 	}
+
+	return result;
 }
 
 float* Matrix4::operator[](int index)

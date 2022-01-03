@@ -119,13 +119,13 @@ void Renderer::Render(Model& modelSource)
 				vert.clipPosition /= vert.clipPosition.w;
 			}
 
-			for (auto i = 0; i < clippedVertices.size() - 2; ++i)
+			for (auto k = 0; k < clippedVertices.size() - 2; ++k)
 			{
 				//Triangle assembly
 				VertexData vert[3] = {
 						clippedVertices[0],
-						clippedVertices[i + 1],
-						clippedVertices[i + 2] };
+						clippedVertices[k + 1],
+						clippedVertices[k + 2] };
 
 				//背面剔除
 				if (IsTowardBackFace(vert[0].clipPosition, vert[1].clipPosition, vert[2].clipPosition))
@@ -133,22 +133,40 @@ void Renderer::Render(Model& modelSource)
 					continue;
 				}
 
-				//光栅化
+				//计算屏幕坐标
 				auto tempVector = viewPortMatrix * vert[0].clipPosition + Vector4(0.5f);
-				vertex[0].screenPosition = Vector2(int(tempVector.x),int(tempVector.y));
+				vertex[0].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
 				tempVector = viewPortMatrix * vert[1].clipPosition + Vector4(0.5f);
 				vertex[1].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
 				tempVector = viewPortMatrix * vert[2].clipPosition + Vector4(0.5f);
 				vertex[2].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
 
+				//光栅化
 				shaderPipeline->RasterizeFillEdgeFunction(vert[0], vert[1], vert[2],
 					backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
+
+
+				//fragment shader处理阶段
+				for (auto& point : rasterizedPoints)
+				{
+					if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
+					{
+						//光栅化之后的透视矫正
+						VertexData::AftPrespCorrection(point);
+
+						Vector4 fragColor;
+						shaderPipeline->FragmentShader(point, fragColor);
+						backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
+						backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
+					}
+				}
+
+				rasterizedPoints.clear();
 			}
-
-			//fragment shader处理阶段
 		}
-
 	}
+
+	std::swap(backBuffer, frontBuffer);
 }
 
 void Renderer::SetShaderPipline(std::shared_ptr<ShaderPipeline>& value)
@@ -158,6 +176,11 @@ void Renderer::SetShaderPipline(std::shared_ptr<ShaderPipeline>& value)
 	value->SetProjectionMatrix(shaderPipeline->GetProjectionMatrix());
 
 	shaderPipeline = value;
+}
+
+const unsigned char* Renderer::GetRenderedColorBuffer()
+{
+	return frontBuffer->GetColorBuffer().data();
 }
 
 std::vector<VertexData> Renderer::Clipping(const VertexData& v0, const VertexData& v1, const VertexData& v2) const
