@@ -22,6 +22,7 @@ Vector4& Vector4::operator/=(float value)
 	x /= value;
 	y /= value;
 	z /= value;
+	w /= value;
 
 	return *this;
 }

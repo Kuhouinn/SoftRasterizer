@@ -54,10 +54,6 @@ Matrix4 Camera::GetViewMatrix()
  	inverseTransformMatrix.m[1][3] = -cameraPos.y;
  	inverseTransformMatrix.m[2][3] = -cameraPos.z;
 
-// 	inverseTransformMatrix.m[3][0] = -cameraPos.x;
-// 	inverseTransformMatrix.m[3][1] = -cameraPos.y;
-// 	inverseTransformMatrix.m[3][2] = -cameraPos.z;
-
 	return inversetRotationMatirx * inverseTransformMatrix;
 
 
@@ -70,10 +66,6 @@ Matrix4 Camera::GetViewMatrix()
 // 	auto inversetRotationMatirx = rotationMatrix.GetTransposed();
 // 
 // 	Matrix4 inverseTransformMatrix;
-// // 	inverseTransformMatrix.m[0][3] = -cameraPos.x;
-// // 	inverseTransformMatrix.m[1][3] = -cameraPos.y;
-// // 	inverseTransformMatrix.m[2][3] = -cameraPos.z;
-// 
 // 	inverseTransformMatrix.m[3][0] = -cameraPos.x;
 // 	inverseTransformMatrix.m[3][1] = -cameraPos.y;
 // 	inverseTransformMatrix.m[3][2] = -cameraPos.z;

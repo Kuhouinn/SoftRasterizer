@@ -16,9 +16,9 @@ void FrameBuffer::WritePixelColor(unsigned int x, unsigned int y, const Vector4&
 
 	//сп╢Щ╦д╫Ь
 	auto r = unsigned char(color.x * 255);
-	auto g = unsigned char(color.x * 255);
-	auto b = unsigned char(color.x * 255);
-	auto a = unsigned char(color.x * 255);
+	auto g = unsigned char(color.y * 255);
+	auto b = unsigned char(color.z * 255);
+	auto a = unsigned char(color.w * 255);
 
 	auto index = (y * width + x) * 4;
 	colorBuffer[index] = r;

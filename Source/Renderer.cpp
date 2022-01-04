@@ -35,7 +35,10 @@ Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near
 	result[1][1] = yScale;
 	result[2][2] = -farAddNear / farMinusNear;
 	result[2][3] = -2.0 * far * near / farMinusNear;
-	result[3][2] = -1;
+	result[3][2] = -1.0f;
+
+	//不能忘记设置0，我的矩阵默认创建单位矩阵
+	result[3][3] = 0.0f;
 
 	return result;
 }
