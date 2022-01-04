@@ -12,13 +12,13 @@
 // void processInput(GLFWwindow* window);
 
 // settings
-const unsigned int SCR_WIDTH = 1920;
-const unsigned int SCR_HEIGHT = 1080;
+const unsigned int SCR_WIDTH = 1280;
+const unsigned int SCR_HEIGHT = 720;
 
 int main(int argc, char* argv[])
 {
 
-	std::shared_ptr<RenderWindow> winApp = RenderWindow::GetInstance(SCR_WIDTH, SCR_HEIGHT, "CGAssignment2: Rasterization");
+	std::shared_ptr<RenderWindow> winApp = RenderWindow::GetInstance(SCR_WIDTH, SCR_HEIGHT, "Soft Rasterizer");
 
 	if (winApp == nullptr)
 	{
@@ -54,11 +54,14 @@ int main(int argc, char* argv[])
 
 	Renderer renderer(SCR_WIDTH,SCR_HEIGHT);
 	Camera camera;
-	Model myModel("./Model/AssimpResource/nanosuit.obj");
+	//Model myModel("./Model/AssimpResource/nanosuit.obj");
+	Model myModel("./Model/diablo3_pose.obj");
 
 	auto viewMatrix = camera.GetViewMatrix();
+	auto projection = Renderer::CalculateProjectionMatrix(camera.GetCameraFov(), static_cast<float>(SCR_WIDTH) / static_cast<float>(SCR_HEIGHT), 0.001f, 1000.0f);
+	auto pv = projection * viewMatrix;
 	renderer.SetViewMatrix(viewMatrix);
-	renderer.SetProjectionMatrix(Renderer::CalculateProjectionMatrix(camera.GetCameraFov(), static_cast<float>(SCR_WIDTH) / static_cast<float>(SCR_HEIGHT), 0.1f, 1000.0f));
+	renderer.SetProjectionMatrix(Renderer::CalculateProjectionMatrix(camera.GetCameraFov(), static_cast<float>(SCR_WIDTH) / static_cast<float>(SCR_HEIGHT), 0.001f, 1000.0f));
 
 	//这里将会使用第三方库加载模型，可能会定义一个数据结构去
 	//存储顶点数据。
@@ -77,6 +80,8 @@ int main(int argc, char* argv[])
 // 		glClear(GL_COLOR_BUFFER_BIT);
 
 		winApp->ProcessEvent();
+
+		renderer.ClearColor({ 0.2f, 0.3f, 0.3f,1.0f });
 
 		//在这里将会实现软渲染器的渲染管线，替代OpenGL的渲染管线。预计是做一套可编程管线。
 		//具体步骤包括顶点着色器处理，图元装配，裁剪，背面剔除，光栅化，片元着色器处理，深度测试。

@@ -29,6 +29,8 @@ public:
 
 	const unsigned char* GetRenderedColorBuffer();
 
+	void ClearColor(const Vector4& color);
+
 private:
 	//先在齐次裁剪空间使用简单裁剪，后续如果有时间可以换成Sutherland算法。
 	std::vector<VertexData> Clipping(const VertexData& v0, const VertexData& v1, const VertexData& v2) const;

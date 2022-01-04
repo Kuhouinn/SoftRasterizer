@@ -47,6 +47,13 @@ Matrix4 Matrix4::GetTransposed() const
 	return result;
 }
 
+void Matrix4::SetScale(const Vector3& scale)
+{
+	m[0][0] = scale.x;
+	m[1][1] = scale.y;
+	m[2][2] = scale.z;
+}
+
 Matrix4 Matrix4::operator*(const Matrix4& value) const
 {
 	Matrix4 result;

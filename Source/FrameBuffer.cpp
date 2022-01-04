@@ -41,9 +41,9 @@ void FrameBuffer::WriteDepth(unsigned int x, unsigned int y, float depth)
 void FrameBuffer::Clear(const Vector4& clearColor)
 {
 	auto r = unsigned char(clearColor.x * 255);
-	auto g = unsigned char(clearColor.x * 255);
-	auto b = unsigned char(clearColor.x * 255);
-	auto a = unsigned char(clearColor.x * 255);
+	auto g = unsigned char(clearColor.y * 255);
+	auto b = unsigned char(clearColor.z * 255);
+	auto a = unsigned char(clearColor.w * 255);
 
 	for (auto y = 0; y < height; y++)
 	{
@@ -54,6 +54,8 @@ void FrameBuffer::Clear(const Vector4& clearColor)
 			colorBuffer[index + 1] = g;
 			colorBuffer[index + 2] = b;
 			colorBuffer[index + 3] = a;
+
+			depthBuffer[y * width + x] = 1.0f;
 		}
 	}
 }

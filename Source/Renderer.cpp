@@ -34,8 +34,8 @@ Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near
 	result[0][0] = xScale;
 	result[1][1] = yScale;
 	result[2][2] = -farAddNear / farMinusNear;
-	result[2][3] = -1;
-	result[3][2] = -2.0 * far * near / farAddNear;
+	result[2][3] = -2.0 * far * near / farMinusNear;
+	result[3][2] = -1;
 
 	return result;
 }
@@ -135,11 +135,11 @@ void Renderer::Render(Model& modelSource)
 
 				//计算屏幕坐标
 				auto tempVector = viewPortMatrix * vert[0].clipPosition + Vector4(0.5f);
-				vertex[0].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
+				vert[0].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
 				tempVector = viewPortMatrix * vert[1].clipPosition + Vector4(0.5f);
-				vertex[1].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
+				vert[1].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
 				tempVector = viewPortMatrix * vert[2].clipPosition + Vector4(0.5f);
-				vertex[2].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
+				vert[2].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
 
 				//光栅化
 				shaderPipeline->RasterizeFillEdgeFunction(vert[0], vert[1], vert[2],
@@ -181,6 +181,11 @@ void Renderer::SetShaderPipline(std::shared_ptr<ShaderPipeline>& value)
 const unsigned char* Renderer::GetRenderedColorBuffer()
 {
 	return frontBuffer->GetColorBuffer().data();
+}
+
+void Renderer::ClearColor(const Vector4& color)
+{
+	backBuffer->Clear(color);
 }
 
 std::vector<VertexData> Renderer::Clipping(const VertexData& v0, const VertexData& v1, const VertexData& v2) const

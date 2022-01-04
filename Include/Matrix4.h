@@ -10,6 +10,8 @@ public:
 
 	Matrix4 GetTransposed() const;
 
+	void SetScale(const Vector3& scale);
+
 	Matrix4 operator*(const Matrix4& value) const;
 
 	Vector4 operator*(const Vector4& value) const;
