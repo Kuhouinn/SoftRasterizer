@@ -3,7 +3,6 @@
 
 void DefaultShaderPipline::VertexShader(VertexData& vertex)
 {
-	//modelMatrix.SetScale({ 0.2,0.2,0.2 });
 	vertex.position = modelMatrix * vertex.position;
 	vertex.clipPosition = projectionMatrix * viewMatrix * vertex.position;
 }

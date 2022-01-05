@@ -1,9 +1,13 @@
 #pragma once
 #include <vector>
+#include <memory>
 
 #include "Matrix4.h"
 
 struct VertexData;
+
+class Texture;
+class Vector2;
 
 class ShaderPipeline
 {
@@ -22,6 +26,14 @@ public:
 	const Matrix4& GetProjectionMatrix() const { return projectionMatrix; }
 	void SetProjectionMatrix(const Matrix4& projection) { projectionMatrix = projection; }
 
+	void SetDiffuseTexId(int id) { diffuseTextureId = id; }
+
+	void SetSpecularTexId(int id) { specularTextureId = id; }
+
+	void UploadTexture(std::shared_ptr<Texture> texture) { textures.push_back(texture); }
+
+	void ClearTextures() { textures.clear(); }
+
 	//三角形光栅化,使用Fill Edge 
 	static void RasterizeFillEdgeFunction(
 		const VertexData& v0,
@@ -31,9 +43,16 @@ public:
 		unsigned int screeneHeight,
 		std::vector<VertexData>& rasterizedPoints);
 
+	static Vector4 Texture2D(unsigned int id, const Vector2& uv);
+
 protected:
 	Matrix4 modelMatrix;
 	Matrix4 viewMatrix;
 	Matrix4 projectionMatrix;
+
+	int diffuseTextureId = -1;
+	int specularTextureId = -1;
+
+	static std::vector<std::shared_ptr<Texture>> textures;
 };
 

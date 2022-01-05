@@ -2,12 +2,14 @@
 
 #include "Model.h"
 #include "DefaultShaderPipline.h"
+#include "LightingShaderPipline.h"
 #include "FrameBuffer.h"
 #include <cmath>
 
 Renderer::Renderer(int width, int height)
 {
-	shaderPipeline = std::make_shared<DefaultShaderPipline>();
+	//shaderPipeline = std::make_shared<DefaultShaderPipline>();
+	shaderPipeline = std::make_shared<LightingShaderPipline>();
 	frontBuffer = std::make_shared<FrameBuffer>(width, height);
 	backBuffer = std::make_shared<FrameBuffer>(width, height);
 
@@ -82,9 +84,26 @@ void Renderer::Render(Model& modelSource)
 	{
 		auto& vertices = meshes[i].vertices;
 		auto& indices = meshes[i].indices;
+		auto& texrures = meshes[i].textures;
+
+		shaderPipeline->ClearTextures();
+		for (auto k = 0; k < texrures.size(); k++)
+		{
+			shaderPipeline->UploadTexture(texrures[k]);
+
+			if (texrures[k]->type == "texture_diffuse")
+			{
+				shaderPipeline->SetDiffuseTexId(k);
+			}
+			else if (texrures[k]->type == "texture_specular")
+			{
+				shaderPipeline->SetSpecularTexId(k);
+			}
+		}
 
 		for (auto j = 0; j < indices.size(); j += 3)
 		{
+
 			VertexData vertex[3];
 
 			//从模型中按mesh取出每一个三角面片去处理

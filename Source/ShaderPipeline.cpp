@@ -1,7 +1,11 @@
 #include "ShaderPipeline.h"
 #include "VertexData.h"
+#include "Texture.h"
+
 #include <cmath>
 #include <algorithm>
+
+std::vector<std::shared_ptr<Texture>> ShaderPipeline::textures = {};
 
 void ShaderPipeline::RasterizeFillEdgeFunction(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
 {
@@ -60,4 +64,14 @@ void ShaderPipeline::RasterizeFillEdgeFunction(const VertexData& v0, const Verte
 	rasterizedPoints.push_back(v0);
 	rasterizedPoints.push_back(v1);
 	rasterizedPoints.push_back(v2);
+}
+
+Vector4 ShaderPipeline::Texture2D(unsigned int id, const Vector2& uv)
+{
+	if (id< 0|| id>textures.size())
+	{
+		return Vector4();
+	}
+
+	return textures[id]->TextureSamplingNearest(uv);
 }

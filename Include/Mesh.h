@@ -2,9 +2,11 @@
 
 #include "Vector3.h"
 #include "Vector2.h"
+#include "Texture.h"
 
 #include <string>
 #include <vector>
+#include <memory>
 
 struct Vertex 
 {
@@ -20,23 +22,16 @@ struct Vertex
 	Vector3 bitangent;
 };
 
-struct Texture 
-{
-	unsigned int id;
-	std::string type;
-	std::string path;
-};
-
 class Mesh
 {
 public:
 	// mesh Data
 	std::vector<Vertex>       vertices;
 	std::vector<unsigned int> indices;
-	std::vector<Texture>      textures;
+	std::vector<std::shared_ptr<Texture>>      textures;
 
 	// constructor
-	Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures)
+	Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<std::shared_ptr<Texture>> textures)
 	{
 		this->vertices = vertices;
 		this->indices = indices;

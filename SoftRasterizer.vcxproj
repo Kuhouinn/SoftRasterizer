@@ -145,6 +145,7 @@
     <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="Source\DefaultShaderPipline.cpp" />
     <ClCompile Include="Source\FrameBuffer.cpp" />
+    <ClCompile Include="Source\LightingShaderPipline.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Matrix3.cpp" />
     <ClCompile Include="Source\Matrix4.cpp" />
@@ -154,6 +155,7 @@
     <ClCompile Include="Source\ShaderPipeline.cpp" />
     <ClCompile Include="Source\stb.cpp" />
     <ClCompile Include="Source\RenderWindow.cpp" />
+    <ClCompile Include="Source\Texture.cpp" />
     <ClCompile Include="Source\Vector2.cpp" />
     <ClCompile Include="source\Vector3.cpp" />
     <ClCompile Include="source\Vector4.cpp" />
@@ -164,6 +166,7 @@
     <ClInclude Include="Include\Camera.h" />
     <ClInclude Include="Include\DefaultShaderPipline.h" />
     <ClInclude Include="Include\FrameBuffer.h" />
+    <ClInclude Include="Include\LightingShaderPipline.h" />
     <ClInclude Include="include\Matrix3.h" />
     <ClInclude Include="Include\Matrix4.h" />
     <ClInclude Include="Include\Mesh.h" />
@@ -172,6 +175,7 @@
     <ClInclude Include="Include\ShaderPipeline.h" />
     <ClInclude Include="Include\stb_image.h" />
     <ClInclude Include="Include\RenderWindow.h" />
+    <ClInclude Include="Include\Texture.h" />
     <ClInclude Include="Include\Vector2.h" />
     <ClInclude Include="include\Vector3.h" />
     <ClInclude Include="include\Vector4.h" />

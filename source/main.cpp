@@ -12,8 +12,8 @@
 // void processInput(GLFWwindow* window);
 
 // settings
-const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 720;
+const unsigned int SCR_WIDTH = 1920;
+const unsigned int SCR_HEIGHT = 1080;
 
 int main(int argc, char* argv[])
 {
@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
 	Renderer renderer(SCR_WIDTH,SCR_HEIGHT);
 	Camera camera;
 	//Model myModel("./Model/AssimpResource/nanosuit.obj");
-	Model myModel("./Model/diablo3_pose.obj");
+	Model myModel("./Model/diablo3_pose/diablo3_pose.obj");
 
 	auto viewMatrix = camera.GetViewMatrix();
 	auto projection = Renderer::CalculateProjectionMatrix(camera.GetCameraFov(), static_cast<float>(SCR_WIDTH) / static_cast<float>(SCR_HEIGHT), 0.001f, 1000.0f);

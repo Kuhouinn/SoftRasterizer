@@ -1,3 +1,2 @@
-﻿  Camera.cpp
-D:\UE4SourceCode\SoftRasterizer\Source\Camera.cpp(35,17): warning C4244:  “-=”: 从“double”转换到“float”，可能丢失数据
+﻿  main.cpp
   SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Debug\SoftRasterizer.exe
