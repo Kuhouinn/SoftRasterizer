@@ -97,3 +97,8 @@ Vector4 ShaderPipeline::Texture2D(unsigned int id, const Vector2& uv)
 
 	return textures[id]->TextureSamplingNearest(uv);
 }
+
+Vector3 ShaderPipeline::Reflect(const Vector3& l, const Vector3& n)
+{
+	return 2 * (l * n) * n - l;
+}

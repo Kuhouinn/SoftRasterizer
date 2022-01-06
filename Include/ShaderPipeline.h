@@ -13,9 +13,9 @@ class ShaderPipeline
 {
 public:
 
-	virtual void VertexShader(VertexData& vertex) = 0;
+	virtual void VertexShader(VertexData& vertex) {};
 
-	virtual void FragmentShader(const VertexData& data, Vector4& fragColor) = 0;
+	virtual void FragmentShader(const VertexData& data, Vector4& fragColor) {};
 
 	const Matrix4& GetModelMatrix() const { return modelMatrix; }
 	void SetModelMatrix(const Matrix4& model) { modelMatrix = model; }
@@ -44,6 +44,8 @@ public:
 		std::vector<VertexData>& rasterizedPoints);
 
 	static Vector4 Texture2D(unsigned int id, const Vector2& uv);
+
+	static Vector3 Reflect(const Vector3& l, const Vector3& n);
 
 protected:
 	Matrix4 modelMatrix;

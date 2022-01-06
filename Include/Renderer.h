@@ -7,6 +7,8 @@
 
 class Model;
 class ShaderPipeline;
+class LightingShaderPipline;
+class DirectionalLight;
 class FrameBuffer;
 
 class Renderer
@@ -27,6 +29,8 @@ public:
 
 	void SetShaderPipline(std::shared_ptr<ShaderPipeline>& value);
 
+	void SetDirectionalLight(std::shared_ptr<DirectionalLight> light);
+
 	const unsigned char* GetRenderedColorBuffer();
 
 	void ClearColor(const Vector4& color);
@@ -41,6 +45,7 @@ private:
 	float near = 0.01f;
 	float far = 1000.0f;
 	std::shared_ptr<ShaderPipeline> shaderPipeline = nullptr;
+	std::shared_ptr<LightingShaderPipline> lightShaderPipeline = nullptr;
 	std::shared_ptr<FrameBuffer> frontBuffer = nullptr;
 	std::shared_ptr<FrameBuffer> backBuffer = nullptr;
 

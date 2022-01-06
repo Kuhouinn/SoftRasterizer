@@ -7,12 +7,16 @@ public:
 	Vector3 operator+(const Vector3& value) const;
 	Vector3 operator-(const Vector3& value) const;
 	float operator*(const Vector3& value) const;
+	Vector3& operator*(float value);
+	Vector3& operator*=(float value);
 	Vector3& operator+=(const Vector3& value);
 	Vector3& operator-=(const Vector3& value);
 	bool operator==(const Vector3& value) const;
 	bool operator!=(const Vector3& value) const;
 
 	friend Vector3 operator*(float value, const Vector3& vector);
+
+	float Length();
 
 
 	Vector3 operator-()const;

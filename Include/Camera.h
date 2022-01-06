@@ -9,7 +9,9 @@ public:
 
 	const Vector3& GetCameraPosition() { return cameraPos; }
 
-	const Vector3& GetCameraDirection() { return cameraDirection; }
+	const Vector3& GetCameraTarget() { return target; }
+
+	Vector3 GetCameraDirection() { return (cameraPos-target).Normalize(); }
 
 	const Vector3& GetCameraUp() { return cameraUp; }
 
@@ -18,7 +20,7 @@ public:
 	void SetCameraPosition(const Vector3& position) { cameraPos = position; }
 	
 	//统一在传进来之前标准化一下
-	void SetCameraDirection(const Vector3& direction) { cameraDirection = direction; }
+	void SetCameraTarget(const Vector3& value) { target = value; }
 
 	void SetCameraUp(const Vector3& up) { cameraUp = up; }
 
@@ -33,7 +35,7 @@ private:
 	float yaw = -90.0f;
 	float fov = 45.0f;
 	Vector3 cameraPos = { 0.0f, 0.0f, 3.0f };
-	Vector3 cameraDirection = { 0.0f, 0.0f, -1.0f };
+	Vector3 target = { 0.0f, 0.0f, 0.0f };
 	Vector3 cameraUp = { 0.0f, 1.0f, 0.0f };
 };
 

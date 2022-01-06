@@ -16,6 +16,12 @@ public:
 
 	Vector4 operator*(const Vector4& value) const;
 
+	Matrix4 GetMatrixInverse();
+
+	float GetA();
+
+	Matrix4 GetAStar();
+
 	float* operator[](int index);
 public:
 	float m[4][4] = { 1,0,0,0,

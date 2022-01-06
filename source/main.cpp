@@ -7,13 +7,14 @@
 #include "Renderer.h"
 #include "Model.h"
 #include "RenderWindow.h"
+#include "DirectionalLight.h"
 
 // void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 // void processInput(GLFWwindow* window);
 
 // settings
-const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 720;
+const unsigned int SCR_WIDTH = 1920;
+const unsigned int SCR_HEIGHT = 1080;
 
 int main(int argc, char* argv[])
 {
@@ -63,6 +64,9 @@ int main(int argc, char* argv[])
 	renderer.SetViewMatrix(viewMatrix);
 	renderer.SetProjectionMatrix(Renderer::CalculateProjectionMatrix(camera.GetCameraFov(), static_cast<float>(SCR_WIDTH) / static_cast<float>(SCR_HEIGHT), 0.001f, 1000.0f));
 
+	auto directionalLight = std::make_shared<DirectionalLight>();
+	renderer.SetDirectionalLight(directionalLight);
+
 	//这里将会使用第三方库加载模型，可能会定义一个数据结构去
 	//存储顶点数据。
 
@@ -88,7 +92,7 @@ int main(int argc, char* argv[])
 		renderer.Render(myModel);
 
 
-		//frameBuffer有了，想个办法绘制到屏幕上
+		//绘制到屏幕上
 		double deltaTime = winApp->UpdateScreenSurface(
 			renderer.GetRenderedColorBuffer(),
 			SCR_WIDTH,
@@ -96,10 +100,32 @@ int main(int argc, char* argv[])
 			4);
 
 
-		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
-		// -------------------------------------------------------------------------------
-// 		glfwSwapBuffers(window);
-// 		glfwPollEvents();
+// 		if (winApp->GetIsMouseLeftButtonPressed())
+// 		{
+// 			int deltaX = winApp->GetMouseMotionDeltaX();
+// 			int deltaY = winApp->GetMouseMotionDeltaY();
+// 			glm::mat4 cameraRotMat(1.0f);
+// 			if (std::abs(deltaX) > std::abs(deltaY))
+// 				cameraRotMat = glm::rotate(glm::mat4(1.0f), -deltaX * 0.001f, glm::vec3(0, 1, 0));
+// 			else
+// 				cameraRotMat = glm::rotate(glm::mat4(1.0f), -deltaY * 0.001f, glm::vec3(1, 0, 0));
+// 
+// 			cameraPos = glm::vec3(cameraRotMat * glm::vec4(cameraPos, 1.0f));
+// 			renderer->setViewMatrix(TRUtils::calcViewMatrix(cameraPos, lookAtTarget, glm::vec3(0.0, 1.0, 0.0f)));
+// 		}
+
+		//Camera zoom in and zoom out
+		if (winApp->GetMouseWheelDelta() != 0)
+		{
+			auto cameraDirection = camera.GetCameraDirection();
+			auto newPosition = camera.GetCameraPosition() +  cameraDirection * (winApp->GetMouseWheelDelta() * 0.1f);
+			camera.SetCameraPosition(newPosition);
+
+			if ((newPosition - camera.GetCameraTarget()).Length() > 1.0f)
+			{
+				renderer.SetViewMatrix(camera.GetViewMatrix());
+			}
+		}
 	}
 
 	// glfw: terminate, clearing all previously allocated GLFW resources.

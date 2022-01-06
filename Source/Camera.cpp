@@ -42,7 +42,7 @@ void Camera::SetScrollCallback(double yOffset)
 Matrix4 Camera::GetViewMatrix()
 {
 	//构建lookat矩阵。lookat矩阵本质上是把相机变换矩阵的逆矩阵给拆开了，变成了R-*T-。
-	auto zAxis = -cameraDirection;
+	auto zAxis = (cameraPos-target).Normalize();
 	auto xAxis = cameraUp.CrossProduct(zAxis).Normalize();
 	auto yAxis = zAxis.CrossProduct(xAxis).Normalize();
 

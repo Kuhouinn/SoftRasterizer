@@ -5,11 +5,14 @@
 #include "LightingShaderPipline.h"
 #include "FrameBuffer.h"
 #include <cmath>
+#include <memory>
 
 Renderer::Renderer(int width, int height)
 {
 	//shaderPipeline = std::make_shared<DefaultShaderPipline>();
-	shaderPipeline = std::make_shared<LightingShaderPipline>();
+	//shaderPipeline = std::make_shared<LightingShaderPipline>();
+	lightShaderPipeline = std::make_shared<LightingShaderPipline>();
+	shaderPipeline = lightShaderPipeline;
 	frontBuffer = std::make_shared<FrameBuffer>(width, height);
 	backBuffer = std::make_shared<FrameBuffer>(width, height);
 
@@ -198,6 +201,14 @@ void Renderer::SetShaderPipline(std::shared_ptr<ShaderPipeline>& value)
 	value->SetProjectionMatrix(shaderPipeline->GetProjectionMatrix());
 
 	shaderPipeline = value;
+}
+
+void Renderer::SetDirectionalLight(std::shared_ptr<DirectionalLight> light)
+{
+	if (lightShaderPipeline)
+	{
+		lightShaderPipeline->SetDirectionalLight(light);
+	}
 }
 
 const unsigned char* Renderer::GetRenderedColorBuffer()

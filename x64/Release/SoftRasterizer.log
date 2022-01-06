@@ -1,0 +1,61 @@
+﻿  Camera.cpp
+  DefaultShaderPipline.cpp
+  DirectionalLight.cpp
+  FrameBuffer.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\Camera.cpp(35,17): warning C4244:  “-=”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(48,21): warning C4018:  “<”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(50,22): warning C4018:  “<”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(65,17): warning C4018:  “>=”: 有符号/无符号不匹配
+  LightingShaderPipline.cpp
+  main.cpp
+  Matrix3.cpp
+  Matrix4.cpp
+  Mesh.cpp
+  Model.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(65,40): warning C4018:  “>=”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Model.cpp(32,20): warning C4018:  “<”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Model.cpp(38,20): warning C4018:  “<”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Model.cpp(51,20): warning C4018:  “<”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Model.cpp(66,20): warning C4018:  “<”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Model.cpp(70,21): warning C4018:  “<”: 有符号/无符号不匹配
+  Renderer.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\Model.cpp(93,20): warning C4018:  “<”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(32,15): warning C4244:  “初始化”: 从“double”转换到“float”，可能丢失数据
+  ShaderPipeline.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(42,35): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(47,18): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(47,14): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(48,54): warning C4244:  “参数”: 从“const int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(48,33): warning C4244:  “参数”: 从“const int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(49,54): warning C4244:  “参数”: 从“const int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(49,33): warning C4244:  “参数”: 从“const int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(50,54): warning C4244:  “参数”: 从“const int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(50,33): warning C4244:  “参数”: 从“const int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(58,33): warning C4244:  “=”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(59,33): warning C4244:  “=”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(62,33): warning C4244:  “=”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(63,33): warning C4244:  “=”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(74,59): warning C4018:  “>”: 有符号/无符号不匹配
+  stb.cpp
+  RenderWindow.cpp
+  Texture.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(74,126): warning C4018:  “>”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Texture.cpp(23,16): warning C4244:  “=”: 从“float”转换到“int”，可能丢失数据
+  Vector2.cpp
+  Vector2i.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\Texture.cpp(24,16): warning C4244:  “=”: 从“float”转换到“int”，可能丢失数据
+  Vector3.cpp
+  Vector4.cpp
+  VertexData.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\Vector2i.cpp(50,18): warning C4244:  “参数”: 从“float”转换到“int”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\VertexData.cpp(31,82): warning C4244:  “=”: 从“float”转换到“int”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\VertexData.cpp(32,82): warning C4244:  “=”: 从“float”转换到“int”，可能丢失数据
+  glad.c
+  正在生成代码
+D:\UE4SourceCode\SoftRasterizer\source\Vector4.cpp(58): warning C4715: “Vector4::operator[]”: 不是所有的控件路径都返回值
+D:\UE4SourceCode\SoftRasterizer\source\Vector4.cpp(69): warning C4715: “Vector4::operator[]”: 不是所有的控件路径都返回值
+  998 of 998 functions (100.0%) were compiled.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe
