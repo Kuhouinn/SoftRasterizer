@@ -12,8 +12,8 @@
 // void processInput(GLFWwindow* window);
 
 // settings
-const unsigned int SCR_WIDTH = 1920;
-const unsigned int SCR_HEIGHT = 1080;
+const unsigned int SCR_WIDTH = 1280;
+const unsigned int SCR_HEIGHT = 720;
 
 int main(int argc, char* argv[])
 {

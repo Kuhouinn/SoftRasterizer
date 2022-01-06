@@ -72,6 +72,9 @@
     <ClCompile Include="Source\LightingShaderPipline.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Vector2i.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Vector3.h">
@@ -123,6 +126,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Include\LightingShaderPipline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Vector2i.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

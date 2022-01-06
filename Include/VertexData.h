@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector2.h"
+#include "Vector2i.h"
 #include "Vector3.h"
 #include "Vector4.h"
 
@@ -10,7 +11,7 @@ struct VertexData
 	Vector3 normal;
 	Vector2 texCoordinate;
 	Vector4	clipPosition;
-	Vector2 screenPosition;
+	Vector2i screenPosition;
 
 	static void PrePerspCorrection(VertexData& v);
 	

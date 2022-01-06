@@ -7,6 +7,20 @@
 
 std::vector<std::shared_ptr<Texture>> ShaderPipeline::textures = {};
 
+bool InsideTriangle(const Vector3& p, const Vector3& v0, const Vector3& v1, const Vector3& v2)
+{
+	//通过叉乘的方法判断点是否在三角形内。
+	bool f1 = (p - v0).CrossProduct(v1 - v0).z > 0;
+	bool f2 = (p - v1).CrossProduct(v2 - v1).z > 0;
+	bool f3 = (p - v2).CrossProduct(v0 - v2).z > 0;
+	if (f1 == f2 && f2 == f3)
+	{
+		return true;
+	}
+
+	return false;
+}
+
 void ShaderPipeline::RasterizeFillEdgeFunction(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
 {
 	//Edge-function rasterization algorithm
@@ -31,6 +45,14 @@ void ShaderPipeline::RasterizeFillEdgeFunction(const VertexData& v0, const Verte
 		for (int iy = minY; iy <= maxY; iy++)
 		{
 			Vector3 p(ix, iy, 1.0);
+			Vector3 vs0(v0.screenPosition.x, v0.screenPosition.y, 1.0f);
+			Vector3 vs1(v1.screenPosition.x, v1.screenPosition.y, 1.0f);
+			Vector3 vs2(v2.screenPosition.x, v2.screenPosition.y, 1.0f);
+
+			if (!InsideTriangle(p, vs0, vs1, vs2))
+			{
+				continue;
+			}
 
 			Vector3 s[2];
 			s[1].x = v2.screenPosition.y - v0.screenPosition.y;

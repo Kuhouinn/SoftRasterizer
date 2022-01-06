@@ -1,2 +1,38 @@
-﻿  main.cpp
-  SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Debug\SoftRasterizer.exe
+﻿  DefaultShaderPipline.cpp
+  LightingShaderPipline.cpp
+  main.cpp
+  Mesh.cpp
+  Model.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(32,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(38,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(51,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(66,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(70,21): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(93,20): warning C4018: “<”: 有符号/无符号不匹配
+  Renderer.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(29,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(39,35): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  ShaderPipeline.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(47,18): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(47,14): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(48,54): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(48,33): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(49,54): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(49,33): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(50,54): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(50,33): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(58,33): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(59,33): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(62,33): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(63,33): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(74,59): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(74,126): warning C4018: “>”: 有符号/无符号不匹配
+  Texture.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Texture.cpp(23,16): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Texture.cpp(24,16): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+  Vector2.cpp
+  VertexData.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\VertexData.cpp(31,82): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\VertexData.cpp(32,82): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+  正在生成代码...
+  SoftRasterizer.vcxproj -> C:\Users\admin\Documents\SoftRasterizer\x64\Debug\SoftRasterizer.exe

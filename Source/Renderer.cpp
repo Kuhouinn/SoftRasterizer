@@ -157,11 +157,11 @@ void Renderer::Render(Model& modelSource)
 
 				//计算屏幕坐标
 				auto tempVector = viewPortMatrix * vert[0].clipPosition + Vector4(0.5f);
-				vert[0].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
+				vert[0].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
 				tempVector = viewPortMatrix * vert[1].clipPosition + Vector4(0.5f);
-				vert[1].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
+				vert[1].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
 				tempVector = viewPortMatrix * vert[2].clipPosition + Vector4(0.5f);
-				vert[2].screenPosition = Vector2(int(tempVector.x), int(tempVector.y));
+				vert[2].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
 
 				//光栅化
 				shaderPipeline->RasterizeFillEdgeFunction(vert[0], vert[1], vert[2],

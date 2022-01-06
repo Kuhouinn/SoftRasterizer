@@ -157,6 +157,7 @@
     <ClCompile Include="Source\RenderWindow.cpp" />
     <ClCompile Include="Source\Texture.cpp" />
     <ClCompile Include="Source\Vector2.cpp" />
+    <ClCompile Include="Source\Vector2i.cpp" />
     <ClCompile Include="source\Vector3.cpp" />
     <ClCompile Include="source\Vector4.cpp" />
     <ClCompile Include="Source\VertexData.cpp" />
@@ -177,6 +178,7 @@
     <ClInclude Include="Include\RenderWindow.h" />
     <ClInclude Include="Include\Texture.h" />
     <ClInclude Include="Include\Vector2.h" />
+    <ClInclude Include="Include\Vector2i.h" />
     <ClInclude Include="include\Vector3.h" />
     <ClInclude Include="include\Vector4.h" />
     <ClInclude Include="Include\VertexData.h" />
