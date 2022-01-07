@@ -40,6 +40,7 @@ private:
 	std::vector<VertexData> Clipping(const VertexData& v0, const VertexData& v1, const VertexData& v2) const;
 
 	bool IsTowardBackFace(const Vector4& v0, const Vector4& v1, const Vector4& v2) const;
+	bool IsBackFacing(const Vector2i& v0, const Vector2i& v1, const Vector2i& v2) const;
 
 private:
 	float near = 0.01f;

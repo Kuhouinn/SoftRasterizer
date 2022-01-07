@@ -13,8 +13,8 @@
 // void processInput(GLFWwindow* window);
 
 // settings
-const unsigned int SCR_WIDTH = 1920;
-const unsigned int SCR_HEIGHT = 1080;
+const unsigned int SCR_WIDTH = 1280;
+const unsigned int SCR_HEIGHT = 720;
 
 int main(int argc, char* argv[])
 {
@@ -100,19 +100,34 @@ int main(int argc, char* argv[])
 			4);
 
 
-// 		if (winApp->GetIsMouseLeftButtonPressed())
-// 		{
-// 			int deltaX = winApp->GetMouseMotionDeltaX();
-// 			int deltaY = winApp->GetMouseMotionDeltaY();
-// 			glm::mat4 cameraRotMat(1.0f);
-// 			if (std::abs(deltaX) > std::abs(deltaY))
-// 				cameraRotMat = glm::rotate(glm::mat4(1.0f), -deltaX * 0.001f, glm::vec3(0, 1, 0));
-// 			else
-// 				cameraRotMat = glm::rotate(glm::mat4(1.0f), -deltaY * 0.001f, glm::vec3(1, 0, 0));
-// 
-// 			cameraPos = glm::vec3(cameraRotMat * glm::vec4(cameraPos, 1.0f));
-// 			renderer->setViewMatrix(TRUtils::calcViewMatrix(cameraPos, lookAtTarget, glm::vec3(0.0, 1.0, 0.0f)));
-// 		}
+		if (winApp->GetIsMouseLeftButtonPressed())
+		{
+			int deltaX = winApp->GetMouseMotionDeltaX();
+			int deltaY = winApp->GetMouseMotionDeltaY();
+			Matrix4 rotateMatrix;
+
+			if (std::abs(deltaX) > std::abs(deltaY))
+			{
+				auto cosTheta = std::cos(-deltaX * 0.005f);
+				auto sinTheta = std::sin(-deltaX * 0.005f);
+				rotateMatrix.m[0][0] = cosTheta;
+				rotateMatrix.m[0][2] = sinTheta;
+				rotateMatrix.m[2][0] = -sinTheta;
+				rotateMatrix.m[2][2] = cosTheta;
+			}
+			else
+			{
+				auto cosTheta = std::cos(-deltaY * 0.005f);
+				auto sinTheta = std::sin(-deltaY * 0.005f);
+				rotateMatrix.m[1][1] = cosTheta;
+				rotateMatrix.m[1][2] = -sinTheta;
+				rotateMatrix.m[2][1] = sinTheta;
+				rotateMatrix.m[2][2] = cosTheta;
+			}
+			auto result = rotateMatrix * Vector4{ camera.GetCameraPosition() };
+			camera.SetCameraPosition({ result.x,result.y,result.z });
+			renderer.SetViewMatrix(camera.GetViewMatrix());
+		}
 
 		//Camera zoom in and zoom out
 		if (winApp->GetMouseWheelDelta() != 0)
@@ -121,7 +136,7 @@ int main(int argc, char* argv[])
 			auto newPosition = camera.GetCameraPosition() +  cameraDirection * (winApp->GetMouseWheelDelta() * 0.1f);
 			camera.SetCameraPosition(newPosition);
 
-			if ((newPosition - camera.GetCameraTarget()).Length() > 1.0f)
+			if ((newPosition - camera.GetCameraTarget()).Length() > 0.0001f)
 			{
 				renderer.SetViewMatrix(camera.GetViewMatrix());
 			}

@@ -10,7 +10,6 @@
 Renderer::Renderer(int width, int height)
 {
 	//shaderPipeline = std::make_shared<DefaultShaderPipline>();
-	//shaderPipeline = std::make_shared<LightingShaderPipline>();
 	lightShaderPipeline = std::make_shared<LightingShaderPipline>();
 	shaderPipeline = lightShaderPipeline;
 	frontBuffer = std::make_shared<FrameBuffer>(width, height);
@@ -25,8 +24,10 @@ Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near
 
 	Matrix4 result;
 
+	float radianFovy = fovy * 3.14159265358979323846 / 180;
+
 	//t/n的值
-	float tanHalf = std::tan(fovy / 2.0f);
+	float tanHalf = std::tan(radianFovy / 2.0f);
 
 	//n/t
 	float yScale = 1.0 / tanHalf;
@@ -158,6 +159,11 @@ void Renderer::Render(Model& modelSource)
 					continue;
 				}
 
+// 				if (IsBackFacing(vert[0].screenPosition, vert[1].screenPosition, vert[2].screenPosition))
+// 				{
+// 					continue;
+// 				}
+
 				//计算屏幕坐标
 				auto tempVector = viewPortMatrix * vert[0].clipPosition + Vector4(0.5f);
 				vert[0].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
@@ -277,7 +283,6 @@ bool Renderer::IsTowardBackFace(const Vector4& v0, const Vector4& v1, const Vect
 
 	//叉乘得到法向量
 	Vector3 normal = tmp1.CrossProduct(tmp2).Normalize();
-	//glm::vec3 view = glm::normalize(glm::vec3(v1.x - camera->Position.x, v1.y - camera->Position.y, v1.z - camera->Position.z));
 	//NDC中观察方向指向+z
 	Vector3 view = Vector3(0, 0, 1);
 	double result = normal * view;
@@ -290,4 +295,14 @@ bool Renderer::IsTowardBackFace(const Vector4& v0, const Vector4& v1, const Vect
 	{
 		return true;
 	}
+}
+
+bool Renderer::IsBackFacing(const Vector2i& v0, const Vector2i& v1, const Vector2i& v2) const
+{
+	auto e1 = v1 - v0;
+	auto e2 = v2 - v0;
+
+	int orient = e1.x * e2.y - e1.y * e2.x;
+
+	return orient > 0;
 }

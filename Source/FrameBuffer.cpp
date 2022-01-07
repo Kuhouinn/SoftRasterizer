@@ -67,5 +67,5 @@ float FrameBuffer::ReadDepth(int x, int y) const
 		return 0.0f;
 	}
 
-	return depthBuffer[height * y + x];
+	return depthBuffer[width * y + x];
 }
