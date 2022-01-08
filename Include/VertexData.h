@@ -18,5 +18,7 @@ struct VertexData
 	static void AftPrespCorrection(VertexData& v);
 
 	static VertexData BarycentricLerp(const VertexData& v0, const VertexData& v1, const VertexData& v2, Vector3 w);
+
+	static VertexData Lerp(const VertexData& v0, const VertexData& v1, float frac);
 };
 

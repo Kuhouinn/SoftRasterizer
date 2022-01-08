@@ -35,12 +35,13 @@ public:
 
 	void ClearColor(const Vector4& color);
 
+	void SetRasterizerLine(bool val) { rasterizerLine = val; }
+
 private:
 	//先在齐次裁剪空间使用简单裁剪，后续如果有时间可以换成Sutherland算法。
 	std::vector<VertexData> Clipping(const VertexData& v0, const VertexData& v1, const VertexData& v2) const;
 
 	bool IsTowardBackFace(const Vector4& v0, const Vector4& v1, const Vector4& v2) const;
-	bool IsBackFacing(const Vector2i& v0, const Vector2i& v1, const Vector2i& v2) const;
 
 private:
 	float near = 0.01f;
@@ -51,5 +52,7 @@ private:
 	std::shared_ptr<FrameBuffer> backBuffer = nullptr;
 
 	Matrix4 viewPortMatrix;
+
+	bool rasterizerLine = false;
 };
 

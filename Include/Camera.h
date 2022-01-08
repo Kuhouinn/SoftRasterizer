@@ -19,14 +19,9 @@ public:
 
 	void SetCameraPosition(const Vector3& position) { cameraPos = position; }
 	
-	//统一在传进来之前标准化一下
 	void SetCameraTarget(const Vector3& value) { target = value; }
 
 	void SetCameraUp(const Vector3& up) { cameraUp = up; }
-
-	void SetMouseCallback(double xOffset, double yOffset);
-
-	void SetScrollCallback(double yOffset);
 
 	Matrix4 GetViewMatrix();
 

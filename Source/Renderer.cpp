@@ -21,7 +21,6 @@ Renderer::Renderer(int width, int height)
 Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
 {
 	//这个透视投影矩阵是按view矩阵是右手坐标系计算的，计算出来的projection矩阵是左手坐标系的
-
 	Matrix4 result;
 
 	float radianFovy = fovy * 3.14159265358979323846 / 180;
@@ -159,11 +158,6 @@ void Renderer::Render(Model& modelSource)
 					continue;
 				}
 
-// 				if (IsBackFacing(vert[0].screenPosition, vert[1].screenPosition, vert[2].screenPosition))
-// 				{
-// 					continue;
-// 				}
-
 				//计算屏幕坐标
 				auto tempVector = viewPortMatrix * vert[0].clipPosition + Vector4(0.5f);
 				vert[0].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
@@ -173,9 +167,16 @@ void Renderer::Render(Model& modelSource)
 				vert[2].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
 
 				//光栅化
-				shaderPipeline->RasterizeFillEdgeFunction(vert[0], vert[1], vert[2],
-					backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
-
+				if (rasterizerLine)
+				{
+					shaderPipeline->RasterizeLine(vert[0], vert[1], vert[2],
+						backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
+				}
+				else
+				{
+					shaderPipeline->RasterizeTriangle(vert[0], vert[1], vert[2],
+						backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
+				}
 
 				//fragment shader处理阶段
 				for (auto& point : rasterizedPoints)
@@ -295,14 +296,4 @@ bool Renderer::IsTowardBackFace(const Vector4& v0, const Vector4& v1, const Vect
 	{
 		return true;
 	}
-}
-
-bool Renderer::IsBackFacing(const Vector2i& v0, const Vector2i& v1, const Vector2i& v2) const
-{
-	auto e1 = v1 - v0;
-	auto e2 = v2 - v0;
-
-	int orient = e1.x * e2.y - e1.y * e2.x;
-
-	return orient > 0;
 }

@@ -35,7 +35,15 @@ public:
 	void ClearTextures() { textures.clear(); }
 
 	//三角形光栅化,使用Fill Edge 
-	static void RasterizeFillEdgeFunction(
+	static void RasterizeTriangle(
+		const VertexData& v0,
+		const VertexData& v1,
+		const VertexData& v2,
+		unsigned int screenWidth,
+		unsigned int screeneHeight,
+		std::vector<VertexData>& rasterizedPoints);
+
+	static void RasterizeLine(
 		const VertexData& v0,
 		const VertexData& v1,
 		const VertexData& v2,
@@ -46,6 +54,14 @@ public:
 	static Vector4 Texture2D(unsigned int id, const Vector2& uv);
 
 	static Vector3 Reflect(const Vector3& l, const Vector3& n);
+
+protected:
+	static void ComputePoint(
+		const VertexData& begin,
+		const VertexData& end,
+		const unsigned int& screenWidth,
+		const unsigned int& screeneHeight,
+		std::vector<VertexData>& rasterizedPoints);
 
 protected:
 	Matrix4 modelMatrix;

@@ -64,6 +64,8 @@ public:
 	int GetMouseWheelDelta() const { return wheelDelta; }
 	bool GetIsMouseLeftButtonPressed() const { return mouseLeftButtonPressed; }
 
+	bool GetPressP() const { return pressP; }
+
 	//Copy the rendered image to screen for displaying
 	double UpdateScreenSurface(
 		const unsigned char* pixels,
@@ -82,6 +84,8 @@ private:
 	bool mouseLeftButtonPressed = false;
 	int lastWheelPos;
 	int wheelDelta;
+
+	bool pressP = false;
 
 	//Timer
 	LTimer timer;

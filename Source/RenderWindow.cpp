@@ -76,6 +76,7 @@ void RenderWindow::ProcessEvent()
 		{
 			quit = true;
 		}
+
 		if (events.type == SDL_MOUSEMOTION)
 		{
 			static bool firstEvent = true;
@@ -95,6 +96,7 @@ void RenderWindow::ProcessEvent()
 				lastMouseY = events.motion.y;
 			}
 		}
+
 		if (events.type == SDL_MOUSEBUTTONDOWN && events.button.button == SDL_BUTTON_LEFT)
 		{
 			mouseLeftButtonPressed = true;
@@ -103,13 +105,20 @@ void RenderWindow::ProcessEvent()
 			mouseDeltaX = 0;
 			mouseDeltaY = 0;
 		}
+
 		if (events.type == SDL_MOUSEBUTTONUP && events.button.button == SDL_BUTTON_LEFT)
 		{
 			mouseLeftButtonPressed = false;
 		}
+
 		if (events.type == SDL_MOUSEWHEEL)
 		{
 			wheelDelta = events.wheel.y;
+		}
+
+		if (events.type == SDL_KEYDOWN && events.key.keysym.sym == SDLK_p)
+		{
+			pressP = !pressP;
 		}
 	}
 }

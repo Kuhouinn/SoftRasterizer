@@ -5,187 +5,154 @@
 #include <cmath>
 #include <algorithm>
 
-std::vector<std::shared_ptr<Texture>> ShaderPipeline::textures = {};
-
-bool InsideTriangle(const Vector3& p, const Vector3& v0, const Vector3& v1, const Vector3& v2)
+void ShaderPipeline::ComputePoint(const VertexData& begin, const VertexData& end, const unsigned int& screenWidth, const unsigned int& screeneHeight, std::vector<VertexData>& rasterizedPoints)
 {
-	//通过叉乘的方法判断点是否在三角形内。
-	auto result1 = (p - v0).CrossProduct(v1 - v0);
-	auto result2 = (p - v1).CrossProduct(v2 - v1);
-	auto result3 = (p - v2).CrossProduct(v0 - v2);
-	bool f1 = result1.z > 0;
-	bool f2 = result2.z > 0;
-	bool f3 = result3.z > 0;
+	//Bresenham line rasterization
 
-	bool equal1 = result1.z == 0;
-	bool equal2 = result2.z == 0;
-	bool equal3 = result3.z == 0;
+	int dx = end.screenPosition.x - begin.screenPosition.x;
+	int dy = end.screenPosition.y - begin.screenPosition.y;
+	int stepX = 1, stepY = 1;
 
-	//这个可能有改善，之前应该把在三角形上的点也去掉了。
-	if (equal1 || equal2 || equal3)
+	// judge the sign
+	if (dx < 0)
 	{
-		return true;
+		stepX = -1;
+		dx = -dx;
+	}
+	if (dy < 0)
+	{
+		stepY = -1;
+		dy = -dy;
 	}
 
-	if (f1 == f2 && f2 == f3)
-	{
-		return true;
-	}
+	int d2x = 2 * dx, d2y = 2 * dy;
+	int d2y_minus_d2x = d2y - d2x;
+	int sx = begin.screenPosition.x;
+	int sy = begin.screenPosition.y;
 
-	return false;
+	// slope < 1.
+	if (dy <= dx)
+	{
+		int flag = d2y - dx;
+		for (int i = 0; i <= dx; ++i)
+		{
+			auto mid = VertexData::Lerp(begin, end, static_cast<float>(i) / dx);
+			mid.screenPosition = Vector2i(sx, sy);
+			if (mid.screenPosition.x >= 0 && mid.screenPosition.x <= screenWidth && mid.screenPosition.y >= 0 && mid.screenPosition.y <= screeneHeight)
+			{
+				rasterizedPoints.push_back(mid);
+			}
+			sx += stepX;
+			if (flag <= 0)
+			{
+				flag += d2y;
+			}
+			else
+			{
+				sy += stepY;
+				flag += d2y_minus_d2x;
+			}
+		}
+	}
+	// slope > 1.
+	else
+	{
+		int flag = d2x - dy;
+		for (int i = 0; i <= dy; ++i)
+		{
+			auto mid = VertexData::Lerp(begin, end, static_cast<float>(i) / dy);
+			mid.screenPosition = Vector2i(sx, sy);
+			if (mid.screenPosition.x >= 0 && mid.screenPosition.x < screenWidth && mid.screenPosition.y >= 0 && mid.screenPosition.y < screeneHeight)
+			{
+				rasterizedPoints.push_back(mid);
+			}
+			sy += stepY;
+			if (flag <= 0)
+			{
+				flag += d2x;
+			}
+			else
+			{
+				sx += stepX;
+				flag -= d2y_minus_d2x;
+			}
+		}
+	}
 }
 
-void ShaderPipeline::RasterizeFillEdgeFunction(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
+std::vector<std::shared_ptr<Texture>> ShaderPipeline::textures = {};
+
+void ShaderPipeline::RasterizeTriangle(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
 {
 	int minX = v0.screenPosition.x;
 	int maxX = v0.screenPosition.x;
 	int minY = v0.screenPosition.y;
 	int maxY = v0.screenPosition.y;
-
-	minX = std::min(minX, std::min(int(v1.screenPosition.x), int(v2.screenPosition.x)));
-	maxX = std::max(maxX, std::max(int(v1.screenPosition.x), int(v2.screenPosition.x)));
-	minY = std::min(minY, std::min(int(v1.screenPosition.y), int(v2.screenPosition.y)));
-	maxY = std::max(maxY, std::max(int(v1.screenPosition.y), int(v2.screenPosition.y)));
-
+	
+	minX = std::max(std::min(v0.screenPosition.x, std::min(v1.screenPosition.x, v2.screenPosition.x)), 0);
+	minY = std::max(std::min(v0.screenPosition.y, std::min(v1.screenPosition.y, v2.screenPosition.y)), 0);
+	maxX = std::min(std::max(v0.screenPosition.x, std::max(v1.screenPosition.x, v2.screenPosition.x)), (int)screenWidth - 1);
+	maxY = std::min(std::max(v0.screenPosition.y, std::max(v1.screenPosition.y, v2.screenPosition.y)), (int)screeneHeight - 1);
+	
 	auto v10 = v1.screenPosition - v0.screenPosition;
 	auto v20 = v2.screenPosition - v0.screenPosition;
 	auto res = v10.x * v20.y - v10.y * v20.x;
-
+	
+	Vector2i arr[3] = { {v0.screenPosition.x,v0.screenPosition.y},{v1.screenPosition.x,v1.screenPosition.y}, {v2.screenPosition.x,v2.screenPosition.y} };
+	
 	for (int ix = minX; ix <= maxX; ix++)
 	{
 		for (int iy = minY; iy <= maxY; iy++)
 		{
-			Vector3 p(ix, iy, 1.0);
-			Vector3 vs0(v0.screenPosition.x, v0.screenPosition.y, 1.0f);
-			Vector3 vs1(v1.screenPosition.x, v1.screenPosition.y, 1.0f);
-			Vector3 vs2(v2.screenPosition.x, v2.screenPosition.y, 1.0f);
-
-			if (!InsideTriangle(p, vs0, vs1, vs2))
+			Vector2i p(ix, iy);
+			Vector2i p0p2 = v2.screenPosition - v0.screenPosition;
+			Vector2i p0p = p - v0.screenPosition;
+			Vector2i p2p1 = v1.screenPosition - v2.screenPosition;
+			Vector2i p2p = p - v2.screenPosition;
+			Vector2i p1p0 = v0.screenPosition - v1.screenPosition;
+			Vector2i p1p = p - v1.screenPosition;
+	
+			int tmp1 = p0p2.x * p0p.y - p0p.x * p0p2.y;
+			int tmp2 = p2p1.x * p2p.y - p2p.x * p2p1.y;
+			int tmp3 = p1p0.x * p1p.y - p1p.x * p1p0.y;
+	
+			//v0,v1,v2是顺时针顺序排列的，但tmp1，tmp2，tmp3是按逆时针计算的向量。
+			bool condition1 = tmp1 >= 0 && tmp2 >= 0 && tmp3 >= 0; // 逆时针三角形
+	
+			if (condition1)
 			{
-				continue;
-			}
-
-			Vector3 s[2];
-			s[1].x = v2.screenPosition.y - v0.screenPosition.y;
-			s[1].y = v1.screenPosition.y - v0.screenPosition.y;
-			s[1].z = v0.screenPosition.y - p.y;
-
-			s[0].x = v2.screenPosition.x - v0.screenPosition.x;
-			s[0].y = v1.screenPosition.x - v0.screenPosition.x;
-			s[0].z = v0.screenPosition.x - p.x;
-
-
-			Vector3 u = s[0].CrossProduct(s[1]);
-
-			Vector3 p1 = { (float)v0.screenPosition.x,(float)v0.screenPosition.y,1.0 };
-			Vector3 p2 = { (float)v1.screenPosition.x,(float)v1.screenPosition.y,1.0 };
-			Vector3 p3 = { (float)v2.screenPosition.x,(float)v2.screenPosition.y,1.0 };
-
-			Vector3 C = p - p3;
-			Vector3 A = p1 - p3;
-			Vector3 B = p2 - p3;
-
-			float sp23 = C.CrossProduct(B).z;
-			float sp123 = A.CrossProduct(B).z;
-			float sp13 = C.CrossProduct(A).z;
-			float spba = B.CrossProduct(A).z;
-
-			float w1 = sp23 / sp123;
-			float w2 = sp13 / spba;
-			float w3 = 1 - w1 - w2;
-			Vector3 test{ w1,w2,w3 };
-//			if (std::abs(u.z) > 1e-2)
-			{
-				//Vector3 result(1.f - (u.x + u.y) / u.z, u.y / u.z, u.x / u.z);
-				Vector3 result(1.f - (u.x + u.y) / u.z, u.x / u.z, u.y / u.z);
-				auto point = VertexData::BarycentricLerp(v0, v1, v2, test);
-
+				// 重心坐标
+	 			Vector3 vx = Vector3(-p1p0.x, p0p2.x, -p0p.x);
+	 			Vector3 vy = Vector3(-p1p0.y, p0p2.y, -p0p.y);
+				Vector3 cpResult = vx.CrossProduct(vy);
+				Vector3 result;
+				result.y = cpResult.x / cpResult.z;
+				result.z = cpResult.y / cpResult.z;
+				result.x = 1 - result.y - result.z;
+	
+				auto point = VertexData::BarycentricLerp(v0, v1, v2, result);
+				point.screenPosition = p;
+	
 				if (point.screenPosition.x<0 || point.screenPosition.x>screenWidth || point.screenPosition.y<0 || point.screenPosition.y >screeneHeight)
 				{
 					continue;
 				}
-
+	
 				rasterizedPoints.push_back(point);
 			}
 		}
 	}
-
-
-	//For instance:
+	
 	rasterizedPoints.push_back(v0);
 	rasterizedPoints.push_back(v1);
 	rasterizedPoints.push_back(v2);
+}
 
-
-// 	VertexData v[] = { v0, v1, v2 };
-// 	//Edge-equations rasterization algorithm
-// 	Vector2i bounding_min;
-// 	Vector2i bounding_max;
-// 	bounding_min.x = std::max(std::min(v0.screenPosition.x, std::min(v1.screenPosition.x, v2.screenPosition.x)), 0);
-// 	bounding_min.y = std::max(std::min(v0.screenPosition.y, std::min(v1.screenPosition.y, v2.screenPosition.y)), 0);
-// 	bounding_max.x = std::min(std::max(v0.screenPosition.x, std::max(v1.screenPosition.x, v2.screenPosition.x)), (int)screenWidth - 1);
-// 	bounding_max.y = std::min(std::max(v0.screenPosition.y, std::max(v1.screenPosition.y, v2.screenPosition.y)), (int)screeneHeight - 1);
-// 
-// 	//Adjust the order
-// 	{
-// 		auto e1 = v1.screenPosition - v0.screenPosition;
-// 		auto e2 = v2.screenPosition - v0.screenPosition;
-// 		int orient = e1.x * e2.y - e1.y * e2.x;
-// 		if (orient > 0)
-// 		{
-// 			std::swap(v[1], v[2]);
-// 		}
-// 	}
-// 
-// 	//Accelerated Half-Space Triangle Rasterization
-// 	//Refs:Mileff P, Nehéz K, Dudra J. Accelerated half-space triangle rasterization[J].
-// 	//     Acta Polytechnica Hungarica, 2015, 12(7): 217-236. http://acta.uni-obuda.hu/Mileff_Nehez_Dudra_63.pdf
-// 
-// 	const Vector2i& A = v[0].screenPosition;
-// 	const Vector2i& B = v[1].screenPosition;
-// 	const Vector2i& C = v[2].screenPosition;
-// 
-// 	const int I01 = A.y - B.y, I02 = B.y - C.y, I03 = C.y - A.y;
-// 	const int J01 = B.x - A.x, J02 = C.x - B.x, J03 = A.x - C.x;
-// 	const int K01 = A.x * B.y - A.y * B.x;
-// 	const int K02 = B.x * C.y - B.y * C.x;
-// 	const int K03 = C.x * A.y - C.y * A.x;
-// 
-// 	int F01 = I01 * bounding_min.x + J01 * bounding_min.y + K01;
-// 	int F02 = I02 * bounding_min.x + J02 * bounding_min.y + K02;
-// 	int F03 = I03 * bounding_min.x + J03 * bounding_min.y + K03;
-// 
-// 	//Degenerated to a line or a point
-// 	if (F01 + F02 + F03 == 0)
-// 		return;
-// 
-// 	const float one_div_delta = 1.0f / (F01 + F02 + F03);
-// 
-// 	//Top left fill rule
-// 	int E1_t = (((B.y > A.y) || (A.y == B.y && A.x > B.x)) ? 0 : 0);
-// 	int E2_t = (((C.y > B.y) || (B.y == C.y && B.x > C.x)) ? 0 : 0);
-// 	int E3_t = (((A.y > C.y) || (C.y == A.y && C.x > A.x)) ? 0 : 0);
-// 
-// 	int Cy1 = F01, Cy2 = F02, Cy3 = F03;
-// 	for (int y = bounding_min.y; y <= bounding_max.y; ++y)
-// 	{
-// 		int Cx1 = Cy1, Cx2 = Cy2, Cx3 = Cy3;
-// 		for (int x = bounding_min.x; x <= bounding_max.x; ++x)
-// 		{
-// 			int E1 = Cx1 + E1_t, E2 = Cx2 + E2_t, E3 = Cx3 + E3_t;
-// 			//Counter-clockwise winding order
-// 			if (E1 <= 0 && E2 <= 0 && E3 <= 0)
-// 			{
-// 				Vector3 uvw(Cx2 * one_div_delta, Cx3 * one_div_delta, Cx1 * one_div_delta);
-// 				auto rasterized_point = VertexData::BarycentricLerp(v[0], v[1], v[2], uvw);
-// 				rasterized_point.screenPosition = Vector2i(x, y);
-// 				rasterizedPoints.push_back(rasterized_point);
-// 			}
-// 			Cx1 += I01; Cx2 += I02; Cx3 += I03;
-// 		}
-// 		Cy1 += J01; Cy2 += J02; Cy3 += J03;
-// 	}
-
+void ShaderPipeline::RasterizeLine(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
+{
+	ComputePoint(v0, v1, screenWidth, screeneHeight, rasterizedPoints);
+	ComputePoint(v1, v2, screenWidth, screeneHeight, rasterizedPoints);
+	ComputePoint(v0, v2, screenWidth, screeneHeight, rasterizedPoints);
 }
 
 Vector4 ShaderPipeline::Texture2D(unsigned int id, const Vector2& uv)
