@@ -27,9 +27,6 @@
     <ClCompile Include="source\Vector4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ThirdParty\Source\glad.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Camera.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

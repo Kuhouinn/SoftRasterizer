@@ -166,7 +166,6 @@
     <ClCompile Include="source\Vector3.cpp" />
     <ClCompile Include="source\Vector4.cpp" />
     <ClCompile Include="Source\VertexData.cpp" />
-    <ClCompile Include="ThirdParty\Source\glad.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Camera.h" />

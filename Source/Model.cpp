@@ -4,7 +4,6 @@
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
 #include <iostream>
-#include <glad/glad.h> 
 
 Model::Model(const char* path)
 {

@@ -1,12 +1,1 @@
-﻿  Camera.cpp
-  main.cpp
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(69,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(70,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(71,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(72,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-  正在生成代码
-  2 of 1007 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    8 functions had inline decision re-evaluated but remain unchanged
-  已完成代码的生成
-  SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe
+﻿  SoftRasterizer.vcxproj -> C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe
