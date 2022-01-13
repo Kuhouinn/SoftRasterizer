@@ -5,6 +5,10 @@
 #include "RenderWindow.h"
 #include "DirectionalLight.h"
 
+#include <chrono>
+
+
+
 // settings
 const unsigned int SCR_WIDTH = 1280;
 const unsigned int SCR_HEIGHT = 720;
@@ -38,6 +42,7 @@ int main(int argc, char* argv[])
 
 	winApp->ReadyToStart();
 
+	long long frameTime = 0;
 	// render loop
 	while (!winApp->ShouldWindowClose())
 	{
@@ -47,10 +52,14 @@ int main(int argc, char* argv[])
 
 		renderer.SetRasterizerLine(winApp->GetPressP());
 
+		auto start = std::chrono::steady_clock::now();
+
 		//在这里将会实现软渲染器的渲染管线，替代OpenGL的渲染管线。预计是做一套可编程管线。
 		//具体步骤包括顶点着色器处理，图元装配，裁剪，背面剔除，光栅化，片元着色器处理，深度测试。
 		renderer.Render(myModel);
 
+		auto end = std::chrono::steady_clock::now();
+		frameTime = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 		//绘制到屏幕上
 		double deltaTime = winApp->UpdateScreenSurface(
 			renderer.GetRenderedColorBuffer(),

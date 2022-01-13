@@ -125,9 +125,13 @@ void Model::TextureFromFile(const char* path, const std::string& directory, Text
 
 	int width, height, nrComponents;
 	unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
+	int size = width * height * nrComponents;
 
-	texture.data = data;
+	texture.data.resize(size);
+	memcpy(texture.data.data(), data, size);
 	texture.width = width;
 	texture.height = height;
 	texture.channle = nrComponents;
+
+	stbi_image_free(data);
 }

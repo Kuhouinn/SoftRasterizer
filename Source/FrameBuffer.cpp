@@ -44,18 +44,19 @@ void FrameBuffer::Clear(const Vector4& clearColor)
 	auto g = unsigned char(clearColor.y * 255);
 	auto b = unsigned char(clearColor.z * 255);
 	auto a = unsigned char(clearColor.w * 255);
-
+	auto data = colorBuffer.data();
+	auto depthData = depthBuffer.data();
 	for (auto y = 0; y < height; y++)
 	{
 		for (auto x = 0; x < width; x++)
 		{
 			auto index = (y * width + x) * 4;
-			colorBuffer[index] = r;
-			colorBuffer[index + 1] = g;
-			colorBuffer[index + 2] = b;
-			colorBuffer[index + 3] = a;
+			*(data + index) = r;
+			*(data + index + 1) = g;
+			*(data + index + 2) = b;
+			*(data + index + 3) = a;
 
-			depthBuffer[y * width + x] = 1.0f;
+			*(depthData + y * width + x) = 1.0f;
 		}
 	}
 }

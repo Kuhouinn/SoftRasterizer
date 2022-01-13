@@ -7,6 +7,8 @@
 #include <cmath>
 #include <memory>
 
+#include <chrono>
+
 Renderer::Renderer(int width, int height)
 {
 	//shaderPipeline = std::make_shared<DefaultShaderPipline>();
@@ -181,15 +183,22 @@ void Renderer::Render(Model& modelSource)
 				//fragment shader处理阶段
 				for (auto& point : rasterizedPoints)
 				{
+
 					if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
 					{
+
 						//光栅化之后的透视矫正
 						VertexData::AftPrespCorrection(point);
 
+						auto start = std::chrono::steady_clock::now();
 						Vector4 fragColor;
 						shaderPipeline->FragmentShader(point, fragColor);
+// 						auto end = std::chrono::steady_clock::now();
+// 
+// 						frameTime += std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 						backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
 						backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
+
 					}
 				}
 

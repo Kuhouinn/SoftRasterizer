@@ -1,4 +1,4 @@
-#include "ShaderPipeline.h"
+ï»¿#include "ShaderPipeline.h"
 #include "VertexData.h"
 #include "Texture.h"
 
@@ -116,12 +116,12 @@ void ShaderPipeline::RasterizeTriangle(const VertexData& v0, const VertexData& v
 			int tmp2 = p2p1.x * p2p.y - p2p.x * p2p1.y;
 			int tmp3 = p1p0.x * p1p.y - p1p.x * p1p0.y;
 	
-			//v0,v1,v2ÊÇË³Ê±ÕëË³ĞòÅÅÁĞµÄ£¬µ«tmp1£¬tmp2£¬tmp3ÊÇ°´ÄæÊ±Õë¼ÆËãµÄÏòÁ¿¡£
-			bool condition1 = tmp1 >= 0 && tmp2 >= 0 && tmp3 >= 0; // ÄæÊ±ÕëÈı½ÇĞÎ
+			//v0,v1,v2æ˜¯é¡ºæ—¶é’ˆé¡ºåºæ’åˆ—çš„ï¼Œä½†tmp1ï¼Œtmp2ï¼Œtmp3æ˜¯æŒ‰é€†æ—¶é’ˆè®¡ç®—çš„å‘é‡ã€‚
+			bool condition1 = tmp1 >= 0 && tmp2 >= 0 && tmp3 >= 0; // é€†æ—¶é’ˆä¸‰è§’å½¢
 	
 			if (condition1)
 			{
-				// ÖØĞÄ×ø±ê
+				// é‡å¿ƒåæ ‡
 	 			Vector3 vx = Vector3(-p1p0.x, p0p2.x, -p0p.x);
 	 			Vector3 vy = Vector3(-p1p0.y, p0p2.y, -p0p.y);
 				Vector3 cpResult = vx.CrossProduct(vy);
@@ -157,7 +157,7 @@ void ShaderPipeline::RasterizeLine(const VertexData& v0, const VertexData& v1, c
 
 Vector4 ShaderPipeline::Texture2D(unsigned int id, const Vector2& uv)
 {
-	if (id< 0|| id>textures.size())
+	if (id< 0 || id>textures.size())
 	{
 		return Vector4();
 	}

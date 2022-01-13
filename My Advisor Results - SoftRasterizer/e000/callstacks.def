@@ -1,0 +1,787 @@
+# callstacks file version: 8
+#    rowid	    parent	       rva	 loop	 system	                                function	binary	instance_start_rva	instance_size	instance_end_rva	finst_rowid	roi	is_inlined	jit_method_id	tripcounts_roi	flops_roi	cachesim_roi	data_transfer_roi	projection_roi
+         1	        -1	    110596	    0	      0	                          mainCRTStartup	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	110596	18	0	32	0	0	0	0	0	0	0	0
+         2	        -1	    337488	    0	      1	                      RtlUserThreadStart	C:\WINDOWS\SYSTEM32\ntdll.dll	337456	72	0	484	0	0	0	0	0	0	0	0
+         3	         2	     94259	    0	      1	                     BaseThreadInitThunk	C:\WINDOWS\System32\KERNEL32.DLL	94240	67	0	4	0	0	0	0	0	0	0	0
+         4	         3	    110483	    0	      0	                  __scrt_common_main_seh	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	110216	380	0	36	0	0	0	0	0	0	0	0
+         5	         4	    113297	    0	      0	                         main_getcmdline	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	112992	425	0	80	0	0	0	0	0	0	0	0
+         6	         5	      8262	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+         7	         6	    105237	    0	      0	               RenderWindow::GetInstance	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	104736	739	0	105	0	0	0	0	0	0	0	0
+         8	         7	    103089	    0	      0	                     RenderWindow::Setup	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	102976	435	0	144	0	0	0	0	0	0	0	0
+         9	         8	      5862	    0	      0	                        func@0x36b471520	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	5408	656	0	35	0	0	0	0	0	0	0	0
+        10	         9	    976239	    0	      0	                        func@0x36b55e3f0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	975856	912	0	50	0	0	0	0	0	0	0	0
+        11	        10	   1210185	    0	      0	                        func@0x36b597720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1210144	128	0	71	0	0	0	0	0	0	0	0
+        12	        11	   1199719	    0	      0	                        func@0x36b594d70	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1199472	288	0	73	0	0	0	0	0	0	0	0
+        13	        12	   1198554	    0	      0	                        func@0x36b5948d0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1198288	560	0	77	0	0	0	0	0	0	0	0
+        14	        13	     10376	    0	      1	                        CreateDIBSection	C:\WINDOWS\System32\GDI32.dll	10272	131	0	503	0	0	0	0	0	0	0	0
+        15	        14	     50660	    0	      1	                        CreateDIBSection	C:\WINDOWS\System32\gdi32full.dll	50624	42	0	28	0	0	0	0	0	0	0	0
+        16	        15	     51576	    0	      1	                        func@0x18000c600	C:\WINDOWS\System32\gdi32full.dll	50688	1360	0	33	0	0	0	0	0	0	0	0
+        17	        16	    353074	    0	      1	                        func@0x180056308	C:\WINDOWS\System32\gdi32full.dll	353032	240	0	51	0	0	0	0	0	0	0	0
+        18	        17	    189327	    0	      1	                        func@0x18002e350	C:\WINDOWS\System32\gdi32full.dll	189264	1180	0	52	0	0	0	0	0	0	0	0
+        19	        18	    175232	    0	      1	                          LoadLibraryExW	C:\WINDOWS\System32\KERNELBASE.dll	175232	283	0	25	0	0	0	0	0	0	0	0
+        20	         7	    103260	    0	      0	                     RenderWindow::Setup	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	102976	435	0	144	0	0	0	0	0	0	0	0
+        21	        20	    973802	    0	      0	                        func@0x36b55d8a0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	972960	1808	0	86	0	0	0	0	0	0	0	0
+        22	        21	   1221006	    0	      0	                        func@0x36b59a090	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1220752	912	0	99	0	0	0	0	0	0	0	0
+        23	        22	     30513	    0	      1	                         CreateWindowExW	C:\WINDOWS\System32\USER32.dll	30384	138	0	39	0	0	0	0	0	0	0	0
+        24	        23	     30951	    0	      1	                        func@0x180007744	C:\WINDOWS\System32\USER32.dll	30532	486	0	48	0	0	0	0	0	0	0	0
+        25	        24	     32026	    0	      1	                        func@0x180007b0c	C:\WINDOWS\System32\USER32.dll	31500	617	0	70	0	0	0	0	0	0	0	0
+        26	        25	      7876	    0	      1	                    NtUserCreateWindowEx	C:\WINDOWS\System32\win32u.dll	7856	21	0	532	0	0	0	0	0	0	0	0
+        27	        25	    658339	    0	      1	                KiUserCallbackDispatcher	C:\WINDOWS\SYSTEM32\ntdll.dll	658304	80	0	485	0	0	0	0	0	0	0	0
+        28	        27	    156010	    0	      1	                        func@0x180026130	C:\WINDOWS\System32\USER32.dll	155952	93	0	82	0	0	0	0	0	0	0	0
+        29	        28	     58219	    0	      1	                        func@0x18000e2d0	C:\WINDOWS\System32\USER32.dll	58064	230	0	88	0	0	0	0	0	0	0	0
+        30	        29	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+        31	        30	   1167400	    0	      0	                        func@0x36b58cf60	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1167200	775	0	104	0	0	0	0	0	0	0	0
+        32	        31	     58493	    0	      1	                         CallWindowProcW	C:\WINDOWS\System32\USER32.dll	58352	163	0	98	0	0	0	0	0	0	0	0
+        33	        32	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+        34	        33	     51058	    0	      1	                        func@0x18000c5d0	C:\WINDOWS\System32\USER32.dll	50640	601	0	101	0	0	0	0	0	0	0	0
+        35	        34	     45680	    0	      1	                        func@0x171b0b260	C:\WINDOWS\system32\uxtheme.dll	45664	22	0	523	0	0	0	0	0	0	0	0
+        36	        35	     48593	    0	      1	                        func@0x171b0b8c2	C:\WINDOWS\system32\uxtheme.dll	47298	1757	0	524	0	0	0	0	0	0	0	0
+        37	        36	     44891	    0	      1	                        func@0x171b0af2b	C:\WINDOWS\system32\uxtheme.dll	44843	216	0	525	0	0	0	0	0	0	0	0
+        38	        37	     28281	    0	      1	                        func@0x171b06e5c	C:\WINDOWS\system32\uxtheme.dll	28252	112	0	526	0	0	0	0	0	0	0	0
+        39	        38	     28548	    0	      1	                        func@0x171b06f2c	C:\WINDOWS\system32\uxtheme.dll	28460	121	0	527	0	0	0	0	0	0	0	0
+        40	        39	     82166	    0	      1	                        func@0x171b14094	C:\WINDOWS\system32\uxtheme.dll	82068	419	0	528	0	0	0	0	0	0	0	0
+        41	        40	    156791	    0	      1	                             RemovePropW	C:\WINDOWS\System32\USER32.dll	156736	83	0	110	0	0	0	0	0	0	0	0
+        42	        41	      6404	    0	      1	                        NtUserRemoveProp	C:\WINDOWS\System32\win32u.dll	6384	21	0	533	0	0	0	0	0	0	0	0
+        43	        21	   1221104	    0	      0	                        func@0x36b59a090	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1220752	912	0	99	0	0	0	0	0	0	0	0
+        44	        43	    658339	    0	      1	                KiUserCallbackDispatcher	C:\WINDOWS\SYSTEM32\ntdll.dll	658304	80	0	485	0	0	0	0	0	0	0	0
+        45	        44	    155839	    0	      1	                        func@0x180026090	C:\WINDOWS\System32\USER32.dll	155792	82	0	115	0	0	0	0	0	0	0	0
+        46	        45	     58219	    0	      1	                        func@0x18000e2d0	C:\WINDOWS\System32\USER32.dll	58064	230	0	88	0	0	0	0	0	0	0	0
+        47	        46	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+        48	        47	   1168906	    0	      0	                        func@0x36b58d478	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1168504	585	0	107	0	0	0	0	0	0	0	0
+        49	        48	   1165423	    0	      0	                        func@0x36b58c840	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1165376	176	0	135	0	0	0	0	0	0	0	0
+        50	        49	      5284	    0	      1	                               CreateDCW	C:\WINDOWS\System32\GDI32.dll	5200	121	0	504	0	0	0	0	0	0	0	0
+        51	        50	      5477	    0	      1	                              bCreateDCW	C:\WINDOWS\System32\GDI32.dll	5328	186	0	505	0	0	0	0	0	0	0	0
+        52	        51	    138849	    0	      1	                            hdcCreateDCW	C:\WINDOWS\System32\gdi32full.dll	138672	260	0	53	0	0	0	0	0	0	0	0
+        53	        52	     10724	    0	      1	                            NtGdiOpenDCW	C:\WINDOWS\System32\win32u.dll	10704	21	0	534	0	0	0	0	0	0	0	0
+        54	        20	    973871	    0	      0	                        func@0x36b55d8a0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	972960	1808	0	86	0	0	0	0	0	0	0	0
+        55	        54	    964957	    0	      0	                        func@0x36b55b690	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	964240	960	0	138	0	0	0	0	0	0	0	0
+        56	        55	    658339	    0	      1	                KiUserCallbackDispatcher	C:\WINDOWS\SYSTEM32\ntdll.dll	658304	80	0	485	0	0	0	0	0	0	0	0
+        57	        56	    135058	    0	      1	                        func@0x180020f60	C:\WINDOWS\System32\USER32.dll	135008	85	0	116	0	0	0	0	0	0	0	0
+        58	        57	     58219	    0	      1	                        func@0x18000e2d0	C:\WINDOWS\System32\USER32.dll	58064	230	0	88	0	0	0	0	0	0	0	0
+        59	        58	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+        60	        59	   1168898	    0	      0	                        func@0x36b58d478	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1168504	585	0	107	0	0	0	0	0	0	0	0
+        61	        60	   1166935	    0	      0	                        func@0x36b58cd50	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1166672	528	0	139	0	0	0	0	0	0	0	0
+        62	        61	   1183182	    0	      0	                        func@0x36b590c20	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1182752	528	0	140	0	0	0	0	0	0	0	0
+        63	        62	    180539	    0	      1	                        CoCreateInstance	C:\WINDOWS\System32\combase.dll	180272	343	0	30	0	0	0	0	0	0	0	0
+        64	        63	    181000	    0	      1	                        func@0x18002c1a0	C:\WINDOWS\System32\combase.dll	180640	465	0	41	0	0	0	0	0	0	0	0
+        65	        64	    186425	    0	      1	                        func@0x18002d4fd	C:\WINDOWS\System32\combase.dll	185597	1560	0	45	0	0	0	0	0	0	0	0
+        66	        65	    114927	    0	      1	                        func@0x18001c060	C:\WINDOWS\System32\combase.dll	114784	176	0	102	0	0	0	0	0	0	0	0
+        67	        66	    399950	    0	      1	                        func@0x180061a2b	C:\WINDOWS\System32\combase.dll	399915	129	0	108	0	0	0	0	0	0	0	0
+        68	        67	    114927	    0	      1	                        func@0x18001c060	C:\WINDOWS\System32\combase.dll	114784	176	0	102	0	0	0	0	0	0	0	0
+        69	        68	    863887	    0	      1	                        func@0x1800d2e10	C:\WINDOWS\System32\combase.dll	863760	149	0	113	0	0	0	0	0	0	0	0
+        70	        69	    845984	    0	      1	                        func@0x1800ce810	C:\WINDOWS\System32\combase.dll	845840	185	0	126	0	0	0	0	0	0	0	0
+        71	        70	    879375	    0	      1	                        func@0x1800d6a7f	C:\WINDOWS\System32\combase.dll	879231	150	0	128	0	0	0	0	0	0	0	0
+        72	        71	    862935	    0	      1	                        func@0x1800d2a80	C:\WINDOWS\System32\combase.dll	862848	126	0	129	0	0	0	0	0	0	0	0
+        73	        72	    315675	    0	      1	                        func@0x18004d080	C:\WINDOWS\System32\combase.dll	315520	185	0	130	0	0	0	0	0	0	0	0
+        74	        73	    114927	    0	      1	                        func@0x18001c060	C:\WINDOWS\System32\combase.dll	114784	176	0	102	0	0	0	0	0	0	0	0
+        75	        74	    766469	    0	      1	                        func@0x1800bb0b0	C:\WINDOWS\System32\combase.dll	766128	595	0	131	0	0	0	0	0	0	0	0
+        76	        75	    768140	    0	      1	                        func@0x1800bb848	C:\WINDOWS\System32\combase.dll	768072	268	0	132	0	0	0	0	0	0	0	0
+        77	        76	    175334	    0	      1	                        func@0x18002aab0	C:\WINDOWS\System32\combase.dll	174768	2249	0	133	0	0	0	0	0	0	0	0
+        78	        77	    360439	    0	      1	                        func@0x180057f7c	C:\WINDOWS\System32\combase.dll	360316	328	0	134	0	0	0	0	0	0	0	0
+        79	        78	    365681	    0	      1	                        func@0x18005940c	C:\WINDOWS\System32\combase.dll	365580	191	0	154	0	0	0	0	0	0	0	0
+        80	        79	    238705	    0	      1	                        func@0x18003a410	C:\WINDOWS\System32\combase.dll	238608	171	0	162	0	0	0	0	0	0	0	0
+        81	        80	    241171	    0	      1	                        func@0x18003ab8c	C:\WINDOWS\System32\combase.dll	240524	3261	0	163	0	0	0	0	0	0	0	0
+        82	        81	    498267	    0	      1	                        func@0x180079868	C:\WINDOWS\System32\combase.dll	497768	693	0	293	0	0	0	0	0	0	0	0
+        83	        82	    499239	    0	      1	                        func@0x180079dbe	C:\WINDOWS\System32\combase.dll	499134	223	0	294	0	0	0	0	0	0	0	0
+        84	        83	    503849	    0	      1	                        func@0x18007afc0	C:\WINDOWS\System32\combase.dll	503744	315	0	295	0	0	0	0	0	0	0	0
+        85	        84	    190968	    0	      1	                           RegOpenKeyExW	C:\WINDOWS\System32\KERNELBASE.dll	190944	30	0	40	0	0	0	0	0	0	0	0
+        86	        85	    191312	    0	      1	                   RegOpenKeyExInternalW	C:\WINDOWS\System32\KERNELBASE.dll	190992	382	0	46	0	0	0	0	0	0	0	0
+        87	        86	    195313	    0	      1	                        func@0x18002f9ec	C:\WINDOWS\System32\KERNELBASE.dll	195052	607	0	67	0	0	0	0	0	0	0	0
+        88	        87	    198646	    0	      1	                        func@0x1800307a0	C:\WINDOWS\System32\KERNELBASE.dll	198560	550	0	78	0	0	0	0	0	0	0	0
+        89	        88	    643124	    0	      1	                              NtQueryKey	C:\WINDOWS\SYSTEM32\ntdll.dll	643104	21	0	486	0	0	0	0	0	0	0	0
+        90	        61	   1183112	    0	      0	                        func@0x36b590c20	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1182752	528	0	140	0	0	0	0	0	0	0	0
+        91	        90	   1178300	    0	      0	                        func@0x36b58fab0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1178288	144	0	141	0	0	0	0	0	0	0	0
+        92	        91	   1178262	    0	      0	                        func@0x36b58f9f0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1178096	192	0	142	0	0	0	0	0	0	0	0
+        93	        92	     49279	    0	      1	                ImmSetCompositionStringW	C:\WINDOWS\System32\IMM32.dll	49248	37	0	492	0	0	0	0	0	0	0	0
+        94	        93	     50153	    0	      1	                        func@0x18000c08c	C:\WINDOWS\System32\IMM32.dll	49292	1458	0	493	0	0	0	0	0	0	0	0
+        95	        94	     43238	    0	      1	                        func@0x18000a8b8	C:\WINDOWS\System32\IMM32.dll	43192	167	0	494	0	0	0	0	0	0	0	0
+        96	        95	     14578	    0	      1	                        func@0x180003813	C:\WINDOWS\System32\IMM32.dll	14355	237	0	495	0	0	0	0	0	0	0	0
+        97	        96	     10234	    0	      1	                        func@0x1800025b0	C:\WINDOWS\System32\IMM32.dll	9648	655	0	496	0	0	0	0	0	0	0	0
+        98	        97	    214941	    0	      1	                          CtfImeSelectEx	C:\WINDOWS\System32\MSCTF.dll	214864	195	0	31	0	0	0	0	0	0	0	0
+        99	        98	    216020	    0	      1	                        func@0x180034a00	C:\WINDOWS\System32\MSCTF.dll	215552	677	0	42	0	0	0	0	0	0	0	0
+       100	        99	    147504	    0	      1	                               ReleaseDC	C:\WINDOWS\System32\USER32.dll	147472	78	0	117	0	0	0	0	0	0	0	0
+       101	       100	     52325	    0	      1	                        func@0x18000cc59	C:\WINDOWS\System32\GDI32.dll	52313	24	0	506	0	0	0	0	0	0	0	0
+       102	       101	    157886	    0	      1	                        IcmDeleteLocalDC	C:\WINDOWS\System32\gdi32full.dll	157840	183	0	54	0	0	0	0	0	0	0	0
+       103	       102	    158123	    0	      1	                        func@0x18002695c	C:\WINDOWS\System32\gdi32full.dll	158044	181	0	63	0	0	0	0	0	0	0	0
+       104	       103	     29252	    0	      1	                         NtGdiSetIcmMode	C:\WINDOWS\System32\win32u.dll	29232	21	0	535	0	0	0	0	0	0	0	0
+       105	        59	   1167400	    0	      0	                        func@0x36b58cf60	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1167200	775	0	104	0	0	0	0	0	0	0	0
+       106	       105	     58493	    0	      1	                         CallWindowProcW	C:\WINDOWS\System32\USER32.dll	58352	163	0	98	0	0	0	0	0	0	0	0
+       107	       106	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       108	       107	     51015	    0	      1	                        func@0x18000c5d0	C:\WINDOWS\System32\USER32.dll	50640	601	0	101	0	0	0	0	0	0	0	0
+       109	       108	     51760	    0	      1	                        func@0x18000c95f	C:\WINDOWS\System32\USER32.dll	51551	2092	0	118	0	0	0	0	0	0	0	0
+       110	       109	    658339	    0	      1	                KiUserCallbackDispatcher	C:\WINDOWS\SYSTEM32\ntdll.dll	658304	80	0	485	0	0	0	0	0	0	0	0
+       111	       110	    135058	    0	      1	                        func@0x180020f60	C:\WINDOWS\System32\USER32.dll	135008	85	0	116	0	0	0	0	0	0	0	0
+       112	       111	     58219	    0	      1	                        func@0x18000e2d0	C:\WINDOWS\System32\USER32.dll	58064	230	0	88	0	0	0	0	0	0	0	0
+       113	       112	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       114	       113	     44798	    0	      1	                        func@0x18000aeb0	C:\WINDOWS\System32\USER32.dll	44720	95	0	136	0	0	0	0	0	0	0	0
+       115	       114	     45198	    0	      1	                        func@0x18000b01d	C:\WINDOWS\System32\USER32.dll	45085	549	0	137	0	0	0	0	0	0	0	0
+       116	       115	     41536	    0	      1	                        func@0x18000a1dc	C:\WINDOWS\System32\USER32.dll	41436	135	0	145	0	0	0	0	0	0	0	0
+       117	       116	     41061	    0	      1	                        func@0x18000a01c	C:\WINDOWS\System32\USER32.dll	40988	109	0	146	0	0	0	0	0	0	0	0
+       118	       117	      9287	    0	      1	                     ImmSetActiveContext	C:\WINDOWS\System32\IMM32.dll	7696	1650	0	497	0	0	0	0	0	0	0	0
+       119	       118	     54809	    0	      1	                            SendMessageW	C:\WINDOWS\System32\USER32.dll	54592	234	0	147	0	0	0	0	0	0	0	0
+       120	       773	     56746	    1	      1	  [Loop@0x18000dcd2 in func@0x18000d6a0]	C:\WINDOWS\System32\USER32.dll	56530	382	0	148	0	0	0	0	0	0	0	0
+       121	       120	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       122	       121	   1167400	    0	      0	                        func@0x36b58cf60	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1167200	775	0	104	0	0	0	0	0	0	0	0
+       123	       122	     58493	    0	      1	                         CallWindowProcW	C:\WINDOWS\System32\USER32.dll	58352	163	0	98	0	0	0	0	0	0	0	0
+       124	       123	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       125	       124	     51015	    0	      1	                        func@0x18000c5d0	C:\WINDOWS\System32\USER32.dll	50640	601	0	101	0	0	0	0	0	0	0	0
+       126	       125	     52385	    0	      1	                        func@0x18000c95f	C:\WINDOWS\System32\USER32.dll	51551	2092	0	118	0	0	0	0	0	0	0	0
+       127	       775	     56746	    1	      1	  [Loop@0x18000dcd2 in func@0x18000d6a0]	C:\WINDOWS\System32\USER32.dll	56530	382	0	148	0	0	0	0	0	0	0	0
+       128	       127	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       129	       128	     44798	    0	      1	                        func@0x18000aeb0	C:\WINDOWS\System32\USER32.dll	44720	95	0	136	0	0	0	0	0	0	0	0
+       130	       129	     45222	    0	      1	                        func@0x18000b01d	C:\WINDOWS\System32\USER32.dll	45085	549	0	137	0	0	0	0	0	0	0	0
+       131	       130	     44164	    0	      1	                        func@0x18000abad	C:\WINDOWS\System32\USER32.dll	43949	325	0	150	0	0	0	0	0	0	0	0
+       132	       131	     34190	    0	      1	                        func@0x1800084ac	C:\WINDOWS\System32\USER32.dll	33964	309	0	151	0	0	0	0	0	0	0	0
+       133	       132	     30513	    0	      1	                         CreateWindowExW	C:\WINDOWS\System32\USER32.dll	30384	138	0	39	0	0	0	0	0	0	0	0
+       134	       133	     30951	    0	      1	                        func@0x180007744	C:\WINDOWS\System32\USER32.dll	30532	486	0	48	0	0	0	0	0	0	0	0
+       135	       134	     32026	    0	      1	                        func@0x180007b0c	C:\WINDOWS\System32\USER32.dll	31500	617	0	70	0	0	0	0	0	0	0	0
+       136	       135	      7876	    0	      1	                    NtUserCreateWindowEx	C:\WINDOWS\System32\win32u.dll	7856	21	0	532	0	0	0	0	0	0	0	0
+       137	        56	    155839	    0	      1	                        func@0x180026090	C:\WINDOWS\System32\USER32.dll	155792	82	0	115	0	0	0	0	0	0	0	0
+       138	       137	     58219	    0	      1	                        func@0x18000e2d0	C:\WINDOWS\System32\USER32.dll	58064	230	0	88	0	0	0	0	0	0	0	0
+       139	       138	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       140	       139	   1168906	    0	      0	                        func@0x36b58d478	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1168504	585	0	107	0	0	0	0	0	0	0	0
+       141	       140	   1165453	    0	      0	                        func@0x36b58c840	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1165376	176	0	135	0	0	0	0	0	0	0	0
+       142	       141	    345110	    0	      1	                          GetICMProfileW	C:\WINDOWS\System32\gdi32full.dll	344864	409	0	64	0	0	0	0	0	0	0	0
+       143	       142	    365130	    0	      1	                        func@0x180059188	C:\WINDOWS\System32\gdi32full.dll	364936	686	0	65	0	0	0	0	0	0	0	0
+       144	       143	     29252	    0	      1	                         NtGdiSetIcmMode	C:\WINDOWS\System32\win32u.dll	29232	21	0	535	0	0	0	0	0	0	0	0
+       145	         5	      9237	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       146	       145	     14675	    0	      0	                        Model::loadModel	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	14576	635	0	220	0	0	0	0	0	0	0	0
+       147	       146	    503235	    0	      0	              Assimp::Importer::ReadFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	499344	5406	0	83	0	0	0	0	0	0	0	0
+       148	       147	    387922	    0	      0	          Assimp::BaseImporter::ReadFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	387744	286	0	109	0	0	0	0	0	0	0	0
+       149	       148	   2869367	    0	      0	 Assimp::ObjFileImporter::InternReadFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2869152	1602	0	127	0	0	0	0	0	0	0	0
+       150	       149	   2862091	    0	      0	Assimp::IOStreamBuffer<char>::IOStreamBuffer<char>	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2861904	619	0	223	0	0	0	0	0	0	0	0
+       151	       150	    341269	    0	      0	std::vector<char,class std::allocator<char> >::_Resize_reallocate<struct std::_Value_init_tag>	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	341136	221	0	231	0	0	0	0	0	0	0	0
+       152	       779	      6129	    1	      1	            [Loop@0x1800017d0 in memset]	C:\WINDOWS\SYSTEM32\VCRUNTIME140D.dll	6096	43	0	26	0	0	0	0	0	0	0	0
+       153	       148	   2870131	    0	      0	 Assimp::ObjFileImporter::InternReadFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2869152	1602	0	127	0	0	0	0	0	0	0	0
+       154	       153	   2920417	    0	      0	    Assimp::ObjFileParser::ObjFileParser	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2919968	473	0	232	0	0	0	0	0	0	0	0
+       155	       154	   2957057	    0	      0	        Assimp::ObjFileParser::parseFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2956352	3000	0	286	0	0	0	0	0	0	0	0
+       156	       155	   2953476	    0	      0	Assimp::ObjFileParser::getTexCoordVector	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2953168	782	0	373	0	0	0	0	0	0	0	0
+       157	       156	   2932328	    0	      0	     Assimp::ObjFileParser::copyNextWord	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2932192	519	0	374	0	0	0	0	0	0	0	0
+       158	       157	   2890317	    0	      0	Assimp::getNextWord<class std::_Vector_iterator<class std::_Vector_val<struct std::_Simple_types<char> > > >	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2889248	1128	0	375	0	0	0	0	0	0	0	0
+       159	       158	    392677	    0	      1	                  std::_Lockit::~_Lockit	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	392608	75	0	24	0	0	0	0	0	0	0	0
+       160	       159	    399939	    0	      1	                               Mtxunlock	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	399920	25	0	34	0	0	0	0	0	0	0	0
+       161	       160	    193077	    0	      1	                 RtlLeaveCriticalSection	C:\WINDOWS\SYSTEM32\ntdll.dll	193072	69	0	487	0	0	0	0	0	0	0	0
+       162	       154	   2957125	    0	      0	        Assimp::ObjFileParser::parseFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2956352	3000	0	286	0	0	0	0	0	0	0	0
+       163	       162	   2955745	    0	      0	       Assimp::ObjFileParser::getVector3	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2955616	468	0	376	0	0	0	0	0	0	0	0
+       164	       163	   2932328	    0	      0	     Assimp::ObjFileParser::copyNextWord	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2932192	519	0	374	0	0	0	0	0	0	0	0
+       165	       734	   2889462	    1	      0	[Loop at line 80 in Assimp::getNextWord<class std::_Vector_iterator<class std::_Vector_val<struct std::_Simple_types<char> > > >]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2889328	270	2890180,2890250,2889598,2889695,2890250,2889841,2889941,2890250	388	0	0	0	0	0	0	0	0
+       166	       165	    392344	    0	      1	                   std::_Lockit::_Lockit	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	392320	95	0	37	0	0	0	0	0	0	0	0
+       167	       154	   2957256	    0	      0	        Assimp::ObjFileParser::parseFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2956352	3000	0	286	0	0	0	0	0	0	0	0
+       168	       736	   2935529	    1	      0	[Loop at line 443 in Assimp::ObjFileParser::getFace]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2935345	721	2936070,2936066,2936644	465	0	0	0	0	0	0	0	0
+       169	       168	    268525	    0	      1	                                    atoi	C:\WINDOWS\SYSTEM32\ucrtbased.dll	268496	35	0	1	0	0	0	0	0	0	0	0
+       170	       169	    267818	    0	      1	                        func@0x1800415e0	C:\WINDOWS\SYSTEM32\ucrtbased.dll	267744	80	0	2	0	0	0	0	0	0	0	0
+       171	       170	    263029	    0	      1	                        func@0x180040230	C:\WINDOWS\SYSTEM32\ucrtbased.dll	262704	1168	0	3	0	0	0	0	0	0	0	0
+       172	       171	    254325	    0	      1	                        func@0x18003e170	C:\WINDOWS\SYSTEM32\ucrtbased.dll	254320	14	0	15	0	0	0	0	0	0	0	0
+       173	       167	   2935021	    0	      0	          Assimp::ObjFileParser::getFace	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2934768	1941	0	466	0	0	0	0	0	0	0	0
+       174	       738	   9032882	    1	      0	       [Loop at line 35 in operator new]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	9032873	23	9032896	467	0	0	0	0	0	0	0	0
+       175	       174	    351341	    0	      1	                                  malloc	C:\WINDOWS\SYSTEM32\ucrtbased.dll	351312	35	0	16	0	0	0	0	0	0	0	0
+       176	       175	    348686	    0	      1	                              malloc_dbg	C:\WINDOWS\SYSTEM32\ucrtbased.dll	348640	52	0	17	0	0	0	0	0	0	0	0
+       177	       718	    336204	    1	      1	  [Loop@0x180052135 in func@0x180052100]	C:\WINDOWS\SYSTEM32\ucrtbased.dll	336181	37	0	18	0	0	0	0	0	0	0	0
+       178	       177	    336805	    0	      1	                        func@0x1800521b0	C:\WINDOWS\SYSTEM32\ucrtbased.dll	336304	1078	0	20	0	0	0	0	0	0	0	0
+       179	       178	    176895	    0	      1	                        func@0x18002aa20	C:\WINDOWS\SYSTEM32\ntdll.dll	174624	3103	0	488	0	0	0	0	0	0	0	0
+       180	       167	   2934955	    0	      0	          Assimp::ObjFileParser::getFace	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2934768	1941	0	466	0	0	0	0	0	0	0	0
+       181	       180	    392404	    0	      1	                   std::_Lockit::_Lockit	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	392320	95	0	37	0	0	0	0	0	0	0	0
+       182	       181	    399907	    0	      1	                                 Mtxlock	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	399888	25	0	49	0	0	0	0	0	0	0	0
+       183	       182	    195251	    0	      1	                 RtlEnterCriticalSection	C:\WINDOWS\SYSTEM32\ntdll.dll	195232	43	0	502	0	0	0	0	0	0	0	0
+       184	       148	   2870248	    0	      0	 Assimp::ObjFileImporter::InternReadFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2869152	1602	0	127	0	0	0	0	0	0	0	0
+       185	       184	   2927230	    0	      0	   Assimp::ObjFileParser::~ObjFileParser	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2927120	214	0	469	0	0	0	0	0	0	0	0
+       186	       740	   2924072	    1	      0	[Loop at line 318 in Assimp::ObjFile::Model::~Model]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2924014	147	2923741,2924308,2923910,2924013,2924161,2924258	470	0	0	0	0	0	0	0	0
+       187	       742	   2922155	    1	      0	[Loop at line 242 in Assimp::ObjFile::Mesh::~Mesh]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2921932	343	2921673,2922422,2921835,2921931,2922275,2922372	472	0	0	0	0	0	0	0	0
+       188	       187	   9033047	    0	      0	                         operator delete	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	9033024	29	0	474	0	0	0	0	0	0	0	0
+       189	       188	   9032999	    0	      0	                         operator delete	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	9032976	29	0	477	0	0	0	0	0	0	0	0
+       190	       189	    348612	    0	      1	                                free_dbg	C:\WINDOWS\SYSTEM32\ucrtbased.dll	348528	98	0	21	0	0	0	0	0	0	0	0
+       191	       190	    334481	    0	      1	                        func@0x180051a80	C:\WINDOWS\SYSTEM32\ucrtbased.dll	334464	1614	0	22	0	0	0	0	0	0	0	0
+       192	       191	    340464	    0	      1	                        func@0x1800531f0	C:\WINDOWS\SYSTEM32\ucrtbased.dll	340464	159	0	23	0	0	0	0	0	0	0	0
+       193	       146	    504225	    0	      0	              Assimp::Importer::ReadFile	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	499344	5406	0	83	0	0	0	0	0	0	0	0
+       194	       744	    482158	    1	      0	[Loop at line 764 in Assimp::Importer::ApplyPostProcessing]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	481840	621	482495,482461	478	0	0	0	0	0	0	0	0
+       195	       194	    402076	    0	      0	     Assimp::BaseProcess::ExecuteOnScene	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	401936	153	0	480	0	0	0	0	0	0	0	0
+       196	       746	    803138	    1	      0	[Loop at line 102 in Assimp::CalcTangentsProcess::Execute]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	803120	35	803155	481	0	0	0	0	0	0	0	0
+       197	       749	    807950	    1	      0	[Loop at line 284 in Assimp::CalcTangentsProcess::ProcessMesh]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	807297	748	806930,807166,807296,808045	489	0	0	0	0	0	0	0	0
+       198	       197	    655855	    0	      0	std::vector<bool,class std::allocator<bool> >::operator[]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	655664	634	0	498	0	0	0	0	0	0	0	0
+       199	       198	    392404	    0	      1	                   std::_Lockit::_Lockit	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	392320	95	0	37	0	0	0	0	0	0	0	0
+       200	       199	    399907	    0	      1	                                 Mtxlock	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	399888	25	0	49	0	0	0	0	0	0	0	0
+       201	       200	    195251	    0	      1	                 RtlEnterCriticalSection	C:\WINDOWS\SYSTEM32\ntdll.dll	195232	43	0	502	0	0	0	0	0	0	0	0
+       202	       748	    806493	    1	      0	[Loop at line 266 in Assimp::CalcTangentsProcess::ProcessMesh]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	806224	595	809991,806819,806930,807166,807296,808169,808316,808671,808808,808948	491	0	0	0	0	0	0	0	0
+       203	       752	    545312	    1	      0	[Loop at line 165 in Assimp::SpatialSort::FindPositions]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	545230	106	544459,544560,545336,544690,544920,545015,545229,545336	499	0	0	0	0	0	0	0	0
+       204	       203	    392677	    0	      1	                  std::_Lockit::~_Lockit	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	392608	75	0	24	0	0	0	0	0	0	0	0
+       205	       204	    399939	    0	      1	                               Mtxunlock	C:\WINDOWS\SYSTEM32\MSVCP140D.dll	399920	25	0	34	0	0	0	0	0	0	0	0
+       206	       205	    193119	    0	      1	                 RtlLeaveCriticalSection	C:\WINDOWS\SYSTEM32\ntdll.dll	193072	69	0	487	0	0	0	0	0	0	0	0
+       207	       145	     14941	    0	      0	                        Model::loadModel	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	14576	635	0	220	0	0	0	0	0	0	0	0
+       208	       624	     15557	    1	      0	 [Loop at line 37 in Model::processNode]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15536	36	15572	221	0	0	0	0	0	0	0	0
+       209	       626	     15314	    1	      0	 [Loop at line 31 in Model::processNode]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15280	236	15516	224	0	0	0	0	0	0	0	0
+       210	       209	     16185	    0	      0	                      Model::processMesh	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15600	1711	0	225	0	0	0	0	0	0	0	0
+       211	       628	     17783	    1	      0	[Loop at line 92 in Model::loadMaterialTextures]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	17460	685	18145	226	0	0	0	0	0	0	0	0
+       212	       211	     18750	    0	      0	                  Model::TextureFromFile	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	18272	765	0	228	0	0	0	0	0	0	0	0
+       213	       212	     38197	    0	      0	         stbi__load_and_postprocess_8bit	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	38144	498	0	229	0	0	0	0	0	0	0	0
+       214	       213	     36052	    0	      0	                         stbi__load_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	35744	2099	0	230	0	0	0	0	0	0	0	0
+       215	       214	     74222	    0	      0	                    stbi__parse_png_file	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	71696	3598	0	270	0	0	0	0	0	0	0	0
+       216	       630	     66209	    1	      0	 [Loop at line 4215 in stbi__parse_zlib]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	65952	270	66238,66222	271	0	0	0	0	0	0	0	0
+       217	       632	     63437	    1	      0	[Loop at line 4049 in stbi__parse_huffman_block]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63360	823	64183,64187,64183	273	0	0	0	0	0	0	0	0
+       218	       632	     63477	    1	      0	[Loop at line 4049 in stbi__parse_huffman_block]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63360	823	64183,64187,64183	273	0	0	0	0	0	0	0	0
+       219	       218	     63296	    0	      0	          stbi__zhuffman_decode_slowpath	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63072	225	0	275	0	0	0	0	0	0	0	0
+       220	       214	     74367	    0	      0	                    stbi__parse_png_file	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	71696	3598	0	270	0	0	0	0	0	0	0	0
+       221	       220	     70876	    0	      0	                  stbi__create_png_image	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	70752	943	0	276	0	0	0	0	0	0	0	0
+       222	       635	     69261	    1	      0	[Loop at line 4487 in stbi__create_png_image_raw]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	69200	93	69293	277	0	0	0	0	0	0	0	0
+       223	       635	     69280	    1	      0	[Loop at line 4487 in stbi__create_png_image_raw]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	69200	93	69293	277	0	0	0	0	0	0	0	0
+       224	       209	     16289	    0	      0	                      Model::processMesh	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15600	1711	0	225	0	0	0	0	0	0	0	0
+       225	       638	     17783	    1	      0	[Loop at line 92 in Model::loadMaterialTextures]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	17460	685	18145	226	0	0	0	0	0	0	0	0
+       226	       225	     18750	    0	      0	                  Model::TextureFromFile	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	18272	765	0	228	0	0	0	0	0	0	0	0
+       227	       226	     38197	    0	      0	         stbi__load_and_postprocess_8bit	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	38144	498	0	229	0	0	0	0	0	0	0	0
+       228	       227	     36052	    0	      0	                         stbi__load_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	35744	2099	0	230	0	0	0	0	0	0	0	0
+       229	       228	     74222	    0	      0	                    stbi__parse_png_file	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	71696	3598	0	270	0	0	0	0	0	0	0	0
+       230	       640	     66209	    1	      0	 [Loop at line 4215 in stbi__parse_zlib]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	65952	270	66238,66222	271	0	0	0	0	0	0	0	0
+       231	       642	     63500	    1	      0	[Loop at line 4049 in stbi__parse_huffman_block]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63360	823	64183,64187,64183	273	0	0	0	0	0	0	0	0
+       232	       228	     74367	    0	      0	                    stbi__parse_png_file	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	71696	3598	0	270	0	0	0	0	0	0	0	0
+       233	       232	     70876	    0	      0	                  stbi__create_png_image	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	70752	943	0	276	0	0	0	0	0	0	0	0
+       234	       644	     69204	    1	      0	[Loop at line 4487 in stbi__create_png_image_raw]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	69200	93	69293	277	0	0	0	0	0	0	0	0
+       235	       647	      9826	    1	      0	           [Loop at line 49 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9584	251	9835	279	0	0	0	0	0	0	0	0
+       236	       235	    193682	    0	      0	                        func@0x36b49f2a4	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	193188	892	0	143	0	0	0	0	0	0	0	0
+       237	       720	   1173940	    1	      0	  [Loop@0x36b58e9a0 in func@0x36b58e950]	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173920	150	1174080,1174070	233	0	0	0	0	0	0	0	0
+       238	       237	     42162	    0	      1	                        func@0x18000a482	C:\WINDOWS\System32\USER32.dll	42114	123	0	152	0	0	0	0	0	0	0	0
+       239	       238	     42322	    0	      1	                        func@0x18000a510	C:\WINDOWS\System32\USER32.dll	42256	104	0	153	0	0	0	0	0	0	0	0
+       240	       239	    658339	    0	      1	                KiUserCallbackDispatcher	C:\WINDOWS\SYSTEM32\ntdll.dll	658304	80	0	485	0	0	0	0	0	0	0	0
+       241	       240	    135058	    0	      1	                        func@0x180020f60	C:\WINDOWS\System32\USER32.dll	135008	85	0	116	0	0	0	0	0	0	0	0
+       242	       241	     58219	    0	      1	                        func@0x18000e2d0	C:\WINDOWS\System32\USER32.dll	58064	230	0	88	0	0	0	0	0	0	0	0
+       243	       242	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       244	       243	     93826	    0	      1	                        func@0x180016de0	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	93664	391	0	540	0	0	0	0	0	0	0	0
+       245	       244	     94304	    0	      1	                        func@0x180016f70	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	94064	613	0	541	0	0	0	0	0	0	0	0
+       246	       245	    101925	    0	      1	                        func@0x180018c81	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	101505	955	0	542	0	0	0	0	0	0	0	0
+       247	       730	    104153	    1	      1	  [Loop@0x1800196c0 in func@0x180019270]	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	104128	30	0	543	0	0	0	0	0	0	0	0
+       248	       247	     98835	    0	      1	                        func@0x180018190	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	98704	458	0	546	0	0	0	0	0	0	0	0
+       249	       248	    100713	    0	      1	                        func@0x180018860	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	100448	407	0	547	0	0	0	0	0	0	0	0
+       250	       249	      4324	    0	      1	                       NtUserCallNoParam	C:\WINDOWS\System32\win32u.dll	4304	21	0	536	0	0	0	0	0	0	0	0
+       251	       646	      9967	    1	      0	           [Loop at line 47 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9552	1836	11388	280	0	0	0	0	0	0	0	0
+       252	       652	     29947	    1	      0	  [Loop at line 149 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29168	1385	30553	281	0	0	0	0	0	0	0	0
+       253	       252	     33707	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       254	       654	     28965	    1	      0	  [Loop at line 140 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28864	238	29102	300	0	0	0	0	0	0	0	0
+       255	       656	     30255	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       256	       255	      7782	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       257	       256	     34681	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       258	       651	     28776	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       259	       258	      7092	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       260	       259	    189220	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       261	       646	      9998	    1	      0	           [Loop at line 47 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9552	1836	11388	280	0	0	0	0	0	0	0	0
+       262	       261	    103611	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       263	       262	    961475	    0	      0	                        func@0x36b55ab70	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	961392	160	0	290	0	0	0	0	0	0	0	0
+       264	       722	   1176356	    1	      0	  [Loop@0x36b58f2f0 in func@0x36b58f2c0]	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1176304	58	1176362	291	0	0	0	0	0	0	0	0
+       265	       264	     14890	    0	      1	                                  BitBlt	C:\WINDOWS\System32\GDI32.dll	14720	200	0	507	0	0	0	0	0	0	0	0
+       266	       265	    121757	    0	      1	                                  BitBlt	C:\WINDOWS\System32\gdi32full.dll	121552	250	0	66	0	0	0	0	0	0	0	0
+       267	       266	      4420	    0	      1	                             NtGdiBitBlt	C:\WINDOWS\System32\win32u.dll	4400	21	0	537	0	0	0	0	0	0	0	0
+       268	       656	     30067	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       269	       255	      7187	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       270	       656	     30009	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       271	       255	      7639	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       272	       663	      9904	    1	      0	           [Loop at line 51 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9872	46	9918	377	0	0	0	0	0	0	0	0
+       273	       255	      7751	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       274	       273	    190675	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       275	       274	    234966	    0	      1	                        func@0x180039460	C:\WINDOWS\System32\ucrtbase.dll	234592	395	0	47	0	0	0	0	0	0	0	0
+       276	       275	    212860	    0	      1	                        func@0x180033e60	C:\WINDOWS\System32\ucrtbase.dll	212576	307	0	72	0	0	0	0	0	0	0	0
+       277	       276	    304263	    0	      1	                        func@0x18004a480	C:\WINDOWS\System32\ucrtbase.dll	304256	33	0	74	0	0	0	0	0	0	0	0
+       278	       665	    103568	    1	      0	[Loop at line 136 in RenderWindow::UpdateScreenSurface]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103536	50	103586	379	0	0	0	0	0	0	0	0
+       279	       278	    907249	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       280	       656	     30226	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       281	       280	     79806	    0	      1	                      Query_perf_counter	C:\WINDOWS\SYSTEM32\MSVCP140.dll	79792	25	0	521	0	0	0	0	0	0	0	0
+       282	       766	    262565	    1	      1	[Loop@0x180040191 in RtlQueryPerformanceCounter]	C:\WINDOWS\SYSTEM32\ntdll.dll	262545	49	0	508	0	0	0	0	0	0	0	0
+       283	       252	     33650	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       284	       278	    907050	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       285	       255	      7365	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       286	       285	    216309	    0	      1	                                   sqrtf	C:\WINDOWS\System32\ucrtbase.dll	216288	159	0	75	0	0	0	0	0	0	0	0
+       287	       252	     34064	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       288	       255	      7802	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       289	       288	     34681	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       290	       665	    103572	    1	      0	[Loop at line 136 in RenderWindow::UpdateScreenSurface]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103536	50	103586	379	0	0	0	0	0	0	0	0
+       291	       651	     28747	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       292	       291	      7092	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       293	       292	    189660	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       294	       288	     34500	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       295	       766	    262572	    1	      1	[Loop@0x180040191 in RtlQueryPerformanceCounter]	C:\WINDOWS\SYSTEM32\ntdll.dll	262545	49	0	508	0	0	0	0	0	0	0	0
+       296	       651	     28760	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       297	       296	      6741	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       298	       663	      9891	    1	      0	           [Loop at line 51 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9872	46	9918	377	0	0	0	0	0	0	0	0
+       299	       255	      7388	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       300	       255	      8056	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       301	       252	     33680	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       302	       252	     33730	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       303	       252	     33623	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       304	       252	     33734	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       305	       654	     29081	    1	      0	  [Loop at line 140 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28864	238	29102	300	0	0	0	0	0	0	0	0
+       306	       278	    907242	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       307	       273	    189618	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       308	       291	      6455	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       309	       275	    212639	    0	      1	                        func@0x180033e60	C:\WINDOWS\System32\ucrtbase.dll	212576	307	0	72	0	0	0	0	0	0	0	0
+       310	       309	    230549	    0	      1	                        func@0x18003842c	C:\WINDOWS\System32\ucrtbase.dll	230444	124	0	79	0	0	0	0	0	0	0	0
+       311	       310	    176025	    0	      1	                        func@0x18002af90	C:\WINDOWS\System32\ucrtbase.dll	176016	10	0	81	0	0	0	0	0	0	0	0
+       312	       255	      7393	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       313	       278	    907200	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       314	       255	      7730	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       315	       309	    230542	    0	      1	                        func@0x18003842c	C:\WINDOWS\System32\ucrtbase.dll	230444	124	0	79	0	0	0	0	0	0	0	0
+       316	       252	     34076	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       317	       288	     34745	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       318	       278	    171008	    0	      0	                              SDL_MapRGB	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	171008	32	0	356	0	0	0	0	0	0	0	0
+       319	       656	     30051	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       320	       273	    188948	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       321	       656	     30326	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       322	       651	     30688	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       323	       663	      9878	    1	      0	           [Loop at line 51 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9872	46	9918	377	0	0	0	0	0	0	0	0
+       324	       651	     30662	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       325	       324	     61530	    0	      1	                               free_base	C:\WINDOWS\System32\ucrtbase.dll	61504	40	0	84	0	0	0	0	0	0	0	0
+       326	       325	    149424	    0	      1	                             RtlFreeHeap	C:\WINDOWS\SYSTEM32\ntdll.dll	149344	103	0	510	0	0	0	0	0	0	0	0
+       327	       769	    683306	    1	      1	  [Loop@0x1800a6d03 in func@0x1800a6a04]	C:\WINDOWS\SYSTEM32\ntdll.dll	683267	49	0	511	0	0	0	0	0	0	0	0
+       328	       665	    103549	    1	      0	[Loop at line 136 in RenderWindow::UpdateScreenSurface]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103536	50	103586	379	0	0	0	0	0	0	0	0
+       329	       255	      7743	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       330	       273	    189641	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       331	       255	      7504	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       332	       680	      6395	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6192	226	6418	380	0	0	0	0	0	0	0	0
+       333	       278	    907045	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       334	       256	     34745	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       335	       288	     34593	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       336	       255	      7486	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       337	       275	    212673	    0	      1	                        func@0x180033e60	C:\WINDOWS\System32\ucrtbase.dll	212576	307	0	72	0	0	0	0	0	0	0	0
+       338	       337	    212201	    0	      1	                        func@0x180033c64	C:\WINDOWS\System32\ucrtbase.dll	212068	186	0	87	0	0	0	0	0	0	0	0
+       339	       338	    230589	    0	      1	                        func@0x1800384b0	C:\WINDOWS\System32\ucrtbase.dll	230576	31	0	97	0	0	0	0	0	0	0	0
+       340	       339	    176008	    0	      1	                        func@0x18002af80	C:\WINDOWS\System32\ucrtbase.dll	176000	16	0	100	0	0	0	0	0	0	0	0
+       341	       259	    190675	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       342	       341	    234966	    0	      1	                        func@0x180039460	C:\WINDOWS\System32\ucrtbase.dll	234592	395	0	47	0	0	0	0	0	0	0	0
+       343	       342	    212639	    0	      1	                        func@0x180033e60	C:\WINDOWS\System32\ucrtbase.dll	212576	307	0	72	0	0	0	0	0	0	0	0
+       344	       343	    230557	    0	      1	                        func@0x18003842c	C:\WINDOWS\System32\ucrtbase.dll	230444	124	0	79	0	0	0	0	0	0	0	0
+       345	       255	      7403	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       346	       652	     29776	    1	      0	  [Loop at line 149 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29168	1385	30553	281	0	0	0	0	0	0	0	0
+       347	       273	    189532	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       348	       273	    187310	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       349	       275	    212842	    0	      1	                        func@0x180033e60	C:\WINDOWS\System32\ucrtbase.dll	212576	307	0	72	0	0	0	0	0	0	0	0
+       350	       349	    230469	    0	      1	                        func@0x18003842c	C:\WINDOWS\System32\ucrtbase.dll	230444	124	0	79	0	0	0	0	0	0	0	0
+       351	       350	    176011	    0	      1	                        func@0x18002af80	C:\WINDOWS\System32\ucrtbase.dll	176000	16	0	100	0	0	0	0	0	0	0	0
+       352	       652	     29200	    1	      0	  [Loop at line 149 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29168	1385	30553	281	0	0	0	0	0	0	0	0
+       353	       663	      9911	    1	      0	           [Loop at line 51 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9872	46	9918	377	0	0	0	0	0	0	0	0
+       354	       665	    103559	    1	      0	[Loop at line 136 in RenderWindow::UpdateScreenSurface]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103536	50	103586	379	0	0	0	0	0	0	0	0
+       355	       252	     33995	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       356	       646	      9563	    1	      0	           [Loop at line 47 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9552	1836	11388	280	0	0	0	0	0	0	0	0
+       357	       356	    193682	    0	      0	                        func@0x36b49f2a4	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	193188	892	0	143	0	0	0	0	0	0	0	0
+       358	       724	   1173940	    1	      0	  [Loop@0x36b58e9a0 in func@0x36b58e950]	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173920	150	1174080,1174070	233	0	0	0	0	0	0	0	0
+       359	       358	     42162	    0	      1	                        func@0x18000a482	C:\WINDOWS\System32\USER32.dll	42114	123	0	152	0	0	0	0	0	0	0	0
+       360	       359	     42322	    0	      1	                        func@0x18000a510	C:\WINDOWS\System32\USER32.dll	42256	104	0	153	0	0	0	0	0	0	0	0
+       361	       360	    658339	    0	      1	                KiUserCallbackDispatcher	C:\WINDOWS\SYSTEM32\ntdll.dll	658304	80	0	485	0	0	0	0	0	0	0	0
+       362	       361	    142934	    0	      1	                        func@0x180022db0	C:\WINDOWS\System32\USER32.dll	142768	365	0	155	0	0	0	0	0	0	0	0
+       363	       362	    175232	    0	      1	                          LoadLibraryExW	C:\WINDOWS\System32\KERNELBASE.dll	175232	283	0	25	0	0	0	0	0	0	0	0
+       364	       361	    124739	    0	      1	                        func@0x18001e6f0	C:\WINDOWS\System32\USER32.dll	124656	161	0	156	0	0	0	0	0	0	0	0
+       365	       364	    124872	    0	      1	                        func@0x18001e7a0	C:\WINDOWS\System32\USER32.dll	124832	66	0	157	0	0	0	0	0	0	0	0
+       366	       365	    135665	    0	      1	                        func@0x180021140	C:\WINDOWS\System32\USER32.dll	135488	212	0	158	0	0	0	0	0	0	0	0
+       367	       366	     16597	    0	      0	                        func@0x180004040	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	16448	214	0	556	0	0	0	0	0	0	0	0
+       368	       367	     25790	    0	      0	                        func@0x180006320	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	25376	887	0	557	0	0	0	0	0	0	0	0
+       369	       754	     29629	    1	      0	  [Loop@0x180007396 in func@0x180007360]	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	29590	50	29640	558	0	0	0	0	0	0	0	0
+       370	       756	      8751	    1	      0	  [Loop@0x1800021e0 in func@0x180002130]	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	8672	116	8788	560	0	0	0	0	0	0	0	0
+       371	       370	      9251	    0	      0	                        func@0x1800022b0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	8880	420	0	562	0	0	0	0	0	0	0	0
+       372	       371	    426504	    0	      1	                            VirtualQuery	C:\WINDOWS\System32\KERNELBASE.dll	426464	66	0	89	0	0	0	0	0	0	0	0
+       373	       372	    643540	    0	      1	                    NtQueryVirtualMemory	C:\WINDOWS\SYSTEM32\ntdll.dll	643520	21	0	513	0	0	0	0	0	0	0	0
+       374	       368	     29662	    0	      0	                        func@0x180007360	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	29536	143	0	559	0	0	0	0	0	0	0	0
+       375	       374	     47007	    0	      0	                        func@0x18000b670	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	46704	964	0	563	0	0	0	0	0	0	0	0
+       376	       375	     45674	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       377	       376	    161069	    0	      1	                CreateToolhelp32Snapshot	C:\WINDOWS\System32\KERNEL32.DLL	160800	1695	0	5	0	0	0	0	0	0	0	0
+       378	       781	    122327	    1	      1	  [Loop@0x18001dd52 in func@0x18001dd00]	C:\WINDOWS\System32\KERNEL32.DLL	122292	66	0	6	0	0	0	0	0	0	0	0
+       379	       378	    644148	    0	      1	                NtQuerySystemInformation	C:\WINDOWS\SYSTEM32\ntdll.dll	644128	21	0	514	0	0	0	0	0	0	0	0
+       380	       758	     45778	    1	      0	  [Loop@0x18000b2a3 in func@0x18000b1e0]	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45731	52	45783	565	0	0	0	0	0	0	0	0
+       381	       380	    136488	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       382	       381	   3356372	    0	      1	                         func@0xc5333640	C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\tpsstool.dll	3356224	799	0	27	0	0	0	0	0	0	0	0
+       383	       382	    643700	    0	      1	                      NtMapViewOfSection	C:\WINDOWS\SYSTEM32\ntdll.dll	643680	21	0	515	0	0	0	0	0	0	0	0
+       384	       380	    136573	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       385	       384	    643764	    0	      1	                    NtUnmapViewOfSection	C:\WINDOWS\SYSTEM32\ntdll.dll	643744	21	0	516	0	0	0	0	0	0	0	0
+       386	       380	    136530	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       387	       380	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	483	0	0	0	0	0	0	0	0
+       388	       387	    476846	    0	      0	                            [pincrt.dll]	pincrt.dll	0	0	0	501	0	0	0	0	0	0	0	0
+       389	       760	     45969	    1	      0	  [Loop@0x18000b330 in func@0x18000b1e0]	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45872	106	45978	566	0	0	0	0	0	0	0	0
+       390	       389	    136573	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       391	       390	    643764	    0	      1	                    NtUnmapViewOfSection	C:\WINDOWS\SYSTEM32\ntdll.dll	643744	21	0	516	0	0	0	0	0	0	0	0
+       392	       389	    136488	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       393	       392	   3356372	    0	      1	                         func@0xc5333640	C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\tpsstool.dll	3356224	799	0	27	0	0	0	0	0	0	0	0
+       394	       393	    643700	    0	      1	                      NtMapViewOfSection	C:\WINDOWS\SYSTEM32\ntdll.dll	643680	21	0	515	0	0	0	0	0	0	0	0
+       395	       389	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	483	0	0	0	0	0	0	0	0
+       396	       395	    476846	    0	      0	                            [pincrt.dll]	pincrt.dll	0	0	0	501	0	0	0	0	0	0	0	0
+       397	       389	    136533	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       398	       367	     26080	    0	      0	                        func@0x180006320	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	25376	887	0	557	0	0	0	0	0	0	0	0
+       399	       398	     47836	    0	      0	                        func@0x18000ba40	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	47680	381	0	567	0	0	0	0	0	0	0	0
+       400	       399	     45674	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       401	       400	    161069	    0	      1	                CreateToolhelp32Snapshot	C:\WINDOWS\System32\KERNEL32.DLL	160800	1695	0	5	0	0	0	0	0	0	0	0
+       402	       783	    122327	    1	      1	  [Loop@0x18001dd52 in func@0x18001dd00]	C:\WINDOWS\System32\KERNEL32.DLL	122292	66	0	6	0	0	0	0	0	0	0	0
+       403	       402	    644148	    0	      1	                NtQuerySystemInformation	C:\WINDOWS\SYSTEM32\ntdll.dll	644128	21	0	514	0	0	0	0	0	0	0	0
+       404	       762	     45778	    1	      0	  [Loop@0x18000b2a3 in func@0x18000b1e0]	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45731	52	45783	565	0	0	0	0	0	0	0	0
+       405	       404	    136503	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       406	       404	    136533	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       407	       404	    136573	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       408	       407	    643764	    0	      1	                    NtUnmapViewOfSection	C:\WINDOWS\SYSTEM32\ntdll.dll	643744	21	0	516	0	0	0	0	0	0	0	0
+       409	       404	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	483	0	0	0	0	0	0	0	0
+       410	       409	    476846	    0	      0	                            [pincrt.dll]	pincrt.dll	0	0	0	501	0	0	0	0	0	0	0	0
+       411	       764	     45969	    1	      0	  [Loop@0x18000b330 in func@0x18000b1e0]	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45872	106	45978	566	0	0	0	0	0	0	0	0
+       412	       411	    136573	    0	      1	                            Thread32Next	C:\WINDOWS\System32\KERNEL32.DLL	136384	208	0	8	0	0	0	0	0	0	0	0
+       413	       412	    643764	    0	      1	                    NtUnmapViewOfSection	C:\WINDOWS\SYSTEM32\ntdll.dll	643744	21	0	516	0	0	0	0	0	0	0	0
+       414	       411	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	483	0	0	0	0	0	0	0	0
+       415	       414	    476846	    0	      0	                            [pincrt.dll]	pincrt.dll	0	0	0	501	0	0	0	0	0	0	0	0
+       416	       273	    189585	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       417	       296	      6026	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       418	       689	     13741	    1	      0	 [Loop at line 77 in Matrix4::operator*]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	13702	116	13818	381	0	0	0	0	0	0	0	0
+       419	       252	     34048	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       420	       273	    189623	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       421	       255	      7209	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       422	       252	     34053	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       423	       278	    907207	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       424	       255	      7438	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       425	       424	    216309	    0	      1	                                   sqrtf	C:\WINDOWS\System32\ucrtbase.dll	216288	159	0	75	0	0	0	0	0	0	0	0
+       426	       309	    230469	    0	      1	                        func@0x18003842c	C:\WINDOWS\System32\ucrtbase.dll	230444	124	0	79	0	0	0	0	0	0	0	0
+       427	       426	    176011	    0	      1	                        func@0x18002af80	C:\WINDOWS\System32\ucrtbase.dll	176000	16	0	100	0	0	0	0	0	0	0	0
+       428	       656	     30031	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       429	       273	    188937	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       430	       426	    176008	    0	      1	                        func@0x18002af80	C:\WINDOWS\System32\ucrtbase.dll	176000	16	0	100	0	0	0	0	0	0	0	0
+       431	       252	     33981	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       432	       431	    107996	    0	      0	             VertexData::BarycentricLerp	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	107856	843	0	383	0	0	0	0	0	0	0	0
+       433	       766	    262583	    1	      1	[Loop@0x180040191 in RtlQueryPerformanceCounter]	C:\WINDOWS\SYSTEM32\ntdll.dll	262545	49	0	508	0	0	0	0	0	0	0	0
+       434	       255	      8096	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       435	       252	     33647	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       436	       273	    189282	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       437	       252	     33971	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       438	       337	    212227	    0	      1	                        func@0x180033c64	C:\WINDOWS\System32\ucrtbase.dll	212068	186	0	87	0	0	0	0	0	0	0	0
+       439	       438	    176025	    0	      1	                        func@0x18002af90	C:\WINDOWS\System32\ucrtbase.dll	176016	10	0	81	0	0	0	0	0	0	0	0
+       440	       274	    234779	    0	      1	                        func@0x180039460	C:\WINDOWS\System32\ucrtbase.dll	234592	395	0	47	0	0	0	0	0	0	0	0
+       441	       278	    907228	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       442	       273	    188926	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       443	       255	      7738	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       444	       665	    103563	    1	      0	[Loop at line 136 in RenderWindow::UpdateScreenSurface]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103536	50	103586	379	0	0	0	0	0	0	0	0
+       445	       273	    189610	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       446	       255	      7962	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       447	       651	     28821	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       448	       447	     31556	    0	      0	                      Renderer::Clipping	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	31008	653	0	384	0	0	0	0	0	0	0	0
+       449	       694	    109314	    1	      0	       [Loop at line 35 in operator new]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	109295	25	109326,109320	385	0	0	0	0	0	0	0	0
+       450	       449	     64997	    0	      1	                             malloc_base	C:\WINDOWS\System32\ucrtbase.dll	64944	78	0	112	0	0	0	0	0	0	0	0
+       451	       450	    176806	    0	      1	                        func@0x18002aa20	C:\WINDOWS\SYSTEM32\ntdll.dll	174624	3103	0	488	0	0	0	0	0	0	0	0
+       452	       338	    176025	    0	      1	                        func@0x18002af90	C:\WINDOWS\System32\ucrtbase.dll	176016	10	0	81	0	0	0	0	0	0	0	0
+       453	       663	      9894	    1	      0	           [Loop at line 51 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9872	46	9918	377	0	0	0	0	0	0	0	0
+       454	       273	    189190	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       455	       656	     30267	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       456	       450	    177094	    0	      1	                        func@0x18002aa20	C:\WINDOWS\SYSTEM32\ntdll.dll	174624	3103	0	488	0	0	0	0	0	0	0	0
+       457	       456	    178016	    0	      1	                        func@0x18002b650	C:\WINDOWS\SYSTEM32\ntdll.dll	177744	683	0	517	0	0	0	0	0	0	0	0
+       458	       431	    108050	    0	      0	             VertexData::BarycentricLerp	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	107856	843	0	383	0	0	0	0	0	0	0	0
+       459	       273	    189224	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       460	       256	     34712	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       461	       255	      7513	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       462	       278	    907234	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       463	       656	     30146	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       464	       447	     31659	    0	      0	                      Renderer::Clipping	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	31008	653	0	384	0	0	0	0	0	0	0	0
+       465	       255	      7398	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       466	       296	      6051	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       467	       431	    108140	    0	      0	             VertexData::BarycentricLerp	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	107856	843	0	383	0	0	0	0	0	0	0	0
+       468	       255	      7449	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       469	       273	    189414	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       470	       296	      7092	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       471	       470	    189623	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       472	       656	     30367	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       473	       326	    153902	    0	      1	                        func@0x180025710	C:\WINDOWS\SYSTEM32\ntdll.dll	153360	559	0	518	0	0	0	0	0	0	0	0
+       474	       255	      7584	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       475	       656	     30138	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       476	       278	    907223	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       477	       456	    178011	    0	      1	                        func@0x18002b650	C:\WINDOWS\SYSTEM32\ntdll.dll	177744	683	0	517	0	0	0	0	0	0	0	0
+       478	       278	    907239	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       479	       337	    212228	    0	      1	                        func@0x180033c64	C:\WINDOWS\System32\ucrtbase.dll	212068	186	0	87	0	0	0	0	0	0	0	0
+       480	       259	    189641	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       481	       255	      8024	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       482	       702	      6579	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6496	120	6616	387	0	0	0	0	0	0	0	0
+       483	       252	     33620	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       484	       278	    907220	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       485	       255	      7494	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       486	       258	      6836	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       487	       470	    189618	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       488	       273	    189066	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       489	       656	     30316	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       490	       255	      7184	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       491	       766	    262569	    1	      1	[Loop@0x180040191 in RtlQueryPerformanceCounter]	C:\WINDOWS\SYSTEM32\ntdll.dll	262545	49	0	508	0	0	0	0	0	0	0	0
+       492	       656	     30341	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       493	       278	    907231	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       494	       255	      7889	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       495	       292	    189641	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       496	       255	      7666	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       497	       291	      6026	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       498	       497	     13669	    0	      0	                      Matrix4::operator*	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	13600	246	0	382	0	0	0	0	0	0	0	0
+       499	       255	      7702	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       500	       470	    189250	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       501	       252	     33752	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       502	       252	     33932	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       503	       273	    187018	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       504	       255	      7836	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       505	       296	      6079	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       506	       259	    189224	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       507	       252	     33755	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       508	       278	    171011	    0	      0	                              SDL_MapRGB	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	171008	32	0	356	0	0	0	0	0	0	0	0
+       509	       326	    683050	    0	      1	                        func@0x1800a6a04	C:\WINDOWS\SYSTEM32\ntdll.dll	682500	1887	0	512	0	0	0	0	0	0	0	0
+       510	       291	      6479	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       511	       255	      7588	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       512	       511	    216309	    0	      1	                                   sqrtf	C:\WINDOWS\System32\ucrtbase.dll	216288	159	0	75	0	0	0	0	0	0	0	0
+       513	       256	     34693	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       514	       431	    108639	    0	      0	             VertexData::BarycentricLerp	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	107856	843	0	383	0	0	0	0	0	0	0	0
+       515	       663	      9901	    1	      0	           [Loop at line 51 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9872	46	9918	377	0	0	0	0	0	0	0	0
+       516	       258	      6630	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       517	       252	     33782	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       518	       292	    187387	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       519	       656	     30375	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       520	       252	     33765	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       521	       665	    103543	    1	      0	[Loop at line 136 in RenderWindow::UpdateScreenSurface]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103536	50	103586	379	0	0	0	0	0	0	0	0
+       522	       252	     34041	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       523	       656	     30220	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       524	       523	     79828	    0	      1	                    Query_perf_frequency	C:\WINDOWS\SYSTEM32\MSVCP140.dll	79824	44	0	522	0	0	0	0	0	0	0	0
+       525	       255	      8016	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       526	       424	    216432	    0	      1	                                   sqrtf	C:\WINDOWS\System32\ucrtbase.dll	216288	159	0	75	0	0	0	0	0	0	0	0
+       527	       349	    230567	    0	      1	                        func@0x18003842c	C:\WINDOWS\System32\ucrtbase.dll	230444	124	0	79	0	0	0	0	0	0	0	0
+       528	       252	     33715	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       529	       278	    907205	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       530	       256	     34549	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       531	       656	     30256	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       532	       656	     30041	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       533	       431	    108559	    0	      0	             VertexData::BarycentricLerp	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	107856	843	0	383	0	0	0	0	0	0	0	0
+       534	       252	     33869	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       535	       288	     34676	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       536	       278	    907245	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       537	       654	     28996	    1	      0	  [Loop at line 140 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28864	238	29102	300	0	0	0	0	0	0	0	0
+       538	       273	    189071	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       539	       255	      7973	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       540	       252	     33643	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       541	       252	     33757	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       542	       256	     34611	    0	      0	               ShaderPipeline::Texture2D	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	34496	345	0	370	0	0	0	0	0	0	0	0
+       543	       292	    189071	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       544	       255	      7476	    0	      0	   LightingShaderPipline::FragmentShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	7184	956	0	369	0	0	0	0	0	0	0	0
+       545	       278	    907212	    0	      0	                        func@0x36b54d720	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	907040	224	0	299	0	0	0	0	0	0	0	0
+       546	       652	     29642	    1	      0	  [Loop at line 149 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29168	1385	30553	281	0	0	0	0	0	0	0	0
+       547	       349	    230549	    0	      1	                        func@0x18003842c	C:\WINDOWS\System32\ucrtbase.dll	230444	124	0	79	0	0	0	0	0	0	0	0
+       548	       547	    176025	    0	      1	                        func@0x18002af90	C:\WINDOWS\System32\ucrtbase.dll	176016	10	0	81	0	0	0	0	0	0	0	0
+       549	       291	      7043	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       550	       456	    178282	    0	      1	                        func@0x18002b650	C:\WINDOWS\SYSTEM32\ntdll.dll	177744	683	0	517	0	0	0	0	0	0	0	0
+       551	       550	     17452	    0	      1	                        func@0x1800043d0	C:\WINDOWS\SYSTEM32\ntdll.dll	17360	170	0	519	0	0	0	0	0	0	0	0
+       552	       656	     30321	    1	      0	  [Loop at line 184 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29984	487	30471	354	0	0	0	0	0	0	0	0
+       553	       252	     33640	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       554	       273	    189101	    0	      1	                                    powf	C:\WINDOWS\System32\ucrtbase.dll	187008	3782	0	43	0	0	0	0	0	0	0	0
+       555	       326	    683096	    0	      1	                        func@0x1800a6a04	C:\WINDOWS\SYSTEM32\ntdll.dll	682500	1887	0	512	0	0	0	0	0	0	0	0
+       556	       252	     33664	    0	      0	       ShaderPipeline::RasterizeTriangle	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	33328	1163	0	296	0	0	0	0	0	0	0	0
+       557	       724	   1174043	    1	      0	  [Loop@0x36b58e9a0 in func@0x36b58e950]	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173920	150	1174080,1174070	233	0	0	0	0	0	0	0	0
+       558	       557	     57896	    0	      1	                        DispatchMessageW	C:\WINDOWS\System32\USER32.dll	57296	658	0	159	0	0	0	0	0	0	0	0
+       559	       558	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       560	       559	   1167400	    0	      0	                        func@0x36b58cf60	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1167200	775	0	104	0	0	0	0	0	0	0	0
+       561	       560	     58493	    0	      1	                         CallWindowProcW	C:\WINDOWS\System32\USER32.dll	58352	163	0	98	0	0	0	0	0	0	0	0
+       562	       561	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       563	       562	     51058	    0	      1	                        func@0x18000c5d0	C:\WINDOWS\System32\USER32.dll	50640	601	0	101	0	0	0	0	0	0	0	0
+       564	       563	     45680	    0	      1	                        func@0x171b0b260	C:\WINDOWS\system32\uxtheme.dll	45664	22	0	523	0	0	0	0	0	0	0	0
+       565	       564	     47112	    0	      1	                        func@0x171b0b280	C:\WINDOWS\system32\uxtheme.dll	45696	1561	0	529	0	0	0	0	0	0	0	0
+       566	       565	    144342	    0	      1	                        func@0x171b23330	C:\WINDOWS\system32\uxtheme.dll	144176	178	0	530	0	0	0	0	0	0	0	0
+       567	       566	     38689	    0	      1	                        func@0x171b096f4	C:\WINDOWS\system32\uxtheme.dll	38644	51	0	531	0	0	0	0	0	0	0	0
+       568	       567	     49726	    0	      1	                        func@0x18000c1f0	C:\WINDOWS\System32\USER32.dll	49648	95	0	160	0	0	0	0	0	0	0	0
+       569	       568	     51844	    0	      1	                        func@0x18000c95f	C:\WINDOWS\System32\USER32.dll	51551	2092	0	118	0	0	0	0	0	0	0	0
+       570	       569	      4388	    0	      1	                       NtUserMessageCall	C:\WINDOWS\System32\win32u.dll	4368	21	0	538	0	0	0	0	0	0	0	0
+       571	       652	     29528	    1	      0	  [Loop at line 149 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29168	1385	30553	281	0	0	0	0	0	0	0	0
+       572	       571	    216434	    0	      1	                                   sqrtf	C:\WINDOWS\System32\ucrtbase.dll	216288	159	0	75	0	0	0	0	0	0	0	0
+       573	         3	    110586	    0	      0	                  __scrt_common_main_seh	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	110216	380	0	36	0	0	0	0	0	0	0	0
+       574	       573	    132173	    0	      1	                                    exit	C:\WINDOWS\System32\ucrtbase.dll	132064	137	0	114	0	0	0	0	0	0	0	0
+       575	       574	    132266	    0	      1	                        func@0x180020470	C:\WINDOWS\System32\ucrtbase.dll	132208	93	0	119	0	0	0	0	0	0	0	0
+       576	       575	    132385	    0	      1	                        func@0x1800204d4	C:\WINDOWS\System32\ucrtbase.dll	132308	157	0	120	0	0	0	0	0	0	0	0
+       577	       576	     82355	    0	      1	                    execute_onexit_table	C:\WINDOWS\System32\ucrtbase.dll	82304	57	0	121	0	0	0	0	0	0	0	0
+       578	       577	     82426	    0	      1	                        func@0x1800141c0	C:\WINDOWS\System32\ucrtbase.dll	82368	96	0	122	0	0	0	0	0	0	0	0
+       579	       777	     82645	    1	      1	  [Loop@0x1800142b0 in func@0x180014230]	C:\WINDOWS\System32\ucrtbase.dll	82608	90	0	123	0	0	0	0	0	0	0	0
+       580	       579	    115039	    0	      0	`dynamic atexit destructor for 'RenderWindow::instance''	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	114992	78	0	475	0	0	0	0	0	0	0	0
+       581	       580	    107253	    0	      0	RenderWindow::`scalar deleting destructor'	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	107232	143	0	476	0	0	0	0	0	0	0	0
+       582	       581	    971241	    0	      0	                        func@0x36b55d1d0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	971216	752	0	357	0	0	0	0	0	0	0	0
+       583	       582	    960248	    0	      0	                        func@0x36b55a680	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	960128	192	0	358	0	0	0	0	0	0	0	0
+       584	       583	    658339	    0	      1	                KiUserCallbackDispatcher	C:\WINDOWS\SYSTEM32\ntdll.dll	658304	80	0	485	0	0	0	0	0	0	0	0
+       585	       584	    135058	    0	      1	                        func@0x180020f60	C:\WINDOWS\System32\USER32.dll	135008	85	0	116	0	0	0	0	0	0	0	0
+       586	       585	     58219	    0	      1	                        func@0x18000e2d0	C:\WINDOWS\System32\USER32.dll	58064	230	0	88	0	0	0	0	0	0	0	0
+       587	       586	     59367	    0	      1	                        func@0x18000e4f0	C:\WINDOWS\System32\USER32.dll	58608	1684	0	90	0	0	0	0	0	0	0	0
+       588	       587	   1168898	    0	      0	                        func@0x36b58d478	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1168504	585	0	107	0	0	0	0	0	0	0	0
+       589	       588	   1166754	    0	      0	                        func@0x36b58cd50	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1166672	528	0	139	0	0	0	0	0	0	0	0
+       590	       589	    203102	    0	      0	                        func@0x36b4a1870	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	202864	512	0	359	0	0	0	0	0	0	0	0
+       591	       590	   1183296	    0	      0	                        func@0x36b590e30	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1183280	192	0	360	0	0	0	0	0	0	0	0
+       592	       727	   1182717	    1	      0	  [Loop@0x36b590bdf in func@0x36b590ba0]	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1182687	40	1182727	361	0	0	0	0	0	0	0	0
+       593	       592	    514954	    0	      1	                               ToUnicode	C:\WINDOWS\System32\USER32.dll	514912	69	0	161	0	0	0	0	0	0	0	0
+       594	       593	      7972	    0	      1	                       NtUserToUnicodeEx	C:\WINDOWS\System32\win32u.dll	7952	21	0	539	0	0	0	0	0	0	0	0
+       595	       580	    107270	    0	      0	RenderWindow::`scalar deleting destructor'	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	107232	143	0	476	0	0	0	0	0	0	0	0
+       596	       595	      6252	    0	      0	                        func@0x36b471850	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	6224	96	0	363	0	0	0	0	0	0	0	0
+       597	       596	      5339	    0	      0	                        func@0x36b471300	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	4864	515	0	364	0	0	0	0	0	0	0	0
+       598	       597	    972228	    0	      0	                        func@0x36b55d510	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	972048	464	0	365	0	0	0	0	0	0	0	0
+       599	       598	   1210117	    0	      0	                        func@0x36b5976f0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1210096	48	0	366	0	0	0	0	0	0	0	0
+       600	       599	   1182377	    0	      0	                        func@0x36b590a10	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1182224	400	0	367	0	0	0	0	0	0	0	0
+       601	       600	     81524	    0	      1	                        func@0x180013e00	C:\WINDOWS\System32\MSCTF.dll	81408	1232	0	68	0	0	0	0	0	0	0	0
+       602	       601	    139335	    0	      1	                        func@0x180021d80	C:\WINDOWS\System32\MSCTF.dll	138624	1062	0	76	0	0	0	0	0	0	0	0
+       603	       602	     85479	    0	      1	                        func@0x180014de0	C:\WINDOWS\System32\MSCTF.dll	85472	28	0	91	0	0	0	0	0	0	0	0
+       604	       603	     51960	    0	      1	                        func@0x18000caeb	C:\WINDOWS\System32\MSCTF.dll	51947	38	0	92	0	0	0	0	0	0	0	0
+       605	       604	    241711	    0	      1	                        func@0x14f03b000	C:\WINDOWS\SYSTEM32\textinputframework.dll	241664	81	0	9	0	0	0	0	0	0	0	0
+       606	       605	     22691	    0	      1	                        func@0x14f005890	C:\WINDOWS\SYSTEM32\textinputframework.dll	22672	54	0	10	0	0	0	0	0	0	0	0
+       607	       606	     23212	    0	      1	                        func@0x14f0058d0	C:\WINDOWS\SYSTEM32\textinputframework.dll	22736	577	0	11	0	0	0	0	0	0	0	0
+       608	       607	     50576	    0	      1	                        func@0x18000c578	C:\WINDOWS\System32\MSCTF.dll	50552	38	0	93	0	0	0	0	0	0	0	0
+       609	       608	     51856	    0	      1	                        func@0x18000ca54	C:\WINDOWS\System32\MSCTF.dll	51796	67	0	94	0	0	0	0	0	0	0	0
+       610	       609	     51960	    0	      1	                        func@0x18000caeb	C:\WINDOWS\System32\MSCTF.dll	51947	38	0	92	0	0	0	0	0	0	0	0
+       611	       610	     50523	    0	      1	                        func@0x18000c551	C:\WINDOWS\System32\MSCTF.dll	50513	39	0	95	0	0	0	0	0	0	0	0
+       612	       611	     50189	    0	      1	                        func@0x18000c31c	C:\WINDOWS\System32\MSCTF.dll	49948	254	0	96	0	0	0	0	0	0	0	0
+       613	       612	    235586	    0	      1	                        func@0x14f039810	C:\WINDOWS\SYSTEM32\textinputframework.dll	235536	84	0	12	0	0	0	0	0	0	0	0
+       614	       613	     22211	    0	      1	                        func@0x14f0056b0	C:\WINDOWS\SYSTEM32\textinputframework.dll	22192	54	0	13	0	0	0	0	0	0	0	0
+       615	       614	     22621	    0	      1	                        func@0x14f0056f0	C:\WINDOWS\SYSTEM32\textinputframework.dll	22256	396	0	14	0	0	0	0	0	0	0	0
+       616	       615	    108372	    0	      1	                        func@0x18001a5a0	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	107936	570	0	548	0	0	0	0	0	0	0	0
+       617	       616	     57173	    0	      1	                        func@0x18000dee0	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	57056	162	0	549	0	0	0	0	0	0	0	0
+       618	       617	    182238	    0	      1	                        func@0x18002c7b0	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	182192	87	0	550	0	0	0	0	0	0	0	0
+       619	       732	    184361	    1	      1	  [Loop@0x18002cfda in func@0x18002cfac]	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	184302	62	0	551	0	0	0	0	0	0	0	0
+       620	       619	    348154	    0	      1	                        func@0x180054fd0	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	348112	83	0	553	0	0	0	0	0	0	0	0
+       621	       620	    236074	    0	      1	                        func@0x180039a0f	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	236047	33	0	554	0	0	0	0	0	0	0	0
+       622	       621	    236293	    0	      1	                        func@0x180039a30	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	236080	360	0	555	0	0	0	0	0	0	0	0
+       623	       622	    646884	    0	      1	               NtAlpcSendWaitReceivePort	C:\WINDOWS\SYSTEM32\ntdll.dll	646864	21	0	520	0	0	0	0	0	0	0	0
+       624	       207	     15536	    0	      0	                      Model::processNode	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15216	382	0	222	0	0	0	0	0	0	0	0
+       625	       207	     15557	    0	      0	                      Model::processNode	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15216	382	0	222	0	0	0	0	0	0	0	0
+       626	       208	     15280	    0	      0	                      Model::processNode	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15216	382	0	222	0	0	0	0	0	0	0	0
+       627	       208	     15314	    0	      0	                      Model::processNode	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	15216	382	0	222	0	0	0	0	0	0	0	0
+       628	       210	     17460	    0	      0	             Model::loadMaterialTextures	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	17312	948	0	227	0	0	0	0	0	0	0	0
+       629	       210	     17783	    0	      0	             Model::loadMaterialTextures	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	17312	948	0	227	0	0	0	0	0	0	0	0
+       630	       215	     65952	    0	      0	                        stbi__parse_zlib	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	65808	443	0	272	0	0	0	0	0	0	0	0
+       631	       215	     66209	    0	      0	                        stbi__parse_zlib	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	65808	443	0	272	0	0	0	0	0	0	0	0
+       632	       216	     63360	    0	      0	               stbi__parse_huffman_block	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63312	912	0	274	0	0	0	0	0	0	0	0
+       633	       216	     63437	    0	      0	               stbi__parse_huffman_block	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63312	912	0	274	0	0	0	0	0	0	0	0
+       634	       216	     63477	    0	      0	               stbi__parse_huffman_block	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63312	912	0	274	0	0	0	0	0	0	0	0
+       635	       221	     69200	    0	      0	              stbi__create_png_image_raw	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	66496	4252	0	278	0	0	0	0	0	0	0	0
+       636	       221	     69261	    0	      0	              stbi__create_png_image_raw	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	66496	4252	0	278	0	0	0	0	0	0	0	0
+       637	       221	     69280	    0	      0	              stbi__create_png_image_raw	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	66496	4252	0	278	0	0	0	0	0	0	0	0
+       638	       224	     17460	    0	      0	             Model::loadMaterialTextures	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	17312	948	0	227	0	0	0	0	0	0	0	0
+       639	       224	     17783	    0	      0	             Model::loadMaterialTextures	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	17312	948	0	227	0	0	0	0	0	0	0	0
+       640	       229	     65952	    0	      0	                        stbi__parse_zlib	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	65808	443	0	272	0	0	0	0	0	0	0	0
+       641	       229	     66209	    0	      0	                        stbi__parse_zlib	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	65808	443	0	272	0	0	0	0	0	0	0	0
+       642	       230	     63360	    0	      0	               stbi__parse_huffman_block	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63312	912	0	274	0	0	0	0	0	0	0	0
+       643	       230	     63500	    0	      0	               stbi__parse_huffman_block	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	63312	912	0	274	0	0	0	0	0	0	0	0
+       644	       233	     69200	    0	      0	              stbi__create_png_image_raw	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	66496	4252	0	278	0	0	0	0	0	0	0	0
+       645	       233	     69204	    0	      0	              stbi__create_png_image_raw	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	66496	4252	0	278	0	0	0	0	0	0	0	0
+       646	         5	      9552	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       647	       646	      9584	    1	      0	           [Loop at line 47 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9552	1836	11388	280	0	0	0	0	0	0	0	0
+       648	         5	      9826	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       649	         5	      9967	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       650	       251	     27840	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       651	       650	     28320	    1	      0	   [Loop at line 88 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27840	2946	30902,30786	284	0	0	0	0	0	0	0	0
+       652	       651	     29168	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       653	       251	     29947	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       654	       651	     28864	    1	      0	  [Loop at line 109 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	28320	2396	30902,30716	283	0	0	0	0	0	0	0	0
+       655	       251	     28965	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       656	       652	     29984	    1	      0	  [Loop at line 149 in Renderer::Render]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	29168	1385	30553	281	0	0	0	0	0	0	0	0
+       657	       251	     30255	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       658	       251	     28776	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       659	         5	      9998	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       660	       251	     30067	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       661	       251	     30009	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       662	       646	      9863	    1	      0	           [Loop at line 47 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9552	1836	11388	280	0	0	0	0	0	0	0	0
+       663	       662	      9872	    1	      0	           [Loop at line 51 in SDL_main]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	9863	64	9927	378	0	0	0	0	0	0	0	0
+       664	         5	      9904	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       665	       261	    103536	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       666	       261	    103568	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       667	       251	     30226	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       668	       261	    103572	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       669	       251	     28747	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       670	       251	     28760	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       671	         5	      9891	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       672	       251	     29081	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       673	       251	     30051	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       674	       251	     30326	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       675	       251	     30688	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       676	         5	      9878	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       677	       251	     30662	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       678	       261	    103549	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       679	       258	      6192	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       680	       679	      6395	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6192	226	6418,6616	568	0	0	0	0	0	0	0	0
+       681	       258	      6395	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       682	       680	      6395	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6192	226	6418	380	0	0	0	0	0	0	0	0
+       683	       680	      6579	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6496	120	6616	387	0	0	0	0	0	0	0	0
+       684	       251	     29776	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       685	       251	     29200	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       686	         5	      9911	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       687	       261	    103559	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       688	         5	      9563	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       689	       417	     13702	    0	      0	                      Matrix4::operator*	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	13600	246	0	382	0	0	0	0	0	0	0	0
+       690	       417	     13741	    0	      0	                      Matrix4::operator*	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	13600	246	0	382	0	0	0	0	0	0	0	0
+       691	       251	     30031	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       692	       261	    103563	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       693	       251	     28821	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       694	       448	    109295	    0	      0	                            operator new	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	109284	60	0	386	0	0	0	0	0	0	0	0
+       695	       448	    109314	    0	      0	                            operator new	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	109284	60	0	386	0	0	0	0	0	0	0	0
+       696	         5	      9894	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       697	       251	     30267	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       698	       251	     30146	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       699	       251	     30367	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       700	       251	     30138	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       701	       258	      6496	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       702	       701	      6579	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6192	226	6418,6616	568	0	0	0	0	0	0	0	0
+       703	       258	      6579	    0	      0	     LightingShaderPipline::VertexShader	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	5920	1259	0	371	0	0	0	0	0	0	0	0
+       704	       702	      6395	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6192	226	6418	380	0	0	0	0	0	0	0	0
+       705	       702	      6579	    1	      0	[Loop at line 13 in LightingShaderPipline::VertexShader]	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	6496	120	6616	387	0	0	0	0	0	0	0	0
+       706	       251	     30316	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       707	       251	     30341	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       708	         5	      9901	    0	      0	                                SDL_main	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	8160	3908	0	85	0	0	0	0	0	0	0	0
+       709	       251	     30375	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       710	       261	    103543	    0	      0	       RenderWindow::UpdateScreenSurface	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	103424	1204	0	372	0	0	0	0	0	0	0	0
+       711	       251	     30220	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       712	       251	     30256	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       713	       251	     30041	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       714	       251	     28996	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       715	       251	     29642	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       716	       251	     30321	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       717	       251	     29528	    0	      0	                        Renderer::Render	D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe	27568	3439	0	282	0	0	0	0	0	0	0	0
+       718	       176	    336181	    0	      1	                        func@0x180052100	C:\WINDOWS\SYSTEM32\ucrtbased.dll	336128	160	0	19	0	0	0	0	0	0	0	0
+       719	       176	    336204	    0	      1	                        func@0x180052100	C:\WINDOWS\SYSTEM32\ucrtbased.dll	336128	160	0	19	0	0	0	0	0	0	0	0
+       720	       236	   1173920	    0	      0	                        func@0x36b58e950	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173840	1008	0	234	0	0	0	0	0	0	0	0
+       721	       236	   1173940	    0	      0	                        func@0x36b58e950	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173840	1008	0	234	0	0	0	0	0	0	0	0
+       722	       263	   1176304	    0	      0	                        func@0x36b58f2c0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1176256	128	0	292	0	0	0	0	0	0	0	0
+       723	       263	   1176356	    0	      0	                        func@0x36b58f2c0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1176256	128	0	292	0	0	0	0	0	0	0	0
+       724	       357	   1173920	    0	      0	                        func@0x36b58e950	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173840	1008	0	234	0	0	0	0	0	0	0	0
+       725	       357	   1173940	    0	      0	                        func@0x36b58e950	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173840	1008	0	234	0	0	0	0	0	0	0	0
+       726	       357	   1174043	    0	      0	                        func@0x36b58e950	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1173840	1008	0	234	0	0	0	0	0	0	0	0
+       727	       591	   1182687	    0	      0	                        func@0x36b590ba0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1182624	128	0	362	0	0	0	0	0	0	0	0
+       728	       591	   1182717	    0	      0	                        func@0x36b590ba0	D:\UE4SourceCode\SoftRasterizer\SDL2.dll	1182624	128	0	362	0	0	0	0	0	0	0	0
+       729	       246	    103871	    0	      1	                        func@0x180019270	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	103024	2880	0	544	0	0	0	0	0	0	0	0
+       730	       729	    104128	    1	      1	  [Loop@0x1800195bf in func@0x180019270]	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	103871	1174	0	545	0	0	0	0	0	0	0	0
+       731	       246	    104153	    0	      1	                        func@0x180019270	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	103024	2880	0	544	0	0	0	0	0	0	0	0
+       732	       618	    184282	    0	      1	                        func@0x18002cfac	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	184236	128	0	552	0	0	0	0	0	0	0	0
+       733	       618	    184361	    0	      1	                        func@0x18002cfac	C:\WINDOWS\SYSTEM32\CoreMessaging.dll	184236	128	0	552	0	0	0	0	0	0	0	0
+       734	       164	   2889328	    0	      0	Assimp::getNextWord<class std::_Vector_iterator<class std::_Vector_val<struct std::_Simple_types<char> > > >	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2889248	1128	0	375	0	0	0	0	0	0	0	0
+       735	       164	   2889462	    0	      0	Assimp::getNextWord<class std::_Vector_iterator<class std::_Vector_val<struct std::_Simple_types<char> > > >	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2889248	1128	0	375	0	0	0	0	0	0	0	0
+       736	       167	   2935345	    0	      0	          Assimp::ObjFileParser::getFace	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2934768	1941	0	466	0	0	0	0	0	0	0	0
+       737	       167	   2935529	    0	      0	          Assimp::ObjFileParser::getFace	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2934768	1941	0	466	0	0	0	0	0	0	0	0
+       738	       173	   9032873	    0	      0	                            operator new	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	9032864	80	0	468	0	0	0	0	0	0	0	0
+       739	       173	   9032882	    0	      0	                            operator new	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	9032864	80	0	468	0	0	0	0	0	0	0	0
+       740	       185	   2923568	    0	      0	          Assimp::ObjFile::Model::~Model	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2922944	3338	0	471	0	0	0	0	0	0	0	0
+       741	       185	   2924072	    0	      0	          Assimp::ObjFile::Model::~Model	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2922944	3338	0	471	0	0	0	0	0	0	0	0
+       742	       186	   2921508	    0	      0	            Assimp::ObjFile::Mesh::~Mesh	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2921360	1258	0	473	0	0	0	0	0	0	0	0
+       743	       186	   2922155	    0	      0	            Assimp::ObjFile::Mesh::~Mesh	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	2921360	1258	0	473	0	0	0	0	0	0	0	0
+       744	       193	    481840	    0	      0	   Assimp::Importer::ApplyPostProcessing	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	481520	1199	0	479	0	0	0	0	0	0	0	0
+       745	       193	    482158	    0	      0	   Assimp::Importer::ApplyPostProcessing	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	481520	1199	0	479	0	0	0	0	0	0	0	0
+       746	       195	    803120	    0	      0	    Assimp::CalcTangentsProcess::Execute	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	803024	203	0	482	0	0	0	0	0	0	0	0
+       747	       195	    803138	    0	      0	    Assimp::CalcTangentsProcess::Execute	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	803024	203	0	482	0	0	0	0	0	0	0	0
+       748	       196	    806224	    0	      0	Assimp::CalcTangentsProcess::ProcessMesh	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	803296	6701	0	490	0	0	0	0	0	0	0	0
+       749	       748	    806862	    1	      0	[Loop at line 266 in Assimp::CalcTangentsProcess::ProcessMesh]	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	807297	872	809991,806819,806930,807166,807296,808169,808316,808671,808808,808948	491	0	0	0	0	0	0	0	0
+       750	       196	    807950	    0	      0	Assimp::CalcTangentsProcess::ProcessMesh	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	803296	6701	0	490	0	0	0	0	0	0	0	0
+       751	       196	    806493	    0	      0	Assimp::CalcTangentsProcess::ProcessMesh	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	803296	6701	0	490	0	0	0	0	0	0	0	0
+       752	       202	    544384	    0	      0	      Assimp::SpatialSort::FindPositions	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	543072	2338	0	500	0	0	0	0	0	0	0	0
+       753	       202	    545312	    0	      0	      Assimp::SpatialSort::FindPositions	D:\UE4SourceCode\SoftRasterizer\assimp-vc142-mtd.dll	543072	2338	0	500	0	0	0	0	0	0	0	0
+       754	       368	     29590	    0	      0	                        func@0x180007360	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	29536	143	0	559	0	0	0	0	0	0	0	0
+       755	       368	     29629	    0	      0	                        func@0x180007360	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	29536	143	0	559	0	0	0	0	0	0	0	0
+       756	       369	      8672	    0	      0	                        func@0x180002130	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	8496	376	0	561	0	0	0	0	0	0	0	0
+       757	       369	      8751	    0	      0	                        func@0x180002130	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	8496	376	0	561	0	0	0	0	0	0	0	0
+       758	       375	     45731	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       759	       375	     45778	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       760	       375	     45872	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       761	       375	     45969	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       762	       399	     45731	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       763	       399	     45778	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       764	       399	     45872	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       765	       399	     45969	    0	      0	                        func@0x18000b1e0	D:\YouDaoDict\8.10.3.0\TextExtractorImpl64.dll	45536	557	0	564	0	0	0	0	0	0	0	0
+       766	       281	    262545	    0	      1	              RtlQueryPerformanceCounter	C:\WINDOWS\SYSTEM32\ntdll.dll	262480	146	0	509	0	0	0	0	0	0	0	0
+       767	       281	    262565	    0	      1	              RtlQueryPerformanceCounter	C:\WINDOWS\SYSTEM32\ntdll.dll	262480	146	0	509	0	0	0	0	0	0	0	0
+       768	       281	    262572	    0	      1	              RtlQueryPerformanceCounter	C:\WINDOWS\SYSTEM32\ntdll.dll	262480	146	0	509	0	0	0	0	0	0	0	0
+       769	       326	    683267	    0	      1	                        func@0x1800a6a04	C:\WINDOWS\SYSTEM32\ntdll.dll	682500	1887	0	512	0	0	0	0	0	0	0	0
+       770	       326	    683306	    0	      1	                        func@0x1800a6a04	C:\WINDOWS\SYSTEM32\ntdll.dll	682500	1887	0	512	0	0	0	0	0	0	0	0
+       771	       281	    262583	    0	      1	              RtlQueryPerformanceCounter	C:\WINDOWS\SYSTEM32\ntdll.dll	262480	146	0	509	0	0	0	0	0	0	0	0
+       772	       281	    262569	    0	      1	              RtlQueryPerformanceCounter	C:\WINDOWS\SYSTEM32\ntdll.dll	262480	146	0	509	0	0	0	0	0	0	0	0
+       773	       119	     56530	    0	      1	                        func@0x18000d6a0	C:\WINDOWS\System32\USER32.dll	54944	2107	0	149	0	0	0	0	0	0	0	0
+       774	       119	     56746	    0	      1	                        func@0x18000d6a0	C:\WINDOWS\System32\USER32.dll	54944	2107	0	149	0	0	0	0	0	0	0	0
+       775	       126	     56530	    0	      1	                        func@0x18000d6a0	C:\WINDOWS\System32\USER32.dll	54944	2107	0	149	0	0	0	0	0	0	0	0
+       776	       126	     56746	    0	      1	                        func@0x18000d6a0	C:\WINDOWS\System32\USER32.dll	54944	2107	0	149	0	0	0	0	0	0	0	0
+       777	       578	     82608	    0	      1	                        func@0x180014230	C:\WINDOWS\System32\ucrtbase.dll	82480	319	0	124	0	0	0	0	0	0	0	0
+       778	       578	     82645	    0	      1	                        func@0x180014230	C:\WINDOWS\System32\ucrtbase.dll	82480	319	0	124	0	0	0	0	0	0	0	0
+       779	       151	      6096	    0	      1	                                  memset	C:\WINDOWS\SYSTEM32\VCRUNTIME140D.dll	5888	304	0	29	0	0	0	0	0	0	0	0
+       780	       151	      6129	    0	      1	                                  memset	C:\WINDOWS\SYSTEM32\VCRUNTIME140D.dll	5888	304	0	29	0	0	0	0	0	0	0	0
+       781	       377	    122194	    0	      1	                        func@0x18001dd00	C:\WINDOWS\System32\KERNEL32.DLL	122112	289	0	7	0	0	0	0	0	0	0	0
+       782	       377	    122327	    0	      1	                        func@0x18001dd00	C:\WINDOWS\System32\KERNEL32.DLL	122112	289	0	7	0	0	0	0	0	0	0	0
+       783	       401	    122194	    0	      1	                        func@0x18001dd00	C:\WINDOWS\System32\KERNEL32.DLL	122112	289	0	7	0	0	0	0	0	0	0	0
+       784	       401	    122327	    0	      1	                        func@0x18001dd00	C:\WINDOWS\System32\KERNEL32.DLL	122112	289	0	7	0	0	0	0	0	0	0	0
+       785	        -1	         0	    0	      0	                      [Outside any loop]	n/a	0	0	0	569	0	0	0	0	0	0	0	0

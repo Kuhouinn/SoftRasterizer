@@ -1,0 +1,106 @@
+78 [11216] INFO perfrun.launcher <> - Launcher main begin
+84 [11216] INFO perfrun.launcher <> - MessageCatalogInit finished
+84 [11216] INFO perfrun.launcher <> - Launcher instance created
+84 [11216] INFO perfrun.launcher <> - argc = 7; cmdline = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\advixe-runss.exe --ui-output-format xml --ui-output-fd 10468 --option-file D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\config\runss.options 
+100 [11216] INFO perfrun.launcher <> - New signal handler callback was added
+201 [11216] INFO perfrun.launcher <> - create msngr2::ICliToolContext
+202 [11216] INFO perfrun.launcher <> - create file finder object
+202 [11216] INFO perfrun.launcher <> - create a result directory: pattern = D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007 pid = 4294967295
+205 [11216] INFO perfrun.launcher <> - create data directory = D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0
+206 [11216] INFO perfrun.launcher <> - Creating the master collection flag
+217 [11216] INFO perfrun.launcher <> - Done creating the master collection flag
+218 [1484] INFO perfrun.launcher <> - plugin [remoteplug] was disabled because it doesn't support the given collection type.
+218 [1484] INFO perfrun.sdk <> - Allocating TMU :D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0\systemcollector-26972-JU3H237682QNK4L.sc
+218 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+223 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+223 [1484] INFO perfrun.launcher <> - plugin [gpu] was disabled because it doesn't support the given collection type.
+223 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+223 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+223 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+223 [1484] INFO perfrun.mrte <> - system-wide mode is 0
+223 [1484] INFO perfrun.mrte <> - Getting  mrte profiling environment ...
+298 [1484] INFO perfrun.mrte <> - INTEL_MRTE_DATA_DIR=D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0
+298 [1484] INFO perfrun.mrte <> - INTEL_MRTE_HOST_NAME=JU3H237682QNK4L
+298 [1484] INFO perfrun.mrte <> - JAVA_TOOL_OPTIONS=-agentlib:advixe_tpssmrte_javaprof_1.0
+298 [1484] INFO perfrun.mrte <> - PATH=C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\runtime;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\windows\system32;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin
+298 [1484] INFO perfrun.mrte <> - COR_ENABLE_PROFILING=1
+298 [1484] INFO perfrun.mrte <> - COR_PROFILER={2603158F-60BC-4915-9795-D85FC7A9A2C8}
+298 [1484] INFO perfrun.mrte <> - COMPLUS_ProfAPI_ProfilerCompatibilitySetting=EnableV2Profiler
+298 [1484] INFO perfrun.mrte <> - CORECLR_ENABLE_PROFILING=1
+298 [1484] INFO perfrun.mrte <> - CORECLR_PROFILER=
+298 [1484] INFO perfrun.mrte <> - CORECLR_PROFILER_PATH=C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64/
+298 [1484] INFO perfrun.mrte <> - INTEL_MRTE_PROFILER_MODE=mixed
+298 [1484] INFO perfrun.mrte <> - Data directory: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0
+298 [1484] INFO perfrun.mrte <> - Mrte plugin is initialized
+298 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+298 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+298 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+298 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+298 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+298 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+298 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.tpss <> - initialize tpss controller
+299 [1484] INFO perfrun.tpss <> - configure collection mode: value = cpu:stack
+299 [1484] INFO perfrun.tpss <> - default obj-size-min=1024
+299 [1484] INFO perfrun.tpss <> - default hash-table-size=0
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [1484] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+299 [11216] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\runtime;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\windows\system32;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin
+299 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY32 = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\runtime\ittnotify_collector.dll
+299 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY64 = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\runtime\ittnotify_collector.dll
+299 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_ITTNOTIFY_GROUPS = 
+299 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER32 = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\runtime\ittnotify_collector.dll
+300 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER64 = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\runtime\ittnotify_collector.dll
+300 [11216] INFO perfrun.launcher <> - set environment variable: VS_PROFILER = ittnotify_collector.dll
+300 [11216] INFO perfrun.launcher <> - set environment variable: OMP_TOOL_LIBRARIES = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\runtime\ittnotify_collector.dll;C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\runtime\ittnotify_collector.dll
+300 [11216] INFO perfrun.launcher <> - set environment variable: ENABLE_JITPROFILING = 1
+300 [11216] INFO perfrun.launcher <> - set environment variable: CL_CONFIG_USE_VTUNE = True
+300 [11216] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES = 0
+300 [11216] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES_MODE = 0
+300 [11216] INFO perfrun.launcher <> - set environment variable: OMP_TOOL = disabled
+300 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_DATA_DIR = D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0
+300 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_HOST_NAME = JU3H237682QNK4L
+300 [11216] INFO perfrun.launcher <> - set environment variable: JAVA_TOOL_OPTIONS = -agentlib:advixe_tpssmrte_javaprof_1.0
+300 [11216] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\runtime;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\windows\system32;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin
+300 [11216] INFO perfrun.launcher <> - set environment variable: COR_ENABLE_PROFILING = 1
+301 [11216] INFO perfrun.launcher <> - set environment variable: COR_PROFILER = {2603158F-60BC-4915-9795-D85FC7A9A2C8}
+301 [11216] INFO perfrun.launcher <> - set environment variable: COMPLUS_ProfAPI_ProfilerCompatibilitySetting = EnableV2Profiler
+301 [11216] INFO perfrun.launcher <> - set environment variable: CORECLR_ENABLE_PROFILING = 1
+301 [11216] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER = 
+301 [11216] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER_PATH = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64/
+301 [11216] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_PROFILER_MODE = mixed
+301 [11216] INFO perfrun.launcher <> - RpcServer: run RPC server to handle requests
+306 [11216] INFO perfrun.sdk <> - IProcessUtil: the given executable 'D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe' is valid.
+306 [11216] INFO perfrun.launcher <> - Launcher: command line to start before modification = D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe
+309 [11216] INFO perfrun.launcher <> - Launcher: command line to start after modification = C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\pin.exe -error_file D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0\pinerr.tpsslog -detach_reattach -probe -follow_execv -p32 C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\pin.exe -p64 C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\pin.exe -t64 C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64\tpsstool.dll -t C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin32\tpsstool.dll -server_name tpss_ipc.26972 -prd_dir C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0 -- D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe
+309 [11216] INFO perfrun.launcher <> - ProcessCreator object was created
+311 [11216] INFO perfrun.launcher <> - Launcher: the process was started in suspend mode
+311 [1484] INFO perfrun.itt <> - start itt controller for pid #23360
+312 [1484] INFO perfrun.tpss <> - start tpss controller for pid #23360
+365 [11216] INFO perfrun.launcher <> - Launcher: all plugins were started
+365 [11216] INFO perfrun.launcher <> - DirectoryMonitor object was created
+365 [11216] INFO perfrun.launcher <> - DirectoryMonitor: a callback was added
+365 [11216] INFO perfrun.launcher <> - DirectoryMonitor was started with pingTime = 1000
+365 [11216] INFO perfrun.launcher <> - DeadlineTimer is going to be constructed
+365 [11216] INFO perfrun.launcher <> - DeadlineTimer: a callback was added
+376 [11216] INFO perfrun.launcher <> - Launcher: resume the profiled application and  wait its termination or stop command
+7856 [11216] INFO perfrun.launcher <> - Launcher: the profiled application was terminated  with exit code = 0
+7865 [1484] INFO perfrun.itt <> - detach itt controller
+7865 [1484] INFO perfrun.itt <> - detach itt controller done
+7865 [1484] INFO perfrun.tpss <> - stop tpss controller
+7866 [1484] INFO perfrun.sdk <> - De-allocating TMU: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0\systemcollector-26972-JU3H237682QNK4L.sc
+7888 [1484] INFO perfrun.system <> - closed the system trace file: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\hs007\data.0\systemcollector-26972-JU3H237682QNK4L.sc
+7889 [11216] INFO perfrun.launcher <> - Launcher: all plugins were stopped.
+7889 [11216] INFO perfrun.launcher <> - DeadlineTimer is going to be destroyed
+7889 [11216] INFO perfrun.launcher <> - DeadlineTimer was destroyed
+7889 [11216] INFO perfrun.launcher <> - DirectoryMonitor object was destroyed
+7889 [11216] WARN perfrun.launcher <> - Stop command is ignored because it is received when collection is already stopped, at file: vcs\perfrun1\launcher\src\command_handler.cpp:212
+7890 [11216] INFO perfrun.launcher <> - Application exit code: 0
+7890 [11216] INFO perfrun.launcher <> - Exit code: 0

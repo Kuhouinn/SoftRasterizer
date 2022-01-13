@@ -135,6 +135,21 @@ double RenderWindow::UpdateScreenSurface(
 		Uint32* destPixels = (Uint32*)screenSurface->pixels;
 		for (int i = 0; i < width * height; ++i)
 		{
+ 			int index = i * channel;
+// 			Uint32 color = SDL_MapRGB(
+// 				screenSurface->format,
+// 				static_cast<uint8_t>(*(pixels+index)),
+// 				static_cast<uint8_t>(*(pixels+index + 1)),
+// 				static_cast<uint8_t>(*(pixels+index + 2)));
+// 			*(destPixels+i) = color;
+
+// 			Uint32 color = SDL_MapRGB(
+// 				screenSurface->format,
+// 				static_cast<uint8_t>(pixels[index + 0]),
+// 				static_cast<uint8_t>(pixels[index + 1]),
+// 				static_cast<uint8_t>(pixels[index + 2]));
+// 			destPixels[i] = color;
+
 			Uint32 color = SDL_MapRGB(
 				screenSurface->format,
 				static_cast<uint8_t>(pixels[i * channel + 0]),

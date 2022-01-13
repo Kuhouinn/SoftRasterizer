@@ -1,0 +1,10 @@
+224 [1484] INFO mrtehelpers.mrteenv <> - Product libs directory: C:\Program Files (x86)\Intel\oneAPI\advisor\2022.0.0\bin64
+224 [1484] INFO mrtehelpers.mrteenv <> - File mask: advixe_tpssmrte_clrprof*
+242 [1484] INFO mrtehelpers.mrteenv <> - File name: advixe_tpssmrte_clrprof_1.0.dll
+242 [1484] INFO mrtehelpers.mrteenv <> - File mask: advixe_tpssmrte_clrprof*
+261 [1484] INFO mrtehelpers.mrteenv <> - File name: advixe_tpssmrte_clrprof_1.0.dll
+262 [1484] INFO mrtehelpers.mrteenv <> - File mask: advixe_samplingmrte_clrprof*
+280 [1484] ERROR mrtehelpers.mrteenv <> - Profiler name is empty, at file: vcs\mrtehelpers3\src\mrteenv\mrte_profiling_initializer.cpp:469
+280 [1484] INFO mrtehelpers.mrteenv <> - File mask: advixe_samplingmrte_clrprof*
+298 [1484] ERROR mrtehelpers.mrteenv <> - Profiler name is empty, at file: vcs\mrtehelpers3\src\mrteenv\mrte_profiling_initializer.cpp:469
+298 [1484] ERROR mrtehelpers.mrteenv <> - Profiler name is empty, at file: vcs\mrtehelpers3\src\mrteenv\mrte_profiling_initializer.cpp:488

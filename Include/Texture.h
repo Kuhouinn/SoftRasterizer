@@ -4,12 +4,12 @@
 #include "Vector4.h"
 
 #include <string>
+#include <vector>
 
 class Texture
 {
 public:
 	Texture() {};
-	~Texture();
 
 	Vector4 TextureSamplingNearest(Vector2 uv);
 
@@ -23,6 +23,6 @@ public:
 	int width = 0;
 	int height = 0;
 	int channle = 0;
-	unsigned char* data = 0;
+	std::vector<unsigned char> data;
 };
 
