@@ -1,0 +1,55 @@
+
+=== Start: [2022/01/16 19:45:18] === 
+Analysis started...
+Result file: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\mp006\mp006.advixe 
+Found target process d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe (PID = 3268). Analysis started... 
+Loaded module: d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe. 
+Loaded module: c:\windows\system32\kernelbase.dll. 
+Loaded module: c:\windows\system32\kernel32.dll. 
+Loaded module: c:\windows\system32\ntdll.dll. 
+Loaded module: c:\windows\system32\ucrtbase.dll. 
+Loaded module: c:\windows\system32\shell32.dll. 
+Loaded module: d:\ue4sourcecode\softrasterizer\x64\release\assimp-vc142-mtd.dll. 
+Loaded module: c:\windows\system32\msvcp140.dll. 
+Loaded module: d:\ue4sourcecode\softrasterizer\x64\release\sdl2.dll. 
+Loaded module: c:\windows\system32\msvcp_win.dll. 
+Loaded module: c:\windows\system32\user32.dll. 
+Loaded module: c:\windows\system32\advapi32.dll. 
+Loaded module: c:\windows\system32\win32u.dll. 
+Loaded module: c:\windows\system32\msvcrt.dll. 
+Loaded module: c:\windows\system32\vcruntime140.dll. 
+Loaded module: c:\windows\system32\gdi32.dll. 
+Loaded module: c:\windows\system32\sechost.dll. 
+Loaded module: c:\windows\system32\gdi32full.dll. 
+Loaded module: c:\windows\system32\rpcrt4.dll. 
+Loaded module: c:\windows\system32\imm32.dll. 
+Loaded module: c:\windows\system32\ole32.dll. 
+Loaded module: c:\windows\system32\vcruntime140_1.dll. 
+Loaded module: c:\windows\system32\combase.dll. 
+Loaded module: c:\windows\system32\oleaut32.dll. 
+Loaded module: c:\windows\system32\setupapi.dll. 
+Loaded module: c:\windows\system32\vcomp140.dll. 
+Warning: Advisor does not support the Microsoft OpenMP Runtime module and may report false positives. Refer to the product release notes. 
+Loaded module: c:\windows\system32\cfgmgr32.dll. 
+Loaded module: c:\windows\system32\bcrypt.dll. 
+Loaded module: c:\windows\system32\version.dll. 
+Loaded module: c:\windows\system32\winmm.dll. 
+Loaded module: c:\windows\system32\vcruntime140d.dll. 
+Loaded module: c:\windows\system32\msvcp140d.dll. 
+Loaded module: c:\windows\system32\ucrtbased.dll. 
+Loaded module: c:\windows\system32\shcore.dll. 
+Loaded module: c:\windows\system32\uxtheme.dll. 
+Loaded module: c:\windows\system32\mscms.dll. 
+Loaded module: c:\windows\system32\userenv.dll. 
+Loaded module: c:\windows\system32\coloradapterclient.dll. 
+Loaded module: c:\windows\system32\icm32.dll. 
+Loaded module: c:\windows\system32\msctf.dll. 
+Loaded module: c:\windows\system32\kernel.appcore.dll. 
+Loaded module: c:\windows\system32\bcryptprimitives.dll. 
+Loaded module: c:\windows\system32\clbcatq.dll. 
+Loaded module: c:\windows\system32\textinputframework.dll. 
+Loaded module: c:\windows\system32\coreuicomponents.dll. 
+Loaded module: c:\windows\system32\coremessaging.dll. 
+Loaded module: c:\windows\system32\ws2_32.dll. 
+Loaded module: c:\windows\system32\ntmarta.dll. 
+Loaded module: c:\windows\system32\wintypes.dll. 

@@ -1,33 +1,26 @@
-﻿  FrameBuffer.cpp
-D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(49,21): warning C4018:  “<”: 有符号/无符号不匹配
-D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(51,22): warning C4018:  “<”: 有符号/无符号不匹配
-D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(66,17): warning C4018:  “>=”: 有符号/无符号不匹配
-  LightingShaderPipline.cpp
+﻿  Renderer.cpp
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(31,19): warning C4244:  “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(37,15): warning C4244:  “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(47,35): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(317,27): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(318,16): warning C4305:  “初始化”: 从“double”到“float”截断
   ShaderPipeline.cpp
-D:\UE4SourceCode\SoftRasterizer\Source\FrameBuffer.cpp(66,40): warning C4018:  “>=”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(349,26): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
 D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(41,58): warning C4018:  “<=”: 有符号/无符号不匹配
 D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(41,126): warning C4018:  “<=”: 有符号/无符号不匹配
 D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(65,58): warning C4018:  “<”: 有符号/无符号不匹配
 D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(65,125): warning C4018:  “<”: 有符号/无符号不匹配
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(125,44): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(125,40): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(125,27): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(126,44): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(126,40): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(126,27): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(136,59): warning C4018:  “>”: 有符号/无符号不匹配
-  Texture.cpp
-D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(136,126): warning C4018:  “>”: 有符号/无符号不匹配
-D:\UE4SourceCode\SoftRasterizer\Source\Texture.cpp(15,12): warning C4244:  “=”: 从“float”转换到“int”，可能丢失数据
-  main.cpp
-D:\UE4SourceCode\SoftRasterizer\Source\Texture.cpp(16,12): warning C4244:  “=”: 从“float”转换到“int”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(70,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(71,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(72,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\source\main.cpp(73,31): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(128,44): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(128,40): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(128,27): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(129,44): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(129,40): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(129,27): warning C4244:  “参数”: 从“int”转换到“float”，可能丢失数据
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(139,59): warning C4018:  “>”: 有符号/无符号不匹配
+D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp(139,126): warning C4018:  “>”: 有符号/无符号不匹配
   正在生成代码
-  55 of 1032 functions ( 5.3%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    15 functions had inline decision re-evaluated but remain unchanged
+  16 of 1103 functions ( 1.5%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+    97 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe

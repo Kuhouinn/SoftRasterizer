@@ -35,7 +35,7 @@ public:
 	void ClearTextures() { textures.clear(); }
 
 	//三角形光栅化,使用Fill Edge 
-	static void RasterizeTriangle(
+	static std::vector<int> RasterizeTriangle(
 		const VertexData& v0,
 		const VertexData& v1,
 		const VertexData& v2,

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log version="1.0" tool="runtool">
+
+<msg id="1" tool="runtool">
+  <type>log-start</type>
+  <arg>2022/01/16 19:45:18</arg>
+</msg>
+<msg id="2" tool="runtool">
+  <type>collector-starts</type>
+</msg>
+<msg id="3" tool="runtool">
+  <type>marker-file</type>
+  <arg>D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\mp006\mp006.advixe</arg>
+</msg>
+<msg id="4" tool="tc">
+  <type>START</type>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:19 2022</timestamp>
+</msg>
+<msg id="5" tool="tc">
+  <type>EXEC_OF_INTEREST</type>
+  <arg>d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe</arg>
+  <arg>3268</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:19 2022</timestamp>
+</msg>
+<msg id="6" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe</arg>
+  <arg>0x7ff60da60000</arg>
+  <arg>0x7ff60da87fff</arg>
+  <arg>1</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:19 2022</timestamp>
+</msg>
+<msg id="7" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\kernelbase.dll</arg>
+  <arg>0x7ffc9bb60000</arg>
+  <arg>0x7ffc9be27fff</arg>
+  <arg>2</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:19 2022</timestamp>
+</msg>
+<msg id="8" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\kernel32.dll</arg>
+  <arg>0x7ffc9d660000</arg>
+  <arg>0x7ffc9d71dfff</arg>
+  <arg>3</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:19 2022</timestamp>
+</msg>
+<msg id="9" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\ntdll.dll</arg>
+  <arg>0x7ffc9df90000</arg>
+  <arg>0x7ffc9e184fff</arg>
+  <arg>4</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:19 2022</timestamp>
+</msg>
+<msg id="10" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\ucrtbase.dll</arg>
+  <arg>0x7ffc9b6a0000</arg>
+  <arg>0x7ffc9b79ffff</arg>
+  <arg>5</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:20 2022</timestamp>
+</msg>
+<msg id="11" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\shell32.dll</arg>
+  <arg>0x7ffc9ce30000</arg>
+  <arg>0x7ffc9d573fff</arg>
+  <arg>6</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:21 2022</timestamp>
+</msg>
+<msg id="12" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>d:\ue4sourcecode\softrasterizer\x64\release\assimp-vc142-mtd.dll</arg>
+  <arg>0x7ffc0ba00000</arg>
+  <arg>0x7ffc0c7c6fff</arg>
+  <arg>7</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:22 2022</timestamp>
+</msg>
+<msg id="13" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\msvcp140.dll</arg>
+  <arg>0x7ffc8f9c0000</arg>
+  <arg>0x7ffc8fa4cfff</arg>
+  <arg>8</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:26 2022</timestamp>
+</msg>
+<msg id="14" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>d:\ue4sourcecode\softrasterizer\x64\release\sdl2.dll</arg>
+  <arg>0x7ffc0c7d0000</arg>
+  <arg>0x7ffc0c9f8fff</arg>
+  <arg>9</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:26 2022</timestamp>
+</msg>
+<msg id="15" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\msvcp_win.dll</arg>
+  <arg>0x7ffc9bac0000</arg>
+  <arg>0x7ffc9bb5cfff</arg>
+  <arg>10</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="16" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\user32.dll</arg>
+  <arg>0x7ffc9c850000</arg>
+  <arg>0x7ffc9c9f0fff</arg>
+  <arg>11</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="17" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\advapi32.dll</arg>
+  <arg>0x7ffc9c6e0000</arg>
+  <arg>0x7ffc9c78dfff</arg>
+  <arg>12</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="18" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\win32u.dll</arg>
+  <arg>0x7ffc9ba90000</arg>
+  <arg>0x7ffc9bab1fff</arg>
+  <arg>13</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="19" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\msvcrt.dll</arg>
+  <arg>0x7ffc9c030000</arg>
+  <arg>0x7ffc9c0cdfff</arg>
+  <arg>14</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="20" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\vcruntime140.dll</arg>
+  <arg>0x7ffc8fa50000</arg>
+  <arg>0x7ffc8fa6afff</arg>
+  <arg>15</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="21" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\gdi32.dll</arg>
+  <arg>0x7ffc9c100000</arg>
+  <arg>0x7ffc9c12afff</arg>
+  <arg>16</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="22" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\sechost.dll</arg>
+  <arg>0x7ffc9d810000</arg>
+  <arg>0x7ffc9d8abfff</arg>
+  <arg>17</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="23" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\gdi32full.dll</arg>
+  <arg>0x7ffc9be30000</arg>
+  <arg>0x7ffc9bf3cfff</arg>
+  <arg>18</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="24" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\rpcrt4.dll</arg>
+  <arg>0x7ffc9de20000</arg>
+  <arg>0x7ffc9df44fff</arg>
+  <arg>19</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:27 2022</timestamp>
+</msg>
+<msg id="25" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\imm32.dll</arg>
+  <arg>0x7ffc9c0d0000</arg>
+  <arg>0x7ffc9c0fffff</arg>
+  <arg>20</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="26" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\ole32.dll</arg>
+  <arg>0x7ffc9c5b0000</arg>
+  <arg>0x7ffc9c6d9fff</arg>
+  <arg>21</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="27" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\vcruntime140_1.dll</arg>
+  <arg>0x7ffc8f9b0000</arg>
+  <arg>0x7ffc8f9bbfff</arg>
+  <arg>22</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="28" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\combase.dll</arg>
+  <arg>0x7ffc9ca00000</arg>
+  <arg>0x7ffc9cd54fff</arg>
+  <arg>23</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="29" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\oleaut32.dll</arg>
+  <arg>0x7ffc9dba0000</arg>
+  <arg>0x7ffc9dc6cfff</arg>
+  <arg>24</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="30" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\setupapi.dll</arg>
+  <arg>0x7ffc9c130000</arg>
+  <arg>0x7ffc9c5a1fff</arg>
+  <arg>25</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="31" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\vcomp140.dll</arg>
+  <arg>0x7ffc65e90000</arg>
+  <arg>0x7ffc65ebdfff</arg>
+  <arg>26</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="32" tool="tc">
+  <type>UNSUPPORTED_MODULE</type>
+  <arg>Microsoft OpenMP Runtime module</arg>
+  <severity>WARNING</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="33" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\cfgmgr32.dll</arg>
+  <arg>0x7ffc9b7a0000</arg>
+  <arg>0x7ffc9b7edfff</arg>
+  <arg>27</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="34" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\bcrypt.dll</arg>
+  <arg>0x7ffc9bfa0000</arg>
+  <arg>0x7ffc9bfc6fff</arg>
+  <arg>28</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="35" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\version.dll</arg>
+  <arg>0x7ffc96780000</arg>
+  <arg>0x7ffc96789fff</arg>
+  <arg>29</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="36" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\winmm.dll</arg>
+  <arg>0x7ffc8d700000</arg>
+  <arg>0x7ffc8d726fff</arg>
+  <arg>30</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="37" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\vcruntime140d.dll</arg>
+  <arg>0x7ffc65d50000</arg>
+  <arg>0x7ffc65d73fff</arg>
+  <arg>31</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="38" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\msvcp140d.dll</arg>
+  <arg>0x7ffc20ad0000</arg>
+  <arg>0x7ffc20bc5fff</arg>
+  <arg>32</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:28 2022</timestamp>
+</msg>
+<msg id="39" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\ucrtbased.dll</arg>
+  <arg>0x7ffc0b830000</arg>
+  <arg>0x7ffc0b9f2fff</arg>
+  <arg>33</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:29 2022</timestamp>
+</msg>
+<msg id="40" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\shcore.dll</arg>
+  <arg>0x7ffc9c790000</arg>
+  <arg>0x7ffc9c83cfff</arg>
+  <arg>34</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:35 2022</timestamp>
+</msg>
+<msg id="41" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\uxtheme.dll</arg>
+  <arg>0x7ffc990b0000</arg>
+  <arg>0x7ffc9914dfff</arg>
+  <arg>35</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:35 2022</timestamp>
+</msg>
+<msg id="42" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\mscms.dll</arg>
+  <arg>0x7ffc81dd0000</arg>
+  <arg>0x7ffc81e7dfff</arg>
+  <arg>36</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:36 2022</timestamp>
+</msg>
+<msg id="43" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\userenv.dll</arg>
+  <arg>0x7ffc9b5a0000</arg>
+  <arg>0x7ffc9b5cdfff</arg>
+  <arg>37</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:36 2022</timestamp>
+</msg>
+<msg id="44" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\coloradapterclient.dll</arg>
+  <arg>0x7ffc81db0000</arg>
+  <arg>0x7ffc81dc0fff</arg>
+  <arg>38</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:36 2022</timestamp>
+</msg>
+<msg id="45" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\icm32.dll</arg>
+  <arg>0x7ffc64b80000</arg>
+  <arg>0x7ffc64bc2fff</arg>
+  <arg>39</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:36 2022</timestamp>
+</msg>
+<msg id="46" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\msctf.dll</arg>
+  <arg>0x7ffc9d9a0000</arg>
+  <arg>0x7ffc9dab4fff</arg>
+  <arg>40</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:37 2022</timestamp>
+</msg>
+<msg id="47" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\kernel.appcore.dll</arg>
+  <arg>0x7ffc995b0000</arg>
+  <arg>0x7ffc995c1fff</arg>
+  <arg>41</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:39 2022</timestamp>
+</msg>
+<msg id="48" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\bcryptprimitives.dll</arg>
+  <arg>0x7ffc9b7f0000</arg>
+  <arg>0x7ffc9b871fff</arg>
+  <arg>42</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:39 2022</timestamp>
+</msg>
+<msg id="49" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\clbcatq.dll</arg>
+  <arg>0x7ffc9cd60000</arg>
+  <arg>0x7ffc9ce08fff</arg>
+  <arg>43</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:39 2022</timestamp>
+</msg>
+<msg id="50" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\textinputframework.dll</arg>
+  <arg>0x7ffc92ec0000</arg>
+  <arg>0x7ffc92fb8fff</arg>
+  <arg>44</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:42 2022</timestamp>
+</msg>
+<msg id="51" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\coreuicomponents.dll</arg>
+  <arg>0x7ffc98950000</arg>
+  <arg>0x7ffc98cadfff</arg>
+  <arg>45</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:42 2022</timestamp>
+</msg>
+<msg id="52" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\coremessaging.dll</arg>
+  <arg>0x7ffc98cb0000</arg>
+  <arg>0x7ffc98da1fff</arg>
+  <arg>46</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:42 2022</timestamp>
+</msg>
+<msg id="53" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\ws2_32.dll</arg>
+  <arg>0x7ffc9d930000</arg>
+  <arg>0x7ffc9d99afff</arg>
+  <arg>47</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:42 2022</timestamp>
+</msg>
+<msg id="54" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\ntmarta.dll</arg>
+  <arg>0x7ffc9a390000</arg>
+  <arg>0x7ffc9a3c2fff</arg>
+  <arg>48</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:42 2022</timestamp>
+</msg>
+<msg id="55" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>c:\windows\system32\wintypes.dll</arg>
+  <arg>0x7ffc98160000</arg>
+  <arg>0x7ffc982b3fff</arg>
+  <arg>49</arg>
+  <severity>INFO</severity>
+  <timestamp>Sun Jan 16 19:45:42 2022</timestamp>
+</msg>

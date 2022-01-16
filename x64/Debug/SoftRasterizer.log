@@ -1,9 +1,2 @@
-﻿  Renderer.cpp
-D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(28,19): warning C4244:  “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(34,15): warning C4244:  “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(44,35): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(293,27): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(294,16): warning C4305:  “初始化”: 从“double”到“float”截断
-D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(330,26): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp(412): warning C4715:  “Renderer::IsAllOutsideClipingFrustum”: 不是所有的控件路径都返回值
+﻿  Matrix4.cpp
   SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Debug\SoftRasterizer.exe

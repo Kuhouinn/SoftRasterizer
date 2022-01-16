@@ -1,8 +1,0 @@
-
-=== Start: [2022/01/16 12:28:46] === 
-Analysis started...
-Result file: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\trc000\trc000.advixe 
-Application exit code: 0 
-Result file: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\trc000\trc000.advixe 
-Analysis completed
-=== End: [2022/01/16 12:29:05] === 

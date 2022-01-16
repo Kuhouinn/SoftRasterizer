@@ -29,7 +29,7 @@ private:
 	unsigned int width = 1920;
 	unsigned int height = 1080;
 	std::vector<float> depthBuffer;          
-	std::vector<unsigned char> colorBuffer;
+	std::vector<unsigned int> colorBuffer;
 
 };
 

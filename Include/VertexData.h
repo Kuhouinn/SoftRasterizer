@@ -13,6 +13,8 @@ struct VertexData
 	Vector4	clipPosition;
 	Vector2i screenPosition;
 
+	bool discard = true;
+
 	static void PrePerspCorrection(VertexData& v);
 	
 	static void AftPrespCorrection(VertexData& v);

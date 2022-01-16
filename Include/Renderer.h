@@ -31,7 +31,7 @@ public:
 
 	void SetDirectionalLight(std::shared_ptr<DirectionalLight> light);
 
-	const unsigned char* GetRenderedColorBuffer();
+	const unsigned int* GetRenderedColorBuffer();
 
 	void ClearColor(const Vector4& color);
 
@@ -58,6 +58,8 @@ private:
 	std::shared_ptr<LightingShaderPipline> lightShaderPipeline = nullptr;
 	std::shared_ptr<FrameBuffer> frontBuffer = nullptr;
 	std::shared_ptr<FrameBuffer> backBuffer = nullptr;
+
+	std::vector<VertexData> rasterizedPoints;
 
 	Matrix4 viewPortMatrix;
 

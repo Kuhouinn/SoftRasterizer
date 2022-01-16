@@ -58,6 +58,7 @@ Matrix4 Matrix4::operator*(const Matrix4& value) const
 {
 	Matrix4 result;
 
+
 	for (auto i = 0; i < 4; i++)
 	{
 		for (auto j = 0; j < 4; j++)

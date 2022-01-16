@@ -68,7 +68,7 @@ public:
 
 	//Copy the rendered image to screen for displaying
 	double UpdateScreenSurface(
-		const unsigned char* pixels,
+		const unsigned int* pixels,
 		int width,
 		int height,
 		int channel);

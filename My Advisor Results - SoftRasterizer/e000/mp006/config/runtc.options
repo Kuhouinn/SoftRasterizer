@@ -1,0 +1,13 @@
+-r
+D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\mp006
+--tool=map
+--record-stack-frame
+--sample-size=400000
+--record-mem-allocations
+--search-dir
+sym=D:\UE4SourceCode\SoftRasterizer\x64\Release
+--search-dir
+bin=D:\UE4SourceCode\SoftRasterizer\x64\Release
+--app-working-dir=D:\UE4SourceCode\SoftRasterizer
+--
+D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe

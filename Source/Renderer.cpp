@@ -18,6 +18,9 @@ Renderer::Renderer(int width, int height)
 	backBuffer = std::make_shared<FrameBuffer>(width, height);
 
 	viewPortMatrix = CalculateViewPortMatrix(width, height);
+
+//	rasterizedPoints.resize(backBuffer->GetWidth() * backBuffer->GetHeight());
+	rasterizedPoints.reserve(backBuffer->GetWidth() * backBuffer->GetHeight());
 }
 
 Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
@@ -80,9 +83,6 @@ void Renderer::SetViewMatrix(const Matrix4& value)
 
 void Renderer::Render(Model& modelSource)
 {
-	std::vector<VertexData> rasterizedPoints;
-	rasterizedPoints.reserve(backBuffer->GetWidth() * backBuffer->GetHeight());
-
 	auto& meshes = modelSource.meshs;
 
 	for (auto i = 0; i < meshes.size(); i++)
@@ -130,7 +130,7 @@ void Renderer::Render(Model& modelSource)
 			shaderPipeline->VertexShader(vertex[2]);
 
 			//齐次空间裁剪
-			auto clippedVertices = ClippingSutherlandHodgeman(vertex[0], vertex[1], vertex[2]);
+			auto clippedVertices = std::move(ClippingSutherlandHodgeman(vertex[0], vertex[1], vertex[2]));
 			if (clippedVertices.empty())
 			{
 				continue;
@@ -162,11 +162,16 @@ void Renderer::Render(Model& modelSource)
 
 				//计算屏幕坐标
 				auto tempVector = viewPortMatrix * vert[0].clipPosition + Vector4(0.5f);
-				vert[0].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
+				vert[0].screenPosition = Vector2i(int(tempVector.x)-1, int(tempVector.y)-1);
+				vert[0].discard = false;
 				tempVector = viewPortMatrix * vert[1].clipPosition + Vector4(0.5f);
-				vert[1].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
+				vert[1].screenPosition = Vector2i(int(tempVector.x) - 1, int(tempVector.y) - 1);
+				vert[1].discard = false;
 				tempVector = viewPortMatrix * vert[2].clipPosition + Vector4(0.5f);
-				vert[2].screenPosition = Vector2i(int(tempVector.x), int(tempVector.y));
+				vert[2].screenPosition = Vector2i(int(tempVector.x) - 1, int(tempVector.y) - 1);
+				vert[2].discard = false;
+
+				std::vector<int> boundingBox;
 
 				//光栅化
 				if (rasterizerLine)
@@ -176,26 +181,45 @@ void Renderer::Render(Model& modelSource)
 				}
 				else
 				{
-					shaderPipeline->RasterizeTriangle(vert[0], vert[1], vert[2],
-						backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
+					boundingBox = shaderPipeline->RasterizeTriangle(vert[0], vert[1], vert[2],
+ 						backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
 				}
+
+//#pragma omp parallel for
+// 				for (int ix = boundingBox[0]; ix <= boundingBox[2]; ix++)
+// 				{
+// 					for (int iy = boundingBox[1]; iy <= boundingBox[3]; iy++)
+// 					{
+// 						auto& point = rasterizedPoints[iy * backBuffer->GetWidth() + ix];
+// 						if (point.discard)
+// 						{
+// 							continue;
+// 						}
+// 						point.discard = true;
+// 						if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
+// 						{
+// 
+// 							//光栅化之后的透视矫正
+// 							VertexData::AftPrespCorrection(point);
+// 							Vector4 fragColor;
+// 							shaderPipeline->FragmentShader(point, fragColor);
+// 							backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
+// 							backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
+// 
+// 						}
+// 					}
+// 				}
 
 				//fragment shader处理阶段
 				for (auto& point : rasterizedPoints)
 				{
-
 					if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
 					{
 
 						//光栅化之后的透视矫正
 						VertexData::AftPrespCorrection(point);
-
-						auto start = std::chrono::steady_clock::now();
 						Vector4 fragColor;
 						shaderPipeline->FragmentShader(point, fragColor);
-// 						auto end = std::chrono::steady_clock::now();
-// 
-// 						frameTime += std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 						backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
 						backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
 
@@ -227,7 +251,7 @@ void Renderer::SetDirectionalLight(std::shared_ptr<DirectionalLight> light)
 	}
 }
 
-const unsigned char* Renderer::GetRenderedColorBuffer()
+const unsigned int* Renderer::GetRenderedColorBuffer()
 {
 	return frontBuffer->GetColorBuffer().data();
 }

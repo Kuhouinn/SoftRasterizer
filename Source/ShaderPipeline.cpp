@@ -82,7 +82,7 @@ void ShaderPipeline::ComputePoint(const VertexData& begin, const VertexData& end
 
 std::vector<std::shared_ptr<Texture>> ShaderPipeline::textures = {};
 
-void ShaderPipeline::RasterizeTriangle(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
+std::vector<int> ShaderPipeline::RasterizeTriangle(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
 {
 	int minX = v0.screenPosition.x;
 	int maxX = v0.screenPosition.x;
@@ -93,6 +93,8 @@ void ShaderPipeline::RasterizeTriangle(const VertexData& v0, const VertexData& v
 	minY = std::max(std::min(v0.screenPosition.y, std::min(v1.screenPosition.y, v2.screenPosition.y)), 0);
 	maxX = std::min(std::max(v0.screenPosition.x, std::max(v1.screenPosition.x, v2.screenPosition.x)), (int)screenWidth - 1);
 	maxY = std::min(std::max(v0.screenPosition.y, std::max(v1.screenPosition.y, v2.screenPosition.y)), (int)screeneHeight - 1);
+
+	std::vector<int> boundingBox{ minX,minY,maxX,maxY };
 	
 	auto v10 = v1.screenPosition - v0.screenPosition;
 	auto v20 = v2.screenPosition - v0.screenPosition;
@@ -100,9 +102,10 @@ void ShaderPipeline::RasterizeTriangle(const VertexData& v0, const VertexData& v
 	
 	Vector2i arr[3] = { {v0.screenPosition.x,v0.screenPosition.y},{v1.screenPosition.x,v1.screenPosition.y}, {v2.screenPosition.x,v2.screenPosition.y} };
 	
-	for (int ix = minX; ix <= maxX; ix++)
+//#pragma omp parallel for
+	for (int ix = minX; ix < maxX; ix++)
 	{
-		for (int iy = minY; iy <= maxY; iy++)
+		for (int iy = minY; iy < maxY; iy++)
 		{
 			Vector2i p(ix, iy);
 			Vector2i p0p2 = v2.screenPosition - v0.screenPosition;
@@ -138,14 +141,14 @@ void ShaderPipeline::RasterizeTriangle(const VertexData& v0, const VertexData& v
 					continue;
 				}
 	
-				rasterizedPoints.push_back(point);
+				rasterizedPoints.emplace_back(point);
+// 				point.discard = false;
+// 				rasterizedPoints[iy * screenWidth + ix] = point;
 			}
 		}
 	}
-	
-	rasterizedPoints.push_back(v0);
-	rasterizedPoints.push_back(v1);
-	rasterizedPoints.push_back(v2);
+
+	return boundingBox;
 }
 
 void ShaderPipeline::RasterizeLine(const VertexData& v0, const VertexData& v1, const VertexData& v2, unsigned int screenWidth, unsigned int screeneHeight, std::vector<VertexData>& rasterizedPoints)
