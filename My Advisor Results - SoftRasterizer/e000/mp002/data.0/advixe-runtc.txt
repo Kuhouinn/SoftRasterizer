@@ -1,0 +1,109 @@
+
+=== Start: [2022/01/16 13:01:58] === 
+Analysis started...
+Result file: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\mp002\mp002.advixe 
+Found target process d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe (PID = 24080). Analysis started... 
+Loaded module: d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe. 
+Loaded module: c:\windows\system32\kernelbase.dll. 
+Loaded module: c:\windows\system32\kernel32.dll. 
+Loaded module: c:\windows\system32\ntdll.dll. 
+Loaded module: c:\windows\system32\ucrtbase.dll. 
+Loaded module: c:\windows\system32\shell32.dll. 
+Loaded module: c:\windows\system32\msvcp_win.dll. 
+Loaded module: c:\windows\system32\msvcp140.dll. 
+Loaded module: d:\ue4sourcecode\softrasterizer\assimp-vc142-mtd.dll. 
+Loaded module: d:\ue4sourcecode\softrasterizer\sdl2.dll. 
+Loaded module: c:\windows\system32\user32.dll. 
+Loaded module: c:\windows\system32\advapi32.dll. 
+Loaded module: c:\windows\system32\win32u.dll. 
+Loaded module: c:\windows\system32\msvcrt.dll. 
+Loaded module: c:\windows\system32\gdi32.dll. 
+Loaded module: c:\windows\system32\sechost.dll. 
+Loaded module: c:\windows\system32\vcruntime140.dll. 
+Loaded module: c:\windows\system32\rpcrt4.dll. 
+Loaded module: c:\windows\system32\gdi32full.dll. 
+Loaded module: c:\windows\system32\imm32.dll. 
+Loaded module: c:\windows\system32\ole32.dll. 
+Loaded module: c:\windows\system32\combase.dll. 
+Loaded module: c:\windows\system32\oleaut32.dll. 
+Loaded module: c:\windows\system32\vcruntime140_1.dll. 
+Loaded module: c:\windows\system32\setupapi.dll. 
+Loaded module: c:\windows\system32\cfgmgr32.dll. 
+Loaded module: c:\windows\system32\bcrypt.dll. 
+Loaded module: c:\windows\system32\version.dll. 
+Loaded module: c:\windows\system32\winmm.dll. 
+Loaded module: c:\windows\system32\vcruntime140d.dll. 
+Loaded module: c:\windows\system32\msvcp140d.dll. 
+Loaded module: c:\windows\system32\ucrtbased.dll. 
+Loaded module: c:\windows\system32\shcore.dll. 
+Loaded module: c:\windows\system32\uxtheme.dll. 
+Loaded module: c:\windows\system32\mscms.dll. 
+Loaded module: c:\windows\system32\userenv.dll. 
+Loaded module: c:\windows\system32\coloradapterclient.dll. 
+Loaded module: c:\windows\system32\icm32.dll. 
+Loaded module: c:\windows\system32\msctf.dll. 
+Loaded module: d:\youdaodict\8.10.3.0\wordstrokehelper64.dll. 
+Loaded module: c:\windows\system32\kernel.appcore.dll. 
+Loaded module: c:\windows\system32\bcryptprimitives.dll. 
+Loaded module: c:\windows\system32\clbcatq.dll. 
+Loaded module: c:\windows\system32\textinputframework.dll. 
+Loaded module: c:\windows\system32\coreuicomponents.dll. 
+Loaded module: c:\windows\system32\coremessaging.dll. 
+Loaded module: c:\windows\system32\ws2_32.dll. 
+Loaded module: c:\windows\system32\ntmarta.dll. 
+Loaded module: c:\windows\system32\wintypes.dll. 
+Unloaded module: d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe. 
+Unloaded module: c:\windows\system32\kernelbase.dll. 
+Unloaded module: c:\windows\system32\kernel32.dll. 
+Unloaded module: c:\windows\system32\ntdll.dll. 
+Unloaded module: c:\windows\system32\ucrtbase.dll. 
+Unloaded module: c:\windows\system32\shell32.dll. 
+Unloaded module: c:\windows\system32\msvcp_win.dll. 
+Unloaded module: c:\windows\system32\msvcp140.dll. 
+Unloaded module: d:\ue4sourcecode\softrasterizer\assimp-vc142-mtd.dll. 
+Unloaded module: d:\ue4sourcecode\softrasterizer\sdl2.dll. 
+Unloaded module: c:\windows\system32\user32.dll. 
+Unloaded module: c:\windows\system32\advapi32.dll. 
+Unloaded module: c:\windows\system32\win32u.dll. 
+Unloaded module: c:\windows\system32\msvcrt.dll. 
+Unloaded module: c:\windows\system32\gdi32.dll. 
+Unloaded module: c:\windows\system32\sechost.dll. 
+Unloaded module: c:\windows\system32\vcruntime140.dll. 
+Unloaded module: c:\windows\system32\rpcrt4.dll. 
+Unloaded module: c:\windows\system32\gdi32full.dll. 
+Unloaded module: c:\windows\system32\imm32.dll. 
+Unloaded module: c:\windows\system32\ole32.dll. 
+Unloaded module: c:\windows\system32\combase.dll. 
+Unloaded module: c:\windows\system32\oleaut32.dll. 
+Unloaded module: c:\windows\system32\vcruntime140_1.dll. 
+Unloaded module: c:\windows\system32\setupapi.dll. 
+Unloaded module: c:\windows\system32\cfgmgr32.dll. 
+Unloaded module: c:\windows\system32\bcrypt.dll. 
+Unloaded module: c:\windows\system32\version.dll. 
+Unloaded module: c:\windows\system32\winmm.dll. 
+Unloaded module: c:\windows\system32\vcruntime140d.dll. 
+Unloaded module: c:\windows\system32\msvcp140d.dll. 
+Unloaded module: c:\windows\system32\ucrtbased.dll. 
+Unloaded module: c:\windows\system32\shcore.dll. 
+Unloaded module: c:\windows\system32\uxtheme.dll. 
+Unloaded module: c:\windows\system32\mscms.dll. 
+Unloaded module: c:\windows\system32\userenv.dll. 
+Unloaded module: c:\windows\system32\coloradapterclient.dll. 
+Unloaded module: c:\windows\system32\icm32.dll. 
+Unloaded module: c:\windows\system32\msctf.dll. 
+Unloaded module: d:\youdaodict\8.10.3.0\wordstrokehelper64.dll. 
+Unloaded module: c:\windows\system32\kernel.appcore.dll. 
+Unloaded module: c:\windows\system32\bcryptprimitives.dll. 
+Unloaded module: c:\windows\system32\clbcatq.dll. 
+Unloaded module: c:\windows\system32\textinputframework.dll. 
+Unloaded module: c:\windows\system32\coreuicomponents.dll. 
+Unloaded module: c:\windows\system32\coremessaging.dll. 
+Unloaded module: c:\windows\system32\ws2_32.dll. 
+Unloaded module: c:\windows\system32\ntmarta.dll. 
+Unloaded module: c:\windows\system32\wintypes.dll. 
+Process d:\ue4sourcecode\softrasterizer\x64\release\softrasterizer.exe (PID = 24080) has terminated. 
+Warning: No SITE annotations were encountered, so no stride/alignment data can be reported. 
+Application exit code: 0 
+Result file: D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\mp002\mp002.advixe 
+Analysis completed
+=== End: [2022/01/16 13:03:20] === 

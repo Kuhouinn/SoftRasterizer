@@ -15,10 +15,13 @@
    <ColumnWidth int:SplitterPos="1801" int:SnippetDefaultState="2"/>
   </SourceView>
  </SurveyView>
- <workflow int:selected="0" boolean:accuracyEnable="true">
+ <workflow int:selected="4" boolean:accuracyEnable="false">
   <pmVectorization>
-   <checked boolean:a1="true" boolean:a3="false" boolean:a6="false" boolean:a7="false"/>
+   <checked boolean:a1="false" boolean:a3="false" boolean:a6="true" boolean:a7="false"/>
   </pmVectorization>
+  <pmRoofline>
+   <checked boolean:a1="false" boolean:a3="false" boolean:a6="true" boolean:a7="false"/>
+  </pmRoofline>
  </workflow>
  <MainView int:SidebarWidth="330"/>
  <FilterView boolean:VectorizedButtonChecked="true" boolean:NotVectorizedButtonChecked="true" boolean:FakeLoopButtonChecked="false" boolean:LibrariesButtonChecked="false" ModuleFilterValue="All Modules" SourceFilterValue="All Sources" LoopModeFilterValue="Loops And Functions" ThreadFilterValue="All Threads"/>
@@ -27,4 +30,5 @@
    <ColumnWidth int:SnippetDefaultState="2"/>
   </SourceView>
  </SurveySourceView>
+ <MapSourceView boolean:SourcePaneVisible="true" boolean:AsmPaneVisible="true" boolean:DetailsVisible="true"/>
 </bag>

@@ -130,7 +130,7 @@ void Renderer::Render(Model& modelSource)
 			shaderPipeline->VertexShader(vertex[2]);
 
 			//齐次空间裁剪
-			auto clippedVertices = Clipping(vertex[0], vertex[1], vertex[2]);
+			auto clippedVertices = ClippingSutherlandHodgeman(vertex[0], vertex[1], vertex[2]);
 			if (clippedVertices.empty())
 			{
 				continue;
@@ -241,48 +241,171 @@ std::vector<VertexData> Renderer::Clipping(const VertexData& v0, const VertexDat
 {
 	//齐次裁剪空间坐标满足  -w<=x,y,z<=w, near<= w <= far
 	//超过这个范围的三角形直接裁掉。
-
-	if (v0.clipPosition.w < near && v1.clipPosition.w < near && v2.clipPosition.w < near)
-	{
-		return {};
-	}
-
-	if (v0.clipPosition.w > far && v1.clipPosition.w > far && v2.clipPosition.w > far)
-	{
-		return {};
-	}
-
-	if (v0.clipPosition.x > v0.clipPosition.w && v1.clipPosition.x > v1.clipPosition.w && v2.clipPosition.x > v2.clipPosition.w)
-	{
-		return {};
-	}
-
-	if (v0.clipPosition.x < -v0.clipPosition.w && v1.clipPosition.x < -v1.clipPosition.w && v2.clipPosition.x < -v2.clipPosition.w)
-	{
-		return {};
-	}
-
-	if (v0.clipPosition.y > v0.clipPosition.w && v1.clipPosition.y > v1.clipPosition.w && v2.clipPosition.y > v2.clipPosition.w)
-	{
-		return {};
-	}
-
-	if (v0.clipPosition.y < -v0.clipPosition.w && v1.clipPosition.y < -v1.clipPosition.w && v2.clipPosition.y < -v2.clipPosition.w)
-	{
-		return {};
-	}
-
-	if (v0.clipPosition.z > v0.clipPosition.w && v1.clipPosition.z > v1.clipPosition.w && v2.clipPosition.z > v2.clipPosition.w)
-	{
-		return {};
-	}
-
-	if (v0.clipPosition.z < -v0.clipPosition.w && v1.clipPosition.z < -v1.clipPosition.w && v2.clipPosition.z < -v2.clipPosition.w)
+	if (IsAllOutsideClipingFrustum(v0, v1, v2))
 	{
 		return {};
 	}
 
 	return { v0, v1, v2 };
+}
+
+std::vector<VertexData> Renderer::ClippingSutherlandHodgeman(const VertexData& v0, const VertexData& v1, const VertexData& v2) const
+{
+	//参考：https://zhuanlan.zhihu.com/p/162190576
+	// https://fabiensanglard.net/polygon_codec/clippingdocument/Clipping.pdf
+
+	//所有点都在裁剪空间内
+	if (IsVertexInsideClipingFrustum(v0.clipPosition) && IsVertexInsideClipingFrustum(v1.clipPosition) && IsVertexInsideClipingFrustum(v2.clipPosition))
+	{
+		return { v0, v1, v2 };
+	}
+
+	//所有点都不在裁剪空间内
+	if (IsAllOutsideClipingFrustum(v0, v1, v2))
+	{
+		return {};
+	}
+
+	std::vector<VertexData> vertices;
+	std::vector<VertexData> temp = { v0, v1, v2 };
+	enum Axis { X = 0, Y = 1, Z = 2 };
+
+	//w=x
+	vertices = std::move(ClipWithPlane(temp, Axis::X, +1));
+
+	//w=-x
+	vertices = std::move(ClipWithPlane(vertices, Axis::X, -1));
+	
+	//w=y
+	vertices = std::move(ClipWithPlane(vertices, Axis::Y, +1));
+
+	//w=-y
+	vertices = std::move(ClipWithPlane(vertices, Axis::Y, -1));
+	
+	//w=z
+	vertices = std::move(ClipWithPlane(vertices, Axis::Z, +1));
+
+	//w=-z
+	vertices = std::move(ClipWithPlane(vertices, Axis::Z, -1));
+
+
+	//w=1e-5 plane
+	int num = vertices.size();
+	float w = 1e-5;
+	std::vector<VertexData> result;
+
+	for (int i = 0; i < num; ++i)
+	{
+		auto& p1 = vertices[i];
+		auto& p2 = vertices[(i + 1) % num];
+
+		short p1IsInside = (p1.clipPosition.w < w) ? -1 : 1;
+		short p2IsInside = (p2.clipPosition.w < w) ? -1 : 1;
+
+		//两个点分布在平面两侧
+		if (p1IsInside * p2IsInside < 0)
+		{
+			//t= (w - w1)/(w1-w2)
+			float t = (w -  p1.clipPosition.w) / (p1.clipPosition.w - p2.clipPosition.w);
+			auto point = VertexData::Lerp(p1, p2, t);
+			result.emplace_back(point);
+		}
+
+		if (p2IsInside > 0)
+		{
+			result.emplace_back(p2);
+		}
+	}
+
+	return result;
+}
+
+std::vector<VertexData> Renderer::ClipWithPlane(const std::vector <VertexData>& polygon, int axis, int sign) const
+{
+	int num = polygon.size();
+
+	std::vector<VertexData> vertices;
+
+	for (int i = 0; i < num; ++i)
+	{
+		auto& p1 = polygon[i];
+		auto& p2 = polygon[(i + 1) % num];
+
+		//齐次裁剪空间坐标满足  -w<=x,y,z<=w, near<= w <= far
+		//提取出通式+-(x,y,z)<=w,正负号由sign控制。
+		short p1IsInside = sign * p1.clipPosition[axis] <= p1.clipPosition.w ? 1 : -1;
+		short p2IsInside = sign * p2.clipPosition[axis] <= p2.clipPosition.w ? 1 : -1;
+
+		//两个点分布在平面两侧
+		if (p1IsInside * p2IsInside < 0)
+		{
+			//t的通式是： t = (w1 +- (x,y,z))/(w1 +- (x,y,z) - (w2 +- (x,y,z)))
+			//正负号通过sign控制，当前取x,y,z的哪一个通过axis来控制
+			float t = (p1.clipPosition.w - sign * p1.clipPosition[axis]) / ((p1.clipPosition.w - sign * p1.clipPosition[axis]) - (p2.clipPosition.w - sign * p2.clipPosition[axis]));
+			auto point = VertexData::Lerp(p1, p2, t);
+			vertices.emplace_back(point);
+		}
+
+		if (p2IsInside > 0)
+		{
+			vertices.emplace_back(p2);
+		}
+	}
+
+	return vertices;
+}
+
+bool Renderer::IsVertexInsideClipingFrustum(const Vector4& v) const
+{
+	return (v.x <= v.w && v.x >= -v.w)
+		&& (v.y <= v.w && v.y >= -v.w)
+		&& (v.z <= v.w && v.z >= -v.w)
+		&& (v.w <= far && v.w >= near);
+}
+
+bool Renderer::IsAllOutsideClipingFrustum(const VertexData& v0, const VertexData& v1, const VertexData& v2) const
+{
+	if (v0.clipPosition.w < near && v1.clipPosition.w < near && v2.clipPosition.w < near)
+	{
+		return true;
+	}
+
+	if (v0.clipPosition.w > far && v1.clipPosition.w > far && v2.clipPosition.w > far)
+	{
+		return true;
+	}
+
+	if (v0.clipPosition.x > v0.clipPosition.w && v1.clipPosition.x > v1.clipPosition.w && v2.clipPosition.x > v2.clipPosition.w)
+	{
+		return true;
+	}
+
+	if (v0.clipPosition.x < -v0.clipPosition.w && v1.clipPosition.x < -v1.clipPosition.w && v2.clipPosition.x < -v2.clipPosition.w)
+	{
+		return true;
+	}
+
+	if (v0.clipPosition.y > v0.clipPosition.w && v1.clipPosition.y > v1.clipPosition.w && v2.clipPosition.y > v2.clipPosition.w)
+	{
+		return true;
+	}
+
+	if (v0.clipPosition.y < -v0.clipPosition.w && v1.clipPosition.y < -v1.clipPosition.w && v2.clipPosition.y < -v2.clipPosition.w)
+	{
+		return true;
+	}
+
+	if (v0.clipPosition.z > v0.clipPosition.w && v1.clipPosition.z > v1.clipPosition.w && v2.clipPosition.z > v2.clipPosition.w)
+	{
+		return true;
+	}
+
+	if (v0.clipPosition.z < -v0.clipPosition.w && v1.clipPosition.z < -v1.clipPosition.w && v2.clipPosition.z < -v2.clipPosition.w)
+	{
+		return true;
+	}
+
+	return false;
 }
 
 bool Renderer::IsTowardBackFace(const Vector4& v0, const Vector4& v1, const Vector4& v2) const

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp"
+           line_no="105"
+           routine="ShaderPipeline::RasterizeTriangle"
+           is_vectorized="0"
+           self_time="5.833730E-01"
+           total_time="8.306301E-01"
+           trip_counts="15"
+           func_instance="90"
+           priority="0"/>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\RenderWindow.cpp"
+           line_no="136"
+           routine="RenderWindow::UpdateScreenSurface"
+           is_vectorized="0"
+           self_time="1.978841E-01"
+           total_time="7.128565E-01"
+           trip_counts="921600"
+           func_instance="93"
+           priority="0"/>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp"
+           line_no="184"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="1.869896E-01"
+           total_time="1.935034E+00"
+           trip_counts="48"
+           func_instance="85"
+           priority="0"/>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\source\main.cpp"
+           line_no="51"
+           routine="SDL_main"
+           is_vectorized="0"
+           self_time="1.389358E-01"
+           total_time="1.389358E-01"
+           trip_counts="1280"
+           func_instance="98"
+           priority="0"/>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp"
+           line_no="149"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="5.957437E-02"
+           total_time="2.913646E+00"
+           trip_counts="1"
+           func_instance="87"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

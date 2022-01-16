@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp"
+           line_no="184"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="1.869896E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="85"
+           priority="0">
+           <recommendation id="rec_libm_function_precise_c" title="Vectorize math function calls inside loops" confidence="3" gain="-1"/>
+  </hotspot>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\ShaderPipeline.cpp"
+           line_no="105"
+           routine="ShaderPipeline::RasterizeTriangle"
+           is_vectorized="0"
+           self_time="5.833730E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="90"
+           priority="0">
+           <recommendation id="rec_type_conversions_smallest_c" title="Use the smallest data type" confidence="1" gain="-1"/>
+  </hotspot>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\RenderWindow.cpp"
+           line_no="136"
+           routine="RenderWindow::UpdateScreenSurface"
+           is_vectorized="0"
+           self_time="1.978841E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="93"
+           priority="0">
+           <recommendation id="rec_indirect_call_move_c" title="Remove indirect call(s) inside loop" confidence="1" gain="-1"/>
+  </hotspot>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\RenderWindow.cpp"
+           line_no="136"
+           routine="RenderWindow::UpdateScreenSurface"
+           is_vectorized="0"
+           self_time="1.978841E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="93"
+           priority="0">
+           <recommendation id="rec_indirect_call_proxy_c" title="Replace call(s) to virtual method with direct call(s)" confidence="1" gain="-1"/>
+  </hotspot>
+  <hotspot filename="D:\UE4SourceCode\SoftRasterizer\Source\Renderer.cpp"
+           line_no="184"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="1.869896E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="85"
+           priority="0">
+           <recommendation id="rec_type_conversions_smallest_c" title="Use the smallest data type" confidence="1" gain="-1"/>
+  </hotspot>
+</IntelParallelAdvisorSummary >

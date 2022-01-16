@@ -1,0 +1,15 @@
+-r
+D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000\trc000
+--return-app-exitcode
+--cs-mode=no-count-loops,no-count-flops,stl-profiling,stack-stitching
+--cs-file=D:\UE4SourceCode\SoftRasterizer\My Advisor Results - SoftRasterizer\e000/callstacks.def
+--jit-profiling
+--gpu-carm
+--target-gpu=none
+--search-dir
+sym=D:\UE4SourceCode\SoftRasterizer\x64\Release
+--search-dir
+bin=D:\UE4SourceCode\SoftRasterizer\x64\Release
+--app-working-dir=D:\UE4SourceCode\SoftRasterizer
+--
+D:\UE4SourceCode\SoftRasterizer\x64\Release\SoftRasterizer.exe

@@ -36,14 +36,14 @@ void LightingShaderPipline::FragmentShader(const VertexData& data, Vector4& frag
 
 	spec = std::pow(std::max(viewDir * relectDir, 0.0f), 32);
 
-	auto diffColor = Texture2D(diffuseTextureId, data.texCoordinate);
-	Vector3 ambient = Vector3{ directionalLight->amibent.x * diffColor.x,directionalLight->amibent.y * diffColor.y,directionalLight->amibent.z * diffColor.z };
+	auto diffColor = std::move(Texture2D(diffuseTextureId, data.texCoordinate));
+	Vector3 ambient{ directionalLight->amibent.x * diffColor.x,directionalLight->amibent.y * diffColor.y,directionalLight->amibent.z * diffColor.z };
 
-	Vector3 diffuse = Vector3{ directionalLight->diffuse.x * diffColor.x,directionalLight->diffuse.y * diffColor.y,directionalLight->diffuse.z * diffColor.z };
+	Vector3 diffuse { directionalLight->diffuse.x * diffColor.x,directionalLight->diffuse.y * diffColor.y,directionalLight->diffuse.z * diffColor.z };
 	diffuse *= diff;
 
-	auto specColor = Texture2D(specularTextureId, data.texCoordinate);
-	Vector3 specular = Vector3{ directionalLight->specular.x * specColor.x,directionalLight->specular.y * specColor.y,directionalLight->specular.z * specColor.z };
+	auto specColor = std::move(Texture2D(specularTextureId, data.texCoordinate));
+	Vector3 specular{ directionalLight->specular.x * specColor.x,directionalLight->specular.y * specColor.y,directionalLight->specular.z * specColor.z };
 	specular *= spec;
 
  	Vector3 finalColor = ambient + diffuse + specular;

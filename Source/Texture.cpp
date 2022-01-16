@@ -23,8 +23,7 @@ Vector4 Texture::TextureSamplingNearest(Vector2 uv)
 	float fb = b * denom;
 	float fa = a * denom;
 
-	Vector4 result{ fr, fg, fb, fa };
-	return  result;
+	return  { fr, fg, fb, fa };
 }
 
 void Texture::ReadPixel(int u, int v, unsigned char& r, unsigned char& g, unsigned char& b, unsigned char& a) const
