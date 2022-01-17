@@ -55,9 +55,9 @@ void FrameBuffer::Clear(const Vector4& clearColor)
 	val = val << 8 | g;
 	val = val << 8 | b;
 
-	auto data = colorBuffer.data();
-	auto depthData = depthBuffer.data();
-
+// 	auto data = colorBuffer.data();
+// 	auto depthData = depthBuffer.data();
+// 
 //  	for (auto y = 0; y < height; y++)
 // 	{
 // 		for (auto x = 0; x < width; x++)

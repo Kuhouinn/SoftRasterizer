@@ -102,7 +102,7 @@ std::vector<int> ShaderPipeline::RasterizeTriangle(const VertexData& v0, const V
 	
 	Vector2i arr[3] = { {v0.screenPosition.x,v0.screenPosition.y},{v1.screenPosition.x,v1.screenPosition.y}, {v2.screenPosition.x,v2.screenPosition.y} };
 	
-//#pragma omp parallel for
+#pragma omp parallel for
 	for (int ix = minX; ix < maxX; ix++)
 	{
 		for (int iy = minY; iy < maxY; iy++)
@@ -141,9 +141,9 @@ std::vector<int> ShaderPipeline::RasterizeTriangle(const VertexData& v0, const V
 					continue;
 				}
 	
-				rasterizedPoints.emplace_back(point);
-// 				point.discard = false;
-// 				rasterizedPoints[iy * screenWidth + ix] = point;
+//				rasterizedPoints.emplace_back(point);
+ 				point.discard = false;
+ 				rasterizedPoints[iy * screenWidth + ix] = point;
 			}
 		}
 	}

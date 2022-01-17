@@ -19,8 +19,8 @@ Renderer::Renderer(int width, int height)
 
 	viewPortMatrix = CalculateViewPortMatrix(width, height);
 
-//	rasterizedPoints.resize(backBuffer->GetWidth() * backBuffer->GetHeight());
-	rasterizedPoints.reserve(backBuffer->GetWidth() * backBuffer->GetHeight());
+	rasterizedPoints.resize(backBuffer->GetWidth() * backBuffer->GetHeight());
+//	rasterizedPoints.reserve(backBuffer->GetWidth() * backBuffer->GetHeight());
 }
 
 Matrix4 Renderer::CalculateProjectionMatrix(float fovy, float aspect, float near, float far)
@@ -185,48 +185,48 @@ void Renderer::Render(Model& modelSource)
  						backBuffer->GetWidth(), backBuffer->GetHeight(), rasterizedPoints);
 				}
 
-//#pragma omp parallel for
-// 				for (int ix = boundingBox[0]; ix <= boundingBox[2]; ix++)
-// 				{
-// 					for (int iy = boundingBox[1]; iy <= boundingBox[3]; iy++)
-// 					{
-// 						auto& point = rasterizedPoints[iy * backBuffer->GetWidth() + ix];
-// 						if (point.discard)
-// 						{
-// 							continue;
-// 						}
-// 						point.discard = true;
-// 						if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
-// 						{
-// 
-// 							//光栅化之后的透视矫正
-// 							VertexData::AftPrespCorrection(point);
-// 							Vector4 fragColor;
-// 							shaderPipeline->FragmentShader(point, fragColor);
-// 							backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
-// 							backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
-// 
-// 						}
-// 					}
-// 				}
-
-				//fragment shader处理阶段
-				for (auto& point : rasterizedPoints)
+#pragma omp parallel for
+				for (int ix = boundingBox[0]; ix <= boundingBox[2]; ix++)
 				{
-					if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
+					for (int iy = boundingBox[1]; iy <= boundingBox[3]; iy++)
 					{
+						auto& point = rasterizedPoints[iy * backBuffer->GetWidth() + ix];
+						if (point.discard)
+						{
+							continue;
+						}
+						point.discard = true;
+						if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
+						{
 
-						//光栅化之后的透视矫正
-						VertexData::AftPrespCorrection(point);
-						Vector4 fragColor;
-						shaderPipeline->FragmentShader(point, fragColor);
-						backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
-						backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
+							//光栅化之后的透视矫正
+							VertexData::AftPrespCorrection(point);
+							Vector4 fragColor;
+							shaderPipeline->FragmentShader(point, fragColor);
+							backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
+							backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
 
+						}
 					}
 				}
 
-				rasterizedPoints.clear();
+// 				//fragment shader处理阶段
+// 				for (auto& point : rasterizedPoints)
+// 				{
+// 					if (point.clipPosition.z < backBuffer->ReadDepth(point.screenPosition.x, point.screenPosition.y))
+// 					{
+// 
+// 						//光栅化之后的透视矫正
+// 						VertexData::AftPrespCorrection(point);
+// 						Vector4 fragColor;
+// 						shaderPipeline->FragmentShader(point, fragColor);
+// 						backBuffer->WritePixelColor(point.screenPosition.x, point.screenPosition.y, fragColor);
+// 						backBuffer->WriteDepth(point.screenPosition.x, point.screenPosition.y, point.clipPosition.z);
+// 
+// 					}
+// 				}
+// 
+// 				rasterizedPoints.clear();
 			}
 		}
 	}

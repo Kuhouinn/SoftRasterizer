@@ -1,2 +1,58 @@
-﻿  Matrix4.cpp
-  SoftRasterizer.vcxproj -> D:\UE4SourceCode\SoftRasterizer\x64\Debug\SoftRasterizer.exe
+﻿  Camera.cpp
+  DefaultShaderPipline.cpp
+  DirectionalLight.cpp
+  FrameBuffer.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\FrameBuffer.cpp(78,17): warning C4018: “>=”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\FrameBuffer.cpp(78,40): warning C4018: “>=”: 有符号/无符号不匹配
+  LightingShaderPipline.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\LightingShaderPipline.cpp(37,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  main.cpp
+C:\Users\admin\Documents\SoftRasterizer\source\main.cpp(70,31): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\source\main.cpp(71,31): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\source\main.cpp(72,31): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\source\main.cpp(73,31): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Matrix3.cpp
+  Matrix4.cpp
+  Mesh.cpp
+  Model.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(31,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(37,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(50,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(65,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(69,21): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp(92,20): warning C4018: “<”: 有符号/无符号不匹配
+  Renderer.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(31,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(37,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(47,35): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(317,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(318,16): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp(349,26): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  ShaderPipeline.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(41,58): warning C4018: “<=”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(41,126): warning C4018: “<=”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(65,58): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(65,125): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(128,44): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(128,40): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(128,27): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(129,44): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(129,40): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(129,27): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(139,59): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp(139,126): warning C4018: “>”: 有符号/无符号不匹配
+  stb.cpp
+  RenderWindow.cpp
+  Texture.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Texture.cpp(15,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\admin\Documents\SoftRasterizer\Source\Texture.cpp(16,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+  Vector2.cpp
+  Vector2i.cpp
+C:\Users\admin\Documents\SoftRasterizer\Source\Vector2i.cpp(50,18): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+  Vector3.cpp
+  Vector4.cpp
+  VertexData.cpp
+  正在生成代码...
+C:\Users\admin\Documents\SoftRasterizer\source\Vector4.cpp(58): warning C4715: “Vector4::operator[]”: 不是所有的控件路径都返回值
+C:\Users\admin\Documents\SoftRasterizer\source\Vector4.cpp(69): warning C4715: “Vector4::operator[]”: 不是所有的控件路径都返回值
+  SoftRasterizer.vcxproj -> C:\Users\admin\Documents\SoftRasterizer\x64\Debug\SoftRasterizer.exe

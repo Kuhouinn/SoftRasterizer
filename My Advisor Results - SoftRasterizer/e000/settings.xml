@@ -27,7 +27,7 @@
  <FilterView boolean:VectorizedButtonChecked="true" boolean:NotVectorizedButtonChecked="true" boolean:FakeLoopButtonChecked="false" boolean:LibrariesButtonChecked="false" ModuleFilterValue="All Modules" SourceFilterValue="All Sources" LoopModeFilterValue="Loops And Functions" ThreadFilterValue="All Threads"/>
  <SurveySourceView boolean:SourcePaneVisible="true" boolean:AsmPaneVisible="true" boolean:StackPaneVisible="true">
   <SourceView>
-   <ColumnWidth int:SnippetDefaultState="2"/>
+   <ColumnWidth int:SnippetDefaultState="2" int:SplitterPos="813"/>
   </SourceView>
  </SurveySourceView>
  <MapSourceView boolean:SourcePaneVisible="true" boolean:AsmPaneVisible="true" boolean:DetailsVisible="true"/>

@@ -10,10 +10,10 @@ Vector4 Texture::TextureSamplingNearest(Vector2 uv)
 	int x = 0, y = 0;
 
 	//这std::round也太耗性能了吧，先注释掉，之后在看看怎么回事
-//   	x = std::round(uv.x * (width - 1));
-//   	y = std::round(uv.y * (height - 1));
-	x = (uv.x * (width - 1));
-	y = (uv.y * (height - 1));
+//    	x = std::round(uv.x * (width - 1));
+//    	y = std::round(uv.y * (height - 1));
+	x = (uv.x * (width - 1)) + 0.5f;
+	y = (uv.y * (height - 1)) + 0.5f;
 
 	ReadPixel(x, y, r, g, b, a);
 

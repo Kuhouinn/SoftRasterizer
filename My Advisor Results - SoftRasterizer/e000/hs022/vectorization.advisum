@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="191"
+           routine="Renderer::Render$omp$1"
+           is_vectorized="0"
+           self_time="7.895902E-01"
+           total_time="2.026872E+00"
+           trip_counts=""
+           func_instance="42"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp"
+           line_no="108"
+           routine="ShaderPipeline::RasterizeTriangle$omp$1"
+           is_vectorized="0"
+           self_time="3.130611E-01"
+           total_time="4.986247E-01"
+           trip_counts=""
+           func_instance="38"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\LightingShaderPipline.cpp"
+           line_no="13"
+           routine="LightingShaderPipline::VertexShader"
+           is_vectorized="0"
+           self_time="4.437032E-02"
+           total_time="4.437032E-02"
+           trip_counts=""
+           func_instance="93"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="109"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="3.577245E-02"
+           total_time="1.896947E+00"
+           trip_counts=""
+           func_instance="89"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Matrix4.cpp"
+           line_no="80"
+           routine="Matrix4::operator*"
+           is_vectorized="0"
+           self_time="3.495113E-02"
+           total_time="3.495113E-02"
+           trip_counts=""
+           func_instance="104"
+           priority="0"/>
+</IntelParallelAdvisorSummary >
