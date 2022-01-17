@@ -12,8 +12,6 @@ void VertexData::PrePerspCorrection(VertexData& v)
 void VertexData::AftPrespCorrection(VertexData& v)
 {
 	float w = 1.0f / v.position.w;
-	//这个*需要确认一下是否正确，因为四个分量都乘了w
-	//vector2 和3应该不用确认，所有分量都要乘。
 	v.position = v.position * w;
 	v.texCoordinate = v.texCoordinate * w;
 	v.normal = v.normal * w;

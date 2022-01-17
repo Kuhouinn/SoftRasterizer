@@ -129,8 +129,9 @@ std::vector<int> ShaderPipeline::RasterizeTriangle(const VertexData& v0, const V
 	 			Vector3 vy = Vector3(-p1p0.y, p0p2.y, -p0p.y);
 				Vector3 cpResult = vx.CrossProduct(vy);
 				Vector3 result;
-				result.y = cpResult.x / cpResult.z;
-				result.z = cpResult.y / cpResult.z;
+				auto temp = 1.0f / cpResult.z;
+				result.y = cpResult.x * temp;
+				result.z = cpResult.y * temp;
 				result.x = 1 - result.y - result.z;
 	
 				auto point = VertexData::BarycentricLerp(v0, v1, v2, result);

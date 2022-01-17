@@ -1,33 +1,36 @@
 # hash file version: 3
-333	149	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	481840	482495,482461		0	639	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
-334	177	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	803120	803155		0	35	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
-335	204	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	806224	809991,806819,806930,807166,807296,808169,808316,808671,808808,808948		0	2716	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
-386	30	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SDL2.dll	1176304	1176362		0	58	2f4a57e7a4ff7f6ee01bb07d77d89ebc	0	1	0	0	0
-387	27	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SDL2.dll	1173920	1174080,1174070		0	150	2f4a57e7a4ff7f6ee01bb07d77d89ebc	0	1	0	0	0
-489	202	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	806862	806930,807166,807296,808045		0	1180	8a45998f49fa70522daa1ba12d173313	1	1	0	0	0
-490	42	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	118384	118911	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	191	527	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-491	44	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	118368	118923	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	189	555	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-492	38	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	119184	119670	C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp	108	486	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-493	55	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	38800	38899	C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector	1648	99	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-494	58	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	16784	16820	C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp	37	36	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-495	60	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	16560	16760	C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp	31	200	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-496	71	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	18656	19349	C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp	92	693	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-497	77	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	71201	71486,71470	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4215	269	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-499	82	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	74482	74573	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4487	91	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-501	79	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	68608	69430,69434,69430	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4049	822	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-502	86	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	10672	12477	C:\Users\admin\Documents\SoftRasterizer\source\main.cpp	47	1805	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-503	87	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	30176	31729,31736,31385	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	149	1209	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-504	89	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	29104	31722,31743,31729,31736,31743,31537	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	109	2433	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-505	90	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	28625	31722,31743,31729,31736,31743,31613	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	88	2988	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-507	93	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	7824	8070	C:\Users\admin\Documents\SoftRasterizer\Source\LightingShaderPipline.cpp	13	246	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-508	97	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	114299	114330,114324	d:\a01\_work\6\s\src\vctools\crt\vcstartup\src\heap\new_scalar.cpp	35	25	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-509	104	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	15046	15162	C:\Users\admin\Documents\SoftRasterizer\Source\Matrix4.cpp	80	116	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-511	142	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	2935345	2936070,2936066,2936644		0	721	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
-515	40	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	119168	119689	C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp	106	521	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-516	84	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	69156	69204	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4070	48	a1ed73cb2f9c13d79898727d04df3ce2	0	1	0	0	0
-517	85	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	18128	18173	C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp	86	45	a1ed73cb2f9c13d79898727d04df3ce2	1	1	0	0	0
-518	152	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	414640	414705,414806,414961,415060,415139		0	495	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
-519	170	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	535041	535459,535226		0	185	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
-520	172	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	533136	533203,533303		0	166	8a45998f49fa70522daa1ba12d173313	1	1	0	0	0
-521	174	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	532912	532995,533203,533328,533501		0	500	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
-522	175	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	532907	532995,533203,533536		0	627	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+333	324	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	481840	482495,482461		0	639	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+334	328	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	803120	803155		0	35	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+335	332	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	806224	809991,806819,806930,807166,807296,808169,808316,808671,808808,808948		0	2716	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+386	300	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SDL2.dll	1176304	1176362		0	58	2f4a57e7a4ff7f6ee01bb07d77d89ebc	0	1	0	0	0
+387	291	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SDL2.dll	1173920	1174080,1174070		0	150	2f4a57e7a4ff7f6ee01bb07d77d89ebc	0	1	0	0	0
+727	330	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	806862	806930,807166,807296,808045		0	1180	8a45998f49fa70522daa1ba12d173313	1	1	0	0	0
+785	309	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	2889328	2890180,2890250,2889598,2889695,2890250,2889841,2889941,2890250		0	848	8a45998f49fa70522daa1ba12d173313	1	1	0	0	0
+817	296	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	9032873	9032896		0	59	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+818	317	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	2867280	2867333,2867439		0	158	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+819	319	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	2878096	2878149,2878423		0	326	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+847	49	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	118512	119041	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	191	529	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+848	59	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	118496	119053	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	189	557	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+849	89	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	119312	119817	C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp	108	505	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+850	217	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	38928	39027	C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector	1648	99	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+851	220	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	17200	17236	C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp	37	36	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+852	222	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	16976	17176	C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp	31	200	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+853	224	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	19072	19765	C:\Users\admin\Documents\SoftRasterizer\Source\Model.cpp	92	693	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+854	230	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	71329	71614,71598	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4215	269	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+855	232	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	68736	69558,69562,69558	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4049	822	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+856	235	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	74610	74701	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4487	91	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+857	237	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	77300	77397,80693,80654,80693	C:\Users\admin\Documents\SoftRasterizer\Include\stb_image.h	4816	2222	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+858	239	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	11076	12903	C:\Users\admin\Documents\SoftRasterizer\source\main.cpp	47	1827	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+859	240	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	30304	31860,31867,31516	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	149	1212	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+860	242	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	29232	31853,31874,31860,31867,31874,31668	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	109	2436	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+861	243	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	28753	31853,31874,31860,31867,31874,31744	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	88	2991	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+862	245	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	114427	114458,114452	d:\a01\_work\6\s\src\vctools\crt\vcstartup\src\heap\new_scalar.cpp	35	25	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+863	249	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	37616	37675	C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector	550	59	b7ff6077ddcd716a45d954718035f567	1	1	0	0	0
+864	252	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	30016	30252	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	140	236	b7ff6077ddcd716a45d954718035f567	1	1	0	0	0
+865	253	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	8208	8454	C:\Users\admin\Documents\SoftRasterizer\Source\LightingShaderPipline.cpp	13	246	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+866	257	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	15462	15578	C:\Users\admin\Documents\SoftRasterizer\Source\Matrix4.cpp	77	116	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+867	258	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	8528	8647	C:\Users\admin\Documents\SoftRasterizer\Source\LightingShaderPipline.cpp	13	119	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+868	261	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	35154	35483	C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp	310	329	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0
+869	321	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	2879504	2879557,2879761		0	444	8a45998f49fa70522daa1ba12d173313	0	1	0	0	0
+870	340	C:\Users\admin\Documents\SoftRasterizer\x64\Release\assimp-vc142-mtd.dll	544384	544459,544560,545336,544690,544920,545015,545229,545336		0	946	8a45998f49fa70522daa1ba12d173313	1	1	0	0	0
+871	343	C:\Users\admin\Documents\SoftRasterizer\x64\Release\SoftRasterizer.exe	8208	8454,8647	C:\Users\admin\Documents\SoftRasterizer\Source\LightingShaderPipline.cpp	13	365	b7ff6077ddcd716a45d954718035f567	0	1	0	0	0

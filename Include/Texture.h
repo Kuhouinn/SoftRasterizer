@@ -24,5 +24,6 @@ public:
 	int height = 0;
 	int channle = 0;
 	std::vector<unsigned char> data;
+	unsigned char* dataPtr = nullptr;
 };
 

@@ -56,8 +56,8 @@ bool Vector3::operator!=(const Vector3& value) const
 
 Vector3 Vector3::Normalize() const
 {
-	auto denominator = std::sqrt(x * x + y * y + z * z);
-	return { x / denominator,y / denominator,z / denominator };
+	auto denominator = 1.0f / std::sqrt(x * x + y * y + z * z);
+	return { x * denominator,y * denominator,z * denominator };
 }
 
 Vector3 Vector3::CrossProduct(const Vector3& value)

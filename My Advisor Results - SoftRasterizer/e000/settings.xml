@@ -4,7 +4,7 @@
  <SurveyView int:survey_view_int_operations_mode="0">
   <BottomUpGrid>
    <ColumnStructure DefaultColumnLayout="Default"/>
-   <ColumnWidth int:fdFunctionName="516" int:fdLoopAnnotation="43" int:fdRecommendationPresence="288" int:fdTotalTime="87" int:fdSelfTime="79" int:fdCompilerOptInfoVectLoopTypeSplitting="112" int:fdCompilerOptInfoVectMsg="154" int:fdVectInfoInstSets="49" int:fdVectorGain="49" int:fdVectorLength="49" int:fdVectInfoInstClasses="269" int:fdVectInfoVectDataTypes="202" int:fdCompilerOptDetails="112" int:fdLocation="174"/>
+   <ColumnWidth int:fdFunctionName="516" int:fdLoopAnnotation="43" int:fdRecommendationPresence="288" int:fdTotalTime="87" int:fdSelfTime="128" int:fdCompilerOptInfoVectLoopTypeSplitting="112" int:fdCompilerOptInfoVectMsg="154" int:fdVectInfoInstSets="49" int:fdVectorGain="49" int:fdVectorLength="49" int:fdVectInfoInstClasses="269" int:fdVectInfoVectDataTypes="202" int:fdCompilerOptDetails="112" int:fdLocation="174"/>
   </BottomUpGrid>
   <TopDownGrid>
    <ColumnStructure DefaultColumnLayout="Top Down"/>
@@ -27,7 +27,7 @@
  <FilterView boolean:VectorizedButtonChecked="true" boolean:NotVectorizedButtonChecked="true" boolean:FakeLoopButtonChecked="false" boolean:LibrariesButtonChecked="false" ModuleFilterValue="All Modules" SourceFilterValue="All Sources" LoopModeFilterValue="Loops And Functions" ThreadFilterValue="All Threads"/>
  <SurveySourceView boolean:SourcePaneVisible="true" boolean:AsmPaneVisible="true" boolean:StackPaneVisible="true">
   <SourceView>
-   <ColumnWidth int:SnippetDefaultState="2" int:SplitterPos="813"/>
+   <ColumnWidth int:SnippetDefaultState="2" int:SplitterPos="813" int:LoopTotalTimePercentColumn="30"/>
   </SourceView>
  </SurveySourceView>
  <MapSourceView boolean:SourcePaneVisible="true" boolean:AsmPaneVisible="true" boolean:DetailsVisible="true"/>

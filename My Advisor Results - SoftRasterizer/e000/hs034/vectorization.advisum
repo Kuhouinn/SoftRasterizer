@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="191"
+           routine="Renderer::Render$omp$1"
+           is_vectorized="0"
+           self_time="1.054290E+01"
+           total_time="3.329377E+01"
+           trip_counts=""
+           func_instance="49"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\ShaderPipeline.cpp"
+           line_no="108"
+           routine="ShaderPipeline::RasterizeTriangle$omp$1"
+           is_vectorized="0"
+           self_time="4.718547E+00"
+           total_time="8.170924E+00"
+           trip_counts=""
+           func_instance="89"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\LightingShaderPipline.cpp"
+           line_no="13"
+           routine="LightingShaderPipline::VertexShader"
+           is_vectorized="0"
+           self_time="5.636733E-01"
+           total_time="5.636733E-01"
+           trip_counts=""
+           func_instance="343"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="109"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="2.790199E-01"
+           total_time="2.442660E+01"
+           trip_counts=""
+           func_instance="242"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Matrix4.cpp"
+           line_no="77"
+           routine="Matrix4::operator*"
+           is_vectorized="0"
+           self_time="2.323770E-01"
+           total_time="2.323770E-01"
+           trip_counts=""
+           func_instance="257"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

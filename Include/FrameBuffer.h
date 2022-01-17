@@ -28,8 +28,10 @@ public:
 private:
 	unsigned int width = 1920;
 	unsigned int height = 1080;
-	std::vector<float> depthBuffer;          
+	std::vector<float> depthBuffer;
+	float* depthPtr = nullptr;
 	std::vector<unsigned int> colorBuffer;
+	unsigned int* colorPtr = nullptr;
 
 };
 

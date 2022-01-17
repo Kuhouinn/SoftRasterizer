@@ -128,7 +128,8 @@ void Model::TextureFromFile(const char* path, const std::string& directory, Text
 	int size = width * height * nrComponents;
 
 	texture.data.resize(size);
-	memcpy(texture.data.data(), data, size);
+	texture.dataPtr = texture.data.data();
+	memcpy(texture.dataPtr, data, size);
 	texture.width = width;
 	texture.height = height;
 	texture.channle = nrComponents;

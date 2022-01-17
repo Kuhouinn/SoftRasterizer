@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="189"
+           routine="Renderer::Render$omp$1"
+           is_vectorized="0"
+           self_time="8.262364E-02"
+           total_time="3.337639E+01"
+           trip_counts=""
+           func_instance="59"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="191"
+           routine="Renderer::Render$omp$1"
+           is_vectorized="0"
+           self_time="1.054290E+01"
+           total_time="3.329377E+01"
+           trip_counts=""
+           func_instance="49"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\source\main.cpp"
+           line_no="47"
+           routine="SDL_main"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="2.634856E+01"
+           trip_counts=""
+           func_instance="239"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="88"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="2.442660E+01"
+           trip_counts=""
+           func_instance="243"
+           priority="0"/>
+  <hotspot filename="C:\Users\admin\Documents\SoftRasterizer\Source\Renderer.cpp"
+           line_no="109"
+           routine="Renderer::Render"
+           is_vectorized="0"
+           self_time="2.790199E-01"
+           total_time="2.442660E+01"
+           trip_counts=""
+           func_instance="242"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

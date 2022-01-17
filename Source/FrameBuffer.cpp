@@ -5,6 +5,8 @@ FrameBuffer::FrameBuffer(unsigned int widthVal /*= 1920*/, unsigned int heightVa
 {
 	colorBuffer.resize(widthVal * heightVal);
 	depthBuffer.resize(widthVal * heightVal);
+	colorPtr = colorBuffer.data();
+	depthPtr = depthBuffer.data();
 }
 
 void FrameBuffer::WritePixelColor(unsigned int x, unsigned int y, const Vector4& color)
@@ -26,8 +28,8 @@ void FrameBuffer::WritePixelColor(unsigned int x, unsigned int y, const Vector4&
 	val = val << 8 | b;
 
 //	colorBuffer[y * width + x] = val;
-	auto colorPtr = colorBuffer.data();
-	*(colorPtr + y * width + x) = val;
+ 	//auto colorPtr = colorBuffer.data();
+ 	*(colorPtr + y * width + x) = val;
 }
 
 void FrameBuffer::WriteDepth(unsigned int x, unsigned int y, float depth)
@@ -38,7 +40,7 @@ void FrameBuffer::WriteDepth(unsigned int x, unsigned int y, float depth)
 	}
 
 //	depthBuffer[y * width + x] = depth;
-	auto depthPtr = depthBuffer.data();
+	//auto depthPtr = depthBuffer.data();
 	*(depthPtr + y * width + x) = depth;
 }
 
@@ -80,5 +82,6 @@ float FrameBuffer::ReadDepth(int x, int y) const
 		return 0.0f;
 	}
 
-	return depthBuffer[width * y + x];
+	//auto depthPtr = depthBuffer.data();
+	return *(depthPtr + width * y + x);
 }
